@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188772281290970451}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14214, y: -0.19935, z: 0}
-  m_LocalScale: {x: 1.6257, y: 1.6257, z: 1.6257}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5942632001086945306}
   m_RootOrder: 2
@@ -359,7 +359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3420203299051292643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.42, y: 1.84, z: 0}
+  m_LocalPosition: {x: -2.43, y: 1.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5942632001086945306}
@@ -428,8 +428,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 1
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -448,13 +448,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e860838538f4a844801e74cd815c72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectSreenPoint: {x: 0, y: 0, z: 0}
-  mousePreviousLocation: {x: 0, y: 0, z: 0}
-  mouseCurLocation: {x: 0, y: 0, z: 0}
-  force: {x: 0, y: 0, z: 0}
-  objectCurrentPosition: {x: 0, y: 0, z: 0}
-  objectTargetPosition: {x: 0, y: 0, z: 0}
+  speed: 2
   topSpeed: 1000
+  minigame: {fileID: 814325700303169508}
+  rb: {fileID: 2259512289968124922}
 --- !u!58 &6177082013439109804
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -538,7 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerTextField: {fileID: 8493170087221762003}
-  maxTime: 1000
+  maxTime: 30
 --- !u!1 &7432903275849754795
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +549,7 @@ GameObject:
   - component: {fileID: 6035599435944872151}
   - component: {fileID: 1627330920837266980}
   m_Layer: 0
-  m_Name: snake0
+  m_Name: Snake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,7 +563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7432903275849754795}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000030517578, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3498543158921773748}
@@ -669,7 +666,7 @@ GameObject:
   - component: {fileID: 3498543158921773748}
   - component: {fileID: 1535079485836988026}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
