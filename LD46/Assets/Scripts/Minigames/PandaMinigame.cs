@@ -11,14 +11,20 @@ public class PandaMinigame : BaseMinigame {
 	byte wrongMatchs = 0;
 
 	[Header("Refs")]
-	[SerializeField] SpriteRenderer centerPanda = null;
-	[SerializeField] SpriteRenderer leftPanda = null;
-	[SerializeField] SpriteRenderer rightPanda = null;
+	[SerializeField] Transform centerPanda = null;
+	[SerializeField] Transform leftPanda = null;
+	[SerializeField] Transform rightPanda = null;
 
-	[SerializeField] Sprite[] genders = null;
+	[SerializeField] SpriteRendererAnimator[] genders = null;
 
 	[Header("Debug")]
 	[SerializeField] TextMeshProUGUI debugTextField = null;
+
+	Vector3 centerPos;
+	Vector3 leftPos;
+	Vector3 rightPos;
+	Vector3 leftScale;
+	Vector3 rightScale;
 
 	bool centerGender;
 	bool leftGender;
@@ -26,6 +32,12 @@ public class PandaMinigame : BaseMinigame {
 
 	public override void Init() {
 		base.Init();
+
+		centerPos = centerPanda.position;
+		leftPos = leftPanda.position;
+		rightPos = rightPanda.position;
+		leftScale = leftPanda.localScale;
+		rightScale = rightPanda.localScale;
 
 		SpawnNewPanda();
 	}
@@ -92,11 +104,17 @@ public class PandaMinigame : BaseMinigame {
 			rightGender = true;
 		}
 
-		centerPanda.transform.localScale = new Vector3(centerGender != rightGender ? 1 : -1, 1, 1);
+		Destroy(centerPanda.gameObject);
+		Destroy(leftPanda.gameObject);
+		Destroy(rightPanda.gameObject);
 
-		centerPanda.sprite = genders[centerGender ? 1 : 0];
-		leftPanda.sprite = genders[leftGender ? 1 : 0];
-		rightPanda.sprite = genders[rightGender ? 1 : 0];
+		centerPanda = Instantiate(genders[centerGender ? 1 : 0], centerPos, Quaternion.identity, transform).transform;
+		leftPanda = Instantiate(genders[leftGender ? 1 : 0], leftPos, Quaternion.identity, transform).transform;
+		rightPanda = Instantiate(genders[rightGender ? 1 : 0], rightPos, Quaternion.identity, transform).transform;
+
+		centerPanda.transform.localScale = new Vector3(centerGender != rightGender ? 1 : -1, 1, 1);
+		leftPanda.localScale = leftScale;
+		rightPanda.localScale = rightScale;
 	}
 
 	protected override void ShowLoseAnimation() {
