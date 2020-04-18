@@ -59,7 +59,10 @@ public class PandaMinigame : BaseMinigame {
 					RightMatch();
 			}
 		}
-		
+
+		if (Input.GetKeyDown(KeyCode.Alpha1)) {
+			debugTextField.enabled = !debugTextField.enabled;
+		}
 	}
 
 	void RightMatch() {

@@ -24,6 +24,12 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 	AudioSource currAudio;
 	LTDescr currDelayedUp;
 
+	private void Update() {
+		if (Input.GetKeyDown(KeyCode.Alpha1)) {
+			debugTextField.enabled = !debugTextField.enabled;
+		}
+	}
+
 	public override void Init() {
 		base.Init();
 
