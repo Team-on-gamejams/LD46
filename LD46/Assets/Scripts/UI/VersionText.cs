@@ -18,7 +18,7 @@ public class VersionText : MonoBehaviour {
 #endif
 
 	void Start() {
-		textField.text = GameManager.Instance.buildNameString;
+		textField.text =  GameManager.Instance.buildNameString;
 		Destroy(this);
 	}
 }

@@ -6,6 +6,23 @@ using TMPro;
 
 public static class LeanTweenEx
 {
+	public static LTDescr ChangeSpriteAlpha(SpriteRenderer rend, float alpha, float animTime) {
+		return LeanTween.value(rend.gameObject, rend.color.a, alpha, animTime)
+			.setOnUpdate((float a) => {
+				Color c = rend.color;
+				c.a = a;
+				rend.color = c;
+			});
+	}
+
+	public static LTDescr ChangeSpriteColor(SpriteRenderer rend, Color color, float animTime) {
+		return LeanTween.value(rend.gameObject, rend.color, color, animTime)
+			.setOnUpdate((Color c) => {
+				rend.color = c;
+			});
+	}
+
+
 	public static LTDescr ChangeCanvasGroupAlpha(CanvasGroup canvasGroup, float alpha, float animTime)
 	{
 		return LeanTween.value(canvasGroup.gameObject, canvasGroup.alpha, alpha, animTime)
@@ -41,6 +58,59 @@ public static class LeanTweenEx
 			.setOnComplete(() => {
 				GameObject.Destroy(fadedImage);
 				imageOrig.sprite = newSprite;
+			});
+	}
+
+	public static void FadeToSprite(SpriteRenderer orig, Sprite newSprite, float time) {
+		GameObject go = new GameObject("newSprite");
+
+		SpriteRenderer sr = go.AddComponent<SpriteRenderer>();
+		sr.sprite = newSprite;
+		sr.color = new Color(1, 1, 1, 0);
+		sr.flipX = orig.flipX;
+		sr.flipY = orig.flipY;
+
+		Transform trans = go.GetComponent<Transform>();
+		trans.transform.SetParent(orig.transform);
+		trans.localPosition = Vector3.zero;
+		trans.localScale = Vector3.one;
+
+		LeanTween.value(go, 0.0f, 1.0f, time)
+			.setOnUpdate((float a) => {
+				Color c = sr.color;
+				c.a = a;
+				sr.color = c;
+			})
+			.setOnComplete(() => {
+				GameObject.Destroy(go);
+				orig.sprite = newSprite;
+			});
+	}
+
+	public static void FadeFromSprite(SpriteRenderer orig, Sprite newSprite, float time) {
+		GameObject go = new GameObject("newSprite");
+
+		SpriteRenderer sr = go.AddComponent<SpriteRenderer>();
+		sr.sprite = orig.sprite;
+		sr.color = new Color(1, 1, 1, 1);
+		sr.flipX = orig.flipX;
+		sr.flipY = orig.flipY;
+
+		Transform trans = go.GetComponent<Transform>();
+		trans.transform.SetParent(orig.transform);
+		trans.localPosition = Vector3.zero;
+		trans.localScale = Vector3.one;
+
+		orig.sprite = newSprite;
+
+		LeanTween.value(go, 1.0f, 0.0f, time)
+			.setOnUpdate((float a) => {
+				Color c = sr.color;
+				c.a = a;
+				sr.color = c;
+			})
+			.setOnComplete(() => {
+				GameObject.Destroy(go);
 			});
 	}
 
