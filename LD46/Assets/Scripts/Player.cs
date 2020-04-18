@@ -4,12 +4,18 @@ using UnityEngine;
 using NaughtyAttributes;
 
 public class Player : MonoBehaviour {
+	[Header("Minigames")]
 	[SerializeField] [ReorderableList] List<BaseBaseMinigame> minigames = null;
+
+	[Header("Audio")]
+	[SerializeField] AudioClip mainTheme = null;
 
 	BaseBaseMinigame currMinigame = null;
 	byte currMinigameId = 0;
 
 	private void Start() {
+		if(mainTheme != null)
+			AudioManager.Instance.PlayLoop(mainTheme, 0.7f, channel: AudioManager.AudioChannel.Music);
 		StartNewMinigame();
 	}
 
