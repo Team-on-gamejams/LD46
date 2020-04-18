@@ -435,7 +435,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &174464916770864237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +448,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e860838538f4a844801e74cd815c72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjectSreenPoint: {x: 0, y: 0, z: 0}
+  mousePreviousLocation: {x: 0, y: 0, z: 0}
+  mouseCurLocation: {x: 0, y: 0, z: 0}
+  force: {x: 0, y: 0, z: 0}
+  objectCurrentPosition: {x: 0, y: 0, z: 0}
+  objectTargetPosition: {x: 0, y: 0, z: 0}
+  topSpeed: 1000
 --- !u!58 &6177082013439109804
 CircleCollider2D:
   m_ObjectHideFlags: 0

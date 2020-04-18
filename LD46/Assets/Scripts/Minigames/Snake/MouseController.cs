@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
-    private Color mouseOverColor = Color.blue;
-    private Color originalColor = Color.yellow;
+    public Vector3 gameObjectSreenPoint;
+    public Vector3 mousePreviousLocation;
+    public Vector3 mouseCurLocation;
     private bool dragging = false;
     private float distance;
 
@@ -20,23 +21,33 @@ public class MouseController : MonoBehaviour
 
     void OnMouseDown()
     {
-        distance = Vector3.Distance(transform.position, Camera.main.transform.position);
+        gameObjectSreenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        mousePreviousLocation = new Vector3(Input.mousePosition.x, Input.mousePosition.y, gameObjectSreenPoint.z);
         dragging = true;
+    }
+
+    public Vector3 force;
+    public Vector3 objectCurrentPosition;
+    public Vector3 objectTargetPosition;
+    public float topSpeed = 10;
+
+    void OnMouseDrag()
+    {
+        mouseCurLocation = new Vector3(Input.mousePosition.x, Input.mousePosition.y, gameObjectSreenPoint.z);
+        force = mouseCurLocation - mousePreviousLocation;//Changes the force to be applied
+        mousePreviousLocation = mouseCurLocation;
     }
 
     void OnMouseUp()
     {
         dragging = false;
+        if (GetComponent<Rigidbody2D>().velocity.magnitude > topSpeed)
+            force = GetComponent<Rigidbody2D>().velocity.normalized * topSpeed;
     }
 
-    void Update()
+    public void FixedUpdate()
     {
-        if (dragging)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 rayPoint = ray.GetPoint(distance);
-            transform.position = rayPoint;
-        }
+        GetComponent<Rigidbody2D>().velocity = force;
     }
 
     void OnTriggerEnter2D(Collider2D col)
