@@ -151,9 +151,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigames:
+  - {fileID: 4830098031702296674, guid: 370446926e41f1948a6a138635d6e6f1, type: 3}
   - {fileID: 8517322002556043297, guid: 5fa4d6360af73ee449095dfa35c23e6c, type: 3}
   - {fileID: 5366360495820618836, guid: b65e09e031d97ba4587c5f7c0cc5c52f, type: 3}
-  - {fileID: 4830098031702296674, guid: 370446926e41f1948a6a138635d6e6f1, type: 3}
   - {fileID: 814325700303169508, guid: 91e098562c988c448bdecefadc8833de, type: 3}
   - {fileID: 5942632001086945301, guid: dd89662098a726b458b0cb46d26c1370, type: 3}
   - {fileID: 5942632001086945301, guid: dd89662098a726b458b0cb46d26c1370, type: 3}
