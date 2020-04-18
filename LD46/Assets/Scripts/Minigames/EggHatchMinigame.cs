@@ -24,29 +24,11 @@ public class EggHatchMinigame : BaseMinigame {
 		neededDistHalf = neededDist / 2;
 	}
 
-	//protected new void Update() {
-	//	currPos = Input.mousePosition;
-
-	//	base.Update();
-
-	//	if (isPlaying) {
-	//		if (Input.GetMouseButtonDown(0)) {
-	//			deltaPos = currPos - lastPos;
-	//			dist += deltaPos.magnitude;
-
-	//			if(dist >= neededDistHalf && sranim.currSequence <= 0) {
-	//				sranim.currSequence = 1;
-	//			}
-	//			else if(dist >= neededDist && sranim.currSequence <= 1) {
-	//				sranim.currSequence = 2;
-	//				isPlaying = false;
-	//				ShowWinAnimation();
-	//			}
-	//		}
-	//	}
-
-	//	lastPos = currPos;
-	//}
+	private void Update() {
+		if (Input.GetKeyDown(KeyCode.Alpha1)) {
+			debugTextField.enabled = !debugTextField.enabled;
+		}
+	}
 
 	public void OnDragEgg() {
 		currPos = Input.mousePosition;
