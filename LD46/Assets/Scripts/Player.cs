@@ -4,9 +4,9 @@ using UnityEngine;
 using NaughtyAttributes;
 
 public class Player : MonoBehaviour {
-	[SerializeField] [ReorderableList] List<BaseMinigame> minigames = null;
+	[SerializeField] [ReorderableList] List<BaseBaseMinigame> minigames = null;
 
-	BaseMinigame currMinigame = null;
+	BaseBaseMinigame currMinigame = null;
 	byte currMinigameId = 0;
 
 	private void Start() {
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour {
 
 	void StartNewMinigame() {
 		Debug.Log($"Start new minigame. Id: {currMinigameId}");
-		currMinigame = Instantiate(minigames[currMinigameId].gameObject, transform).GetComponent<BaseMinigame>();
+		currMinigame = Instantiate(minigames[currMinigameId].gameObject, transform).GetComponent<BaseBaseMinigame>();
 
 		currMinigame.onWinEvent += OnWinMinigame;
 		currMinigame.onLoseEvent += OnLoseMinigame;

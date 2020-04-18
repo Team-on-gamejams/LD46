@@ -6,6 +6,23 @@ using TMPro;
 
 public static class LeanTweenEx
 {
+	public static LTDescr ChangeSpriteAlpha(SpriteRenderer rend, float alpha, float animTime) {
+		return LeanTween.value(rend.gameObject, rend.color.a, alpha, animTime)
+			.setOnUpdate((float a) => {
+				Color c = rend.color;
+				c.a = a;
+				rend.color = c;
+			});
+	}
+
+	public static LTDescr ChangeSpriteColor(SpriteRenderer rend, Color color, float animTime) {
+		return LeanTween.value(rend.gameObject, rend.color, color, animTime)
+			.setOnUpdate((Color c) => {
+				rend.color = c;
+			});
+	}
+
+
 	public static LTDescr ChangeCanvasGroupAlpha(CanvasGroup canvasGroup, float alpha, float animTime)
 	{
 		return LeanTween.value(canvasGroup.gameObject, canvasGroup.alpha, alpha, animTime)
