@@ -189,7 +189,7 @@ public static class BuildManager {
 
 		args.Append($"{sequence.itchGameLink}:{data.itchChannel} ");
 		if (data.itchAddLastChangelogUpdateNameToVerison && !string.IsNullOrEmpty(data.itchLastChangelogUpdateName)) {
-			args.Append($"--userversion \"{PlayerSettings.bundleVersion} - {data.itchLastChangelogUpdateName}\" ");
+			args.Append($"--userversion \"{data.itchLastChangelogUpdateName}\" ");
 		}
 		else {
 			args.Append($"--userversion \"{PlayerSettings.bundleVersion}\" ");
