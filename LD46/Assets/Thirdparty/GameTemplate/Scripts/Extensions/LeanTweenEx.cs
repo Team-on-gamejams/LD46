@@ -61,6 +61,59 @@ public static class LeanTweenEx
 			});
 	}
 
+	public static void FadeToSprite(SpriteRenderer orig, Sprite newSprite, float time) {
+		GameObject go = new GameObject("newSprite");
+
+		SpriteRenderer sr = go.AddComponent<SpriteRenderer>();
+		sr.sprite = newSprite;
+		sr.color = new Color(1, 1, 1, 0);
+		sr.flipX = orig.flipX;
+		sr.flipY = orig.flipY;
+
+		Transform trans = go.GetComponent<Transform>();
+		trans.transform.SetParent(orig.transform);
+		trans.localPosition = Vector3.zero;
+		trans.localScale = Vector3.one;
+
+		LeanTween.value(go, 0.0f, 1.0f, time)
+			.setOnUpdate((float a) => {
+				Color c = sr.color;
+				c.a = a;
+				sr.color = c;
+			})
+			.setOnComplete(() => {
+				GameObject.Destroy(go);
+				orig.sprite = newSprite;
+			});
+	}
+
+	public static void FadeFromSprite(SpriteRenderer orig, Sprite newSprite, float time) {
+		GameObject go = new GameObject("newSprite");
+
+		SpriteRenderer sr = go.AddComponent<SpriteRenderer>();
+		sr.sprite = orig.sprite;
+		sr.color = new Color(1, 1, 1, 1);
+		sr.flipX = orig.flipX;
+		sr.flipY = orig.flipY;
+
+		Transform trans = go.GetComponent<Transform>();
+		trans.transform.SetParent(orig.transform);
+		trans.localPosition = Vector3.zero;
+		trans.localScale = Vector3.one;
+
+		orig.sprite = newSprite;
+
+		LeanTween.value(go, 1.0f, 0.0f, time)
+			.setOnUpdate((float a) => {
+				Color c = sr.color;
+				c.a = a;
+				sr.color = c;
+			})
+			.setOnComplete(() => {
+				GameObject.Destroy(go);
+			});
+	}
+
 	public static void InvokeNextFrame(GameObject go, Action action)
 	{
 		go.GetComponent<MonoBehaviour>().StartCoroutine(InvokeNextFrameInner(action));

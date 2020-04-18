@@ -12,8 +12,8 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 	[SerializeField] SpriteRenderer[] sr;
 
 	[Header("Visual")]
-	[SerializeField] Color[] hightlightColors;
-	Color[] defaultColors;
+	[SerializeField] Sprite[] hightlightSprites;
+	Sprite[] defaultSprites;
 
 	[Header("Debug")]
 	[SerializeField] TextMeshProUGUI debugTextField = null;
@@ -27,9 +27,9 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 	public override void Init() {
 		base.Init();
 
-		defaultColors = new Color[sr.Length];
-		for (byte i = 0; i < defaultColors.Length; ++i) {
-			defaultColors[i] = sr[i].color;
+		defaultSprites = new Sprite[sr.Length];
+		for (byte i = 0; i < defaultSprites.Length; ++i) {
+			defaultSprites[i] = sr[i].sprite;
 		}
 
 		sequence = new List<byte>(maxSequenceLength);
@@ -48,7 +48,7 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 			lastClickId = (sbyte)id;
 
 			if (isPlaying) {
-				HightlightButton(id, hightlightColors[id]);
+				HightlightButton(id, hightlightSprites[id], true);
 
 				currAudio = AudioManager.Instance.Play(sounds[id], channel: AudioManager.AudioChannel.Sound);
 				currDelayedUp = LeanTween.delayedCall(sounds[id].length, () => {
@@ -65,7 +65,7 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 	void NoteUpAction() {
 		if (sequence[currSequenceId] == lastClickId) {
 			++currSequenceId;
-			HightlightButton(lastClickId, defaultColors[lastClickId]);
+			HightlightButton(lastClickId, defaultSprites[lastClickId], false);
 
 			if (currSequenceId == sequence.Count) {
 				if (sequence.Count >= maxSequenceLength) {
@@ -102,11 +102,11 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 			allDelay += additionalDelay * currId;
 
 			LeanTween.delayedCall(allDelay, () => {
-				HightlightButton(sequence[currId], hightlightColors[sequence[currId]]);
+				HightlightButton(sequence[currId], hightlightSprites[sequence[currId]], true);
 				AudioManager.Instance.Play(sounds[sequence[currId]], channel: AudioManager.AudioChannel.Sound);
 
 				LeanTween.delayedCall(sounds[sequence[currId]].length, () => {
-					HightlightButton(sequence[currId], defaultColors[sequence[currId]]);
+					HightlightButton(sequence[currId], defaultSprites[sequence[currId]], false);
 					if (currId == sequence.Count - 1) {
 						isPlaying = true;
 					}
@@ -119,8 +119,11 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 		debugTextField.text = $"Curr Id: {currSequenceId}/{sequence.Count} Seq len: {sequence.Count}/{maxSequenceLength} CurrNote: {sequence[currSequenceId]}";
 	}
 
-	LTDescr HightlightButton(int id, Color c) {
-		return LeanTweenEx.ChangeSpriteColor(sr[id], c, 0.1f);
+	void HightlightButton(int id, Sprite sprite, bool isToSprite) {
+		if(isToSprite)
+			LeanTweenEx.FadeToSprite(sr[id], sprite, 0.1f);
+		else
+			LeanTweenEx.FadeFromSprite(sr[id], sprite, 0.1f);
 	}
 
 	protected override void ShowLoseAnimation() {
