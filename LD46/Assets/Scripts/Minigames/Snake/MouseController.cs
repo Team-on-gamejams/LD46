@@ -5,7 +5,7 @@ using UnityEngine;
 public class MouseController : MonoBehaviour
 {
     [Header("Balance")]
-    [SerializeField] [Tooltip("Got squared while play")] float speed = 2;
+    [SerializeField] float speed = 2;
     [SerializeField] [Tooltip("Got squared while play")] float topSpeed = 1000;
 
     [Header("Refs")]
