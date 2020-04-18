@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerTextField: {fileID: 5942632001445486968}
-  maxTime: 100
+  maxTime: 10
   matchs: 4
   maxWrongMatchs: 2
   randomLeftRight: 0

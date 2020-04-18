@@ -21,10 +21,14 @@ public class SpriteRendererAnimator : MonoBehaviour {
 #endif
 
 	private void Awake() {
-		if(startWithRandom)
-			sr.sprite = sprites.Random();
-		else
+		if (startWithRandom) {
+			currSprite = (byte)Random.Range(0, sprites.Length);
 			sr.sprite = sprites[currSprite];
+		}
+		else {
+
+			sr.sprite = sprites[currSprite];
+		}
 	}
 
 	void Update() {
