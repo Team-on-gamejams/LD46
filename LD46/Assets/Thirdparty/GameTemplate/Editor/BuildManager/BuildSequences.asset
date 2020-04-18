@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequences:
   - editorName: Windows 32 only
-    itchGameLink: teamon/gametemplate
+    itchGameLink: teamon/zoo-keeper
     builds:
     - outputRoot: Builds/
-      middlePath: $NAME_$VERSION_TEST/$NAME$EXECUTABLE
+      middlePath: $NAME_$VERSION_$DAY_$TIME/$NAME$EXECUTABLE
       targetGroup: 1
       target: 5
       options: 8
-      needZip: 0
-      compressDirPath: $NAME_$VERSION_TEST
-      needItchPush: 0
+      needZip: 1
+      compressDirPath: $NAME_$VERSION_$DAY_$TIME
+      needItchPush: 1
       itchChannel: windows-32
-      itchDirPath: $NAME_$VERSION_TEST
+      itchDirPath: $NAME_$VERSION_$DAY_$TIME
       itchAddLastChangelogUpdateNameToVerison: 1
       itchLastChangelogUpdateName: TEST CHANGELOG CHANGING RUNTIME
       useGithubActions: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
       needSteamPush: 0
       needGoogleDricePush: 0
   - editorName: Local + Zip + itch.io
-    itchGameLink: teamon/gametemplate
+    itchGameLink: teamon/zoo-keeper
     builds:
     - outputRoot: Builds/
       middlePath: $NAME_$VERSION_$PLATFORM/$NAME_$VERSION/$NAME$EXECUTABLE

@@ -12,10 +12,12 @@ using Debug = UnityEngine.Debug;
 
 public static class BuildManager {
 	const string butlerRelativePath = @"Thirdparty/GameTemplate/Editor/BuildManager/butler/butler.exe";
+	static DateTime usedDate;
 
 	public static void RunBuildSequnce(BuildSequence sequence, ChangelogData changelog) {
 		// Start init
 		GameManager.InstanceEditor.buildNameString = $"{PlayerSettings.bundleVersion} - {changelog.LocalizedUpdate}";
+		usedDate = DateTime.Now;
 		//End init
 
 		Debug.Log("Start building all");
@@ -69,7 +71,9 @@ public static class BuildManager {
 		s = s.Replace("$NAME", GetProductName());
 		s = s.Replace("$PLATFORM", ConvertBuildTargetToString(data.target));
 		s = s.Replace("$VERSION", PlayerSettings.bundleVersion);
-		s = s.Replace("$DATE", $"{DateTime.Now.Date.Year}_{DateTime.Now.Date.Month}_{DateTime.Now.Date.Day}");
+		s = s.Replace("$DATE", $"{usedDate.Date.Year}_{usedDate.Date.Month}_{usedDate.Date.Day}");
+		s = s.Replace("$DAY", $"{usedDate.Date.Day}");
+		s = s.Replace("$TIME", $"{usedDate.Hour}_{usedDate.Minute}");
 		s = s.Replace("$EXECUTABLE", GetBuildTargetExecutable(data.target));
 		return s;
 	}
