@@ -89,7 +89,7 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 
 	void ContinueSequence() {
 		const float additionalDelay = 0.1f;
-		float allDelay = 0.0f;
+		float allDelay = additionalDelay;
 
 		lastClickId = -1;
 		currSequenceId = 0;
@@ -99,7 +99,7 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 		for (byte i = 0; i < sequence.Count; ++i) {
 			byte currId = i;
 
-			allDelay += additionalDelay * currId + sounds[sequence[currId]].length;
+			allDelay += additionalDelay * currId;
 
 			LeanTween.delayedCall(allDelay, () => {
 				HightlightButton(sequence[currId], hightlightColors[sequence[currId]]);
@@ -112,6 +112,8 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 					}
 				});
 			});
+
+			allDelay += sounds[sequence[currId]].length;
 		}
 
 		debugTextField.text = $"Curr Id: {currSequenceId}/{sequence.Count} Seq len: {sequence.Count}/{maxSequenceLength} CurrNote: {sequence[currSequenceId]}";
