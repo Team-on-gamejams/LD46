@@ -27,7 +27,7 @@ MonoBehaviour:
       itchChannel: windows-32
       itchDirPath: $NAME_$VERSION_$DAY_$TIME
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: TEST CHANGELOG CHANGING RUNTIME
+      itchLastChangelogUpdateName: 0.1 - Set this changelog from local polyglot file
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
