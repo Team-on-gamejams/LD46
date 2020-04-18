@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class TurtleFlipper : MonoBehaviour
+public class TurtleFlipper : BaseMinigame
 {
   public GameObject Arrow;
 
     public Vector3 getAngle()
-      {
-        return Arrow.transform.eulerAngles;
-      }
+    {
+      return Arrow.transform.eulerAngles;
+    }
 
     void Rotate(GameObject obj)
     {
