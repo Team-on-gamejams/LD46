@@ -12,12 +12,10 @@ public class MouseController : MonoBehaviour
 
     void OnMouseEnter()
     {
-        GetComponent<Renderer>().material.color = mouseOverColor;
     }
 
     void OnMouseExit()
     {
-        GetComponent<Renderer>().material.color = originalColor;
     }
 
     void OnMouseDown()
@@ -39,5 +37,10 @@ public class MouseController : MonoBehaviour
             Vector3 rayPoint = ray.GetPoint(distance);
             transform.position = rayPoint;
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
     }
 }
