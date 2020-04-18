@@ -11,13 +11,14 @@ public class PandaMinigame : BaseMinigame {
 	byte wrongMatchs = 0;
 
 	[Header("Refs")]
-	[SerializeField] SpriteRenderer centerPanda;
-	[SerializeField] SpriteRenderer leftPanda;
-	[SerializeField] SpriteRenderer rightPanda;
+	[SerializeField] SpriteRenderer centerPanda = null;
+	[SerializeField] SpriteRenderer leftPanda = null;
+	[SerializeField] SpriteRenderer rightPanda = null;
 
-	[SerializeField] Sprite[] genders;
+	[SerializeField] Sprite[] genders = null;
 
-	[SerializeField] TextMeshProUGUI debugTextField;
+	[Header("Debug")]
+	[SerializeField] TextMeshProUGUI debugTextField = null;
 
 	bool centerGender;
 	bool leftGender;
@@ -81,6 +82,7 @@ public class PandaMinigame : BaseMinigame {
 	void SpawnNewPanda() {
 		debugTextField.text += $" Total: {matchs} WrongLeft: {wrongMatchs}";
 
+		centerGender = Random.Range(0, 2) == 0;
 		if (randomLeftRight) {
 			leftGender = Random.Range(0, 2) == 0;
 			rightGender = Random.Range(0, 2) == 0;
@@ -89,8 +91,8 @@ public class PandaMinigame : BaseMinigame {
 			leftGender = false;
 			rightGender = true;
 		}
-		
-		centerGender = Random.Range(0, 2) == 0;
+
+		centerPanda.transform.localScale = new Vector3(centerGender != rightGender ? 1 : -1, 1, 1);
 
 		centerPanda.sprite = genders[centerGender ? 1 : 0];
 		leftPanda.sprite = genders[leftGender ? 1 : 0];
