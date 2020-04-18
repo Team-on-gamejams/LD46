@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameHandler : MonoBehaviour
+public class MouseController : MonoBehaviour
 {
     private Color mouseOverColor = Color.blue;
     private Color originalColor = Color.yellow;
