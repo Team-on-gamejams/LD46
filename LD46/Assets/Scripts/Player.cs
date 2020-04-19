@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
 
 	[Header("Minigames")]
 	[SerializeField] [ReorderableList] List<BaseBaseMinigame> minigames = null;
+	[SerializeField] [ReorderableList] List<MinigameLauncher> minigamesSingle = null;
 
 	[Header("Audio")]
 	[SerializeField] AudioClip mainTheme = null;
@@ -27,6 +28,11 @@ public class Player : MonoBehaviour {
 	}
 
 	private void Start() {
+		for(byte i = 0; i < currDifficulty; ++i) {
+			if(i < minigamesSingle.Count)
+				minigamesSingle[i].Enable();
+		}
+
 		if (mainTheme != null) {
 			LeanTween.delayedCall(0.1f, () => {
 				AudioManager.Instance.PlayLoop(mainTheme, 0.7f, channel: AudioManager.AudioChannel.Music);
@@ -41,15 +47,11 @@ public class Player : MonoBehaviour {
 	}
 
 	public void OnClearDifficultyClick() {
-		currDifficulty = 0;
-		PlayerPrefs.SetInt(SAVE_PROGRESS_KEY, currDifficulty);
-		debugTextField.text = $"Difficulty: {currDifficulty}";
+		ResetDifficulty();
 	}	
 	
 	public void OnAddDifficultyClick() {
-		++currDifficulty;
-		PlayerPrefs.SetInt(SAVE_PROGRESS_KEY, currDifficulty);
-		debugTextField.text = $"Difficulty: {currDifficulty}";
+		IncreaseDifficulty();
 	}
 
 	public void StartLoop() {
@@ -106,9 +108,7 @@ public class Player : MonoBehaviour {
 		minigames.Shuffle();
 		currMinigameId = 0;
 
-		++currDifficulty;
-		PlayerPrefs.SetInt(SAVE_PROGRESS_KEY, currDifficulty);
-		debugTextField.text = $"Difficulty: {currDifficulty}";
+		IncreaseDifficulty();
 
 		gameMenu.ShowMainMenu();
 	}
@@ -125,5 +125,23 @@ public class Player : MonoBehaviour {
 
 	void OnEndSingle() {
 		gameMenu.ShowMainMenu();
+	}
+
+	void IncreaseDifficulty() {
+		if(currDifficulty < minigamesSingle.Count)
+			minigamesSingle[currDifficulty].Enable();
+		++currDifficulty;
+		PlayerPrefs.SetInt(SAVE_PROGRESS_KEY, currDifficulty);
+		debugTextField.text = $"Difficulty: {currDifficulty}";
+	}
+
+	void ResetDifficulty() {
+		currDifficulty = 0;
+		PlayerPrefs.SetInt(SAVE_PROGRESS_KEY, currDifficulty);
+		debugTextField.text = $"Difficulty: {currDifficulty}";
+
+		for (byte i = 0; i < minigamesSingle.Count; ++i) {
+			minigamesSingle[i].Disable();
+		}
 	}
 }

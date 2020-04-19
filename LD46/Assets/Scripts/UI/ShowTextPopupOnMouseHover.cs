@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 public class ShowTextPopupOnMouseHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 	[Header("Data")]
-	[SerializeField] [Multiline] string text = "";
+	[Multiline] public string text = "";
 	[SerializeField] bool isUp = true;
 
 	[Header("Refs")]

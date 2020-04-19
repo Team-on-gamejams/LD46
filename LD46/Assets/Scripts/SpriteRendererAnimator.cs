@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using NaughtyAttributes;
 
-[RequireComponent(typeof(SpriteRenderer))]
 public class SpriteRendererAnimator : MonoBehaviour {
 	[SerializeField] bool startWithRandom = true;
 	[SerializeField] float secondsForOneSprite = 0.35f;
 	[SerializeField] [ReorderableList] Sprite[] sprites = null;
 	[ReadOnly] [SerializeField] SpriteRenderer sr = null;
+	[ReadOnly] [SerializeField] Image image = null;
 
 	byte currSprite = 0;
 	float time = 0;
@@ -17,13 +18,18 @@ public class SpriteRendererAnimator : MonoBehaviour {
 	private void OnValidate() {
 		if (sr == null)
 			sr = GetComponent<SpriteRenderer>();
+		if (image == null)
+			image = GetComponent<Image>();
 	}
 #endif
 
 	private void Awake() {
 		if (startWithRandom) {
 			currSprite = (byte)Random.Range(0, sprites.Length);
-			sr.sprite = sprites[currSprite];
+			if(sr)
+				sr.sprite = sprites[currSprite];
+			if(image)
+				image.sprite = sprites[currSprite];
 			time = Random.Range(0, secondsForOneSprite - Time.deltaTime);
 		}
 		else {
@@ -39,7 +45,10 @@ public class SpriteRendererAnimator : MonoBehaviour {
 			++currSprite;
 			if (currSprite == sprites.Length)
 				currSprite = 0;
-			sr.sprite = sprites[currSprite];
+			if (sr)
+				sr.sprite = sprites[currSprite];
+			if (image)
+				image.sprite = sprites[currSprite];
 		}
 	}
 }
