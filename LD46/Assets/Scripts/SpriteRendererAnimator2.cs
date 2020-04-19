@@ -48,6 +48,11 @@ public class SpriteRendererAnimator2 : MonoBehaviour {
 		}
 	}
 
+	public void SetSequenceForce(byte _currSequence) {
+		currSequence = _currSequence;
+		sr.sprite = GetCurrSequence()[currSprite];
+	}
+
 	Sprite[] GetCurrSequence() {
 		switch (currSequence) {
 			case 0:
