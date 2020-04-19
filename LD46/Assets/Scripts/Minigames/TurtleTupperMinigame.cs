@@ -3,15 +3,60 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using NaughtyAttributes;
+using UnityEngine.EventSystems;
 
 public class TurtleTupperMinigame : BaseMinigame {
 	[Header("Refs")]
-	[SerializeField] SpriteRendererAnimator2[] turtles = null;
-	[SerializeField] SpriteRendererAnimator2[] turtleShadows = null;
+	[SerializeField] GameObject turtlePrefab;
+	[SerializeField] GameObject turtleShadowPrefab;
+	SpriteRendererAnimator2[] turtles = null;
+	SpriteRendererAnimator2[] turtleShadows = null;
 	bool[] turtlesState = null;
 
 	[Header("Debug")]
 	[SerializeField] TextMeshProUGUI debugTextField = null;
+
+	TurtleMinigameDifficulty difficulty;
+
+	public override void Init(byte usedDifficulty) {
+		base.Init(usedDifficulty);
+		difficulty = difficultyBase as TurtleMinigameDifficulty;
+
+		short i = difficulty.turtlesCount;
+		turtles = new SpriteRendererAnimator2[i];
+		turtleShadows = new SpriteRendererAnimator2[i];
+		turtlesState = new bool[i];
+
+		while (i > 0) {
+			--i;
+			int id = i;
+
+			Vector3 pos = GameManager.Instance.Camera.ViewportToWorldPoint(new Vector3(Random.Range(0.05f, 0.95f), Random.Range(0.0f, 0.5f)));
+			pos.z = 0.0f;
+
+			turtles[i] = Instantiate(turtlePrefab,
+				pos,
+				Quaternion.identity, transform)
+				.GetComponent<SpriteRendererAnimator2>();
+
+			turtleShadows[i] = Instantiate(turtleShadowPrefab,
+				pos,
+				Quaternion.identity, transform)
+				.GetComponent<SpriteRendererAnimator2>();
+
+			EventTrigger et = turtles[i].GetComponent<EventTrigger>();
+			EventTrigger.Entry en = new EventTrigger.Entry();
+			en.callback.AddListener((ed) => OnTutrleClick(id));
+			en.eventID = EventTriggerType.PointerDown;
+			et.triggers.Add(en);
+
+			turtlesState[i] = false;
+
+			SpriteRenderer sr = turtles[i].GetComponent<SpriteRenderer>();
+			SpriteRenderer srShadow = turtleShadows[i].GetComponent<SpriteRenderer>();
+			srShadow.flipX = sr.flipX = Random.Range(0, 2) == 1;
+		}
+	}
 
 	new void Update() {
 		base.Update();
@@ -39,8 +84,7 @@ public class TurtleTupperMinigame : BaseMinigame {
 			.setOnComplete(()=> {
 				turtleShadows[id].SetSequenceForce(1);
 				turtles[id].SetSequenceForce(1);
-				sr.flipX = moveX < 0;
-				srShadow.flipX = moveX < 0;
+				srShadow.flipX = sr.flipX = moveX < 0;
 				LeanTween.moveLocalY(t, t.transform.position.y - moveY, 0.3f)
 				.setEase(LeanTweenType.easeInCubic)
 				.setOnComplete(()=> {
@@ -62,21 +106,6 @@ public class TurtleTupperMinigame : BaseMinigame {
 		if (isAllOnLegs) {
 			isPlaying = false;
 			ShowWinAnimation();
-		}
-	}
-
-	public override void Init(byte usedDifficulty) {
-		base.Init(usedDifficulty);
-
-		turtlesState = new bool[turtles.Length];
-		for(byte i = 0; i < turtlesState.Length; ++i) {
-			turtlesState[i] = false;
-
-			SpriteRenderer sr = turtles[i].GetComponent<SpriteRenderer>();
-			SpriteRenderer srShadow = turtleShadows[i].GetComponent<SpriteRenderer>();
-
-			sr.flipX = Random.Range(0, 2) == 1;
-			srShadow.flipX = Random.Range(0, 2) == 1;
 		}
 	}
 

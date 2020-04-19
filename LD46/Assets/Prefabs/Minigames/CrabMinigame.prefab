@@ -300,12 +300,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 7
-  difficulties: []
+  difficulties:
+  - {fileID: 11400000, guid: 25551ae108c9a8d4d92ffa97510daf1e, type: 2}
+  - {fileID: 11400000, guid: bf946f495a2218f4892b326af6f751dc, type: 2}
+  - {fileID: 11400000, guid: 1c22126ce21202247bc2e31b319e850b, type: 2}
+  - {fileID: 11400000, guid: ede44d77155ff2940a32cf497d1f588b, type: 2}
+  - {fileID: 11400000, guid: 0ef67768a5bd10449b6372bd4ee84e2f, type: 2}
+  - {fileID: 11400000, guid: 5499d0265fa878e45acdc6496da0eac3, type: 2}
+  - {fileID: 11400000, guid: ae74be926a84e2044befb0335cdb1974, type: 2}
+  - {fileID: 11400000, guid: e88fa54c75df23f438a753654380eb31, type: 2}
+  timerTextField: {fileID: 5942632001445486968}
   Crab: {fileID: 7824089641626436953}
-  Range: 3.5
-  maxHeight: 3.5
-  minHeight: -3.5
-  speed: 100
+  lineHeight: 3.5
 --- !u!1 &5942632001224054568
 GameObject:
   m_ObjectHideFlags: 0

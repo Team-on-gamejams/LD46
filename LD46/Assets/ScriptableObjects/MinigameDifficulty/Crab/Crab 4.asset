@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforePlay: 1
   timer: 10
-  isWinIfTimerEnds: 0
+  isWinIfTimerEnds: 1
+  speed: 10
+  spawnTimer: 1
