@@ -29,7 +29,12 @@ public class CrocoBrush : MonoBehaviour
 
     if (colide.gameObject.name.Contains("Caries"))
     {
-      colide.gameObject.active = false;
+      colide.GetComponent<SpriteRenderer>().color = colide.GetComponent<SpriteRenderer>().color - new Color(0, 0, 0, 0.05f);
+
+      if (colide.GetComponent<SpriteRenderer>().color.a <= 0.3f)
+      {
+        colide.gameObject.active = false;
+      }
     }
   }
 

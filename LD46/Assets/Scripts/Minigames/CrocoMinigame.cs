@@ -8,9 +8,10 @@ public class CrocoMinigame : BaseMinigame {
   public Transform Crocodile;
   public Transform Toothbrush;
   public GameObject FrontCaries;
-  [SerializeField] List<Transform> Caries;
+  [SerializeField] List<Transform> Caries = null;
   bool flip = false;
   public bool wonState = false;
+  public float Difficulty;
 
 
   public void Win() {

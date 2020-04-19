@@ -121,6 +121,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &13924581 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6535911597515280880, guid: c167ca97e16a1704fbab576cf2c1195c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6535911597878719810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &48357429 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6535911597606796006, guid: c167ca97e16a1704fbab576cf2c1195c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6535911597878719810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &398123041
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +730,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99809cf5b63d79645a627fd7946b1e8b, type: 3}
+--- !u!1 &1033611304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4961521406792790973, guid: c167ca97e16a1704fbab576cf2c1195c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6535911597878719810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1474034642 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6535911597381574358, guid: c167ca97e16a1704fbab576cf2c1195c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6535911597878719810}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1594797234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,6 +1036,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6535911599146856188, guid: c167ca97e16a1704fbab576cf2c1195c,
+        type: 3}
+      propertyPath: Difficulty
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 6535911599146856189, guid: c167ca97e16a1704fbab576cf2c1195c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1066,5 +1101,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrocToothMinigame
       objectReference: {fileID: 0}
+    - target: {fileID: 8974124776396071686, guid: c167ca97e16a1704fbab576cf2c1195c,
+        type: 3}
+      propertyPath: Toothbrush
+      value: 
+      objectReference: {fileID: 48357429}
+    - target: {fileID: 8974124776396071686, guid: c167ca97e16a1704fbab576cf2c1195c,
+        type: 3}
+      propertyPath: FrontCaries
+      value: 
+      objectReference: {fileID: 1033611304}
+    - target: {fileID: 8974124776396071686, guid: c167ca97e16a1704fbab576cf2c1195c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974124776396071686, guid: c167ca97e16a1704fbab576cf2c1195c,
+        type: 3}
+      propertyPath: Crocodile
+      value: 
+      objectReference: {fileID: 1474034642}
+    - target: {fileID: 8974124776396071686, guid: c167ca97e16a1704fbab576cf2c1195c,
+        type: 3}
+      propertyPath: timerTextField
+      value: 
+      objectReference: {fileID: 13924581}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c167ca97e16a1704fbab576cf2c1195c, type: 3}
