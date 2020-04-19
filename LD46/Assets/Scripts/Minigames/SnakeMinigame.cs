@@ -5,6 +5,13 @@ using UnityEngine;
 using TMPro;
 
 public class SnakeMinigame : BaseMinigame {
+	public SnakeMinigameDifficulty difficulty;
+
+	public override void Init(byte usedDifficulty) {
+		base.Init(usedDifficulty);
+		difficulty = difficultyBase as SnakeMinigameDifficulty;
+	}
+
 	public void Win() {
 		isPlaying = false;
 		ShowWinAnimation();

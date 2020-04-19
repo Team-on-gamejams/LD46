@@ -44,6 +44,12 @@ public class Player : MonoBehaviour {
 		currDifficulty = 0;
 		PlayerPrefs.SetInt(SAVE_PROGRESS_KEY, currDifficulty);
 		debugTextField.text = $"Difficulty: {currDifficulty}";
+	}	
+	
+	public void OnAddDifficultyClick() {
+		++currDifficulty;
+		PlayerPrefs.SetInt(SAVE_PROGRESS_KEY, currDifficulty);
+		debugTextField.text = $"Difficulty: {currDifficulty}";
 	}
 
 	public void StartLoop() {

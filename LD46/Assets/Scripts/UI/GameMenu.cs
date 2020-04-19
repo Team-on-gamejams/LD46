@@ -35,13 +35,19 @@ public class GameMenu : MonoBehaviour {
 	}
 
 	private void Start() {
+#if UNITY_EDITOR
 		logo.interactable = logo.blocksRaycasts = false;
+		LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
+		ShowMainMenu();
+#else
+		logo.interactable = logo.blocksRaycasts = true;
 		logo.alpha = 1.0f;
 		LeanTween.delayedCall(logoAnim.GetDuration(), () => {
 			logo.interactable = logo.blocksRaycasts = false;
 			LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
 			ShowMainMenu();
 		});
+#endif
 	}
 
 	public void ShowMainMenu() {
