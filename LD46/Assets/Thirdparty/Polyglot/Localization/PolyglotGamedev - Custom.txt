@@ -4,4 +4,4 @@ LANGUAGE_EN	[LanguageName] in english	English	French	Spanish	German	Italian 	Por
 LANGUAGE_DIRECTION	ltr or rtl (text direction used by game code)	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	ltr	rtl	rtl	ltr
 																													
 Polyglot	100																												
-Changelog_0.1		Set this changelog from local polyglot file							Тестовый чейнджлог																				
+Changelog_0.1		Ludum Dare 46							Ludum Dare 46																				

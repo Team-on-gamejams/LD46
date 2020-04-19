@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 48392059}
   - component: {fileID: 48392058}
   - component: {fileID: 48392057}
+  - component: {fileID: 48392061}
   m_Layer: 5
   m_Name: MapMark (3)
   m_TagString: Untagged
@@ -415,6 +416,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48392055}
   m_CullTransparentMesh: 0
+--- !u!114 &48392061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48392055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Practive in turtle minigame
+  isUp: 0
+  textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
+  rc: {fileID: 48392056}
 --- !u!1 &114029119
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +646,7 @@ GameObject:
   - component: {fileID: 182269459}
   - component: {fileID: 182269458}
   - component: {fileID: 182269457}
+  - component: {fileID: 182269460}
   m_Layer: 5
   m_Name: ButtonSound
   m_TagString: Untagged
@@ -650,11 +668,11 @@ RectTransform:
   m_Father: {fileID: 2107989038}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 1805, y: 464}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -71.5, y: -76}
   m_SizeDelta: {x: 87, y: 100}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &182269457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,6 +763,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182269455}
   m_CullTransparentMesh: 0
+--- !u!114 &182269460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182269455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "Turn on/off \naudio"
+  isUp: 0
+  textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
+  rc: {fileID: 182269456}
 --- !u!1 &345240974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1413,7 @@ GameObject:
   - component: {fileID: 589772901}
   - component: {fileID: 589772900}
   - component: {fileID: 589772899}
+  - component: {fileID: 589772902}
   m_Layer: 5
   m_Name: ButtonPlay
   m_TagString: Untagged
@@ -1403,9 +1438,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 48}
+  m_AnchoredPosition: {x: 0, y: 117.5}
   m_SizeDelta: {x: 601.7, y: 139}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589772899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1496,6 +1531,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589772897}
   m_CullTransparentMesh: 0
+--- !u!114 &589772902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589772897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "Play all minigames and \nunlock new games for practice\n\nYou can open cartoon,
+    if unlock them all"
+  isUp: 1
+  textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
+  rc: {fileID: 589772898}
 --- !u!1001 &691460477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1802,6 +1854,7 @@ GameObject:
   - component: {fileID: 755007710}
   - component: {fileID: 755007709}
   - component: {fileID: 755007708}
+  - component: {fileID: 755007711}
   m_Layer: 5
   m_Name: ButtonExit
   m_TagString: Untagged
@@ -1824,11 +1877,11 @@ RectTransform:
   m_Father: {fileID: 2107989038}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 587, y: 48}
-  m_SizeDelta: {x: 278.2, y: 80.899994}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -373, y: 88.45001}
+  m_SizeDelta: {x: 278.19995, y: 80.900024}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755007708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,6 +1972,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755007706}
   m_CullTransparentMesh: 0
+--- !u!114 &755007711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755007706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Are you want?
+  isUp: 1
+  textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
+  rc: {fileID: 755007707}
 --- !u!1 &844991022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,6 +2001,7 @@ GameObject:
   - component: {fileID: 844991025}
   - component: {fileID: 844991024}
   - component: {fileID: 844991027}
+  - component: {fileID: 844991028}
   m_Layer: 5
   m_Name: MapMark (0)
   m_TagString: Untagged
@@ -2063,6 +2133,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   player: {fileID: 114029120}
+--- !u!114 &844991028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844991022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Practive in panda minigame
+  isUp: 1
+  textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
+  rc: {fileID: 844991023}
 --- !u!1 &857906319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,6 +2774,7 @@ GameObject:
   - component: {fileID: 1379444125}
   - component: {fileID: 1379444124}
   - component: {fileID: 1379444123}
+  - component: {fileID: 1379444126}
   m_Layer: 5
   m_Name: ButtonCredits
   m_TagString: Untagged
@@ -2710,11 +2797,11 @@ RectTransform:
   m_Father: {fileID: 2107989038}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -609, y: 48}
-  m_SizeDelta: {x: 278.2, y: 80.899994}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 351, y: 88.45001}
+  m_SizeDelta: {x: 278.2, y: 80.900024}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1379444123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2805,6 +2892,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379444121}
   m_CullTransparentMesh: 0
+--- !u!114 &1379444126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379444121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Who made this game
+  isUp: 1
+  textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
+  rc: {fileID: 1379444122}
 --- !u!1 &1435049018
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,6 +3124,7 @@ GameObject:
   - component: {fileID: 1550950027}
   - component: {fileID: 1550950026}
   - component: {fileID: 1550950025}
+  - component: {fileID: 1550950029}
   m_Layer: 5
   m_Name: MapMark (2)
   m_TagString: Untagged
@@ -3152,6 +3256,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550950023}
   m_CullTransparentMesh: 0
+--- !u!114 &1550950029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550950023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Practive in egg hatch minigame
+  isUp: 1
+  textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
+  rc: {fileID: 1550950024}
 --- !u!1 &1594797234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3488,6 +3608,7 @@ GameObject:
   - component: {fileID: 1746020358}
   - component: {fileID: 1746020357}
   - component: {fileID: 1746020356}
+  - component: {fileID: 1746020360}
   m_Layer: 5
   m_Name: MapMark (1)
   m_TagString: Untagged
@@ -3619,6 +3740,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746020354}
   m_CullTransparentMesh: 0
+--- !u!114 &1746020360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746020354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Practive in bird minigame
+  isUp: 0
+  textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
+  rc: {fileID: 1746020355}
 --- !u!1 &1767389189
 GameObject:
   m_ObjectHideFlags: 0
