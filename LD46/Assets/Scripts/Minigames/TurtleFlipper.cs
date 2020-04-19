@@ -25,8 +25,8 @@ public class TurtleFlipper : BaseMinigame {
 			Arrow.transform.Rotate(new Vector3(0, 0, arrowRotateSpeed) * Time.deltaTime, Space.Self);
 	}
 
-	public override void Init() {
-		base.Init();
+	public override void Init(byte usedDifficulty) {
+		base.Init(usedDifficulty);
 
 		Arrow.transform.Rotate(new Vector3(0, 0, Random.Range(0, 360)), Space.Self);
 		arrowRotateSpeed = Random.Range(0, 2) == 1 ? Random.Range(70f, 120f) : Random.Range(-120f, -70f);

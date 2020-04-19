@@ -1066,10 +1066,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 5
-  delayBeforePlay: 1
-  isWinIfTimerEnds: 0
+  difficulties:
+  - {fileID: 11400000, guid: 5c374723932c4e24283ffb390438af5b, type: 2}
+  - {fileID: 11400000, guid: 9cc8ec0ffd8701744965d3374d48a095, type: 2}
+  - {fileID: 11400000, guid: f2337262585dd63468fccd33dbf3b17d, type: 2}
+  - {fileID: 11400000, guid: 051b20db85b6b0648964e93cd7a96b1b, type: 2}
+  - {fileID: 11400000, guid: fa48c715aaaa58d41af4d4a38e3a640c, type: 2}
+  - {fileID: 11400000, guid: 2e1c69cb6ff685f4f86d575c8d34af51, type: 2}
+  - {fileID: 11400000, guid: 95efe5afc2bd4fc40bc8da67e924aaa5, type: 2}
+  - {fileID: 11400000, guid: d2948281c05fa42469151fb4a329e608, type: 2}
   timerTextField: {fileID: 1752860536867127474}
-  maxTime: 10
   turtles:
   - {fileID: 6989174262600601875}
   - {fileID: 6415557406448825435}

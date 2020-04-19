@@ -719,8 +719,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  delayBeforePlay: 1
-  maxSequenceLength: 4
+  difficulties:
+  - {fileID: 11400000, guid: fdd6450c8a3d17e48be60cd44005ccf6, type: 2}
+  - {fileID: 11400000, guid: aa35c9a3c1d263b43809a09aa278dcdd, type: 2}
+  - {fileID: 11400000, guid: 5f6144a49d620824a94940f6e03db440, type: 2}
+  - {fileID: 11400000, guid: 0b0fc487370b18447bf67b4d4fa49ada, type: 2}
+  - {fileID: 11400000, guid: 4fa8219b5dc02b040994ca89e62918ce, type: 2}
+  - {fileID: 11400000, guid: de97b76e2a430524ebe838e2866b9db9, type: 2}
+  - {fileID: 11400000, guid: 14fe6b382c3d1034d8ddd2d623a8bb36, type: 2}
+  - {fileID: 11400000, guid: 98adb928dd91fac49a76a5534d2570b0, type: 2}
   sounds:
   - {fileID: 8300000, guid: 8972a89b8d64f6f489fe83054e139e26, type: 3}
   - {fileID: 8300000, guid: 17ed3b61c38d7c44fa4e5af69de898d2, type: 3}

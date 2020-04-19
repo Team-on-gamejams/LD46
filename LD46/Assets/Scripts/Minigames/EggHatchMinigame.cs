@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class EggHatchMinigame : BaseMinigame {
 	[Header("Balance")]
-	[SerializeField] float neededDist = 500;
 	float neededDistHalf;
 
 	[Header("Refs")]
@@ -18,11 +17,14 @@ public class EggHatchMinigame : BaseMinigame {
 	float dist = 0;
 	Vector3 lastPos, currPos, deltaPos;
 
-	public override void Init() {
-		base.Init();
+	EggHatchMinigameDifficulty difficulty;
 
-		neededDistHalf = neededDist / 2;
-		debugTextField.text = $"Progress: {dist.ToString("0")}/{neededDist.ToString("0")}   Last: {deltaPos.magnitude.ToString("0")}";
+	public override void Init(byte usedDIfficulty) {
+		base.Init(usedDIfficulty);
+		difficulty = difficultyBase as EggHatchMinigameDifficulty;
+
+		neededDistHalf = difficulty.neededDist / 2;
+		debugTextField.text = $"Progress: {dist.ToString("0")}/{difficulty.neededDist.ToString("0")}   Last: {deltaPos.magnitude.ToString("0")}";
 	}
 
 	private new void Update() {
@@ -45,7 +47,7 @@ public class EggHatchMinigame : BaseMinigame {
 			if (dist >= neededDistHalf && sranim.currSequence <= 0) {
 				sranim.currSequence = 1;
 			}
-			else if (dist >= neededDist && sranim.currSequence <= 1) {
+			else if (dist >= difficulty.neededDist && sranim.currSequence <= 1) {
 				sranim.currSequence = 2;
 				isPlaying = false;
 				ShowWinAnimation();
@@ -54,7 +56,7 @@ public class EggHatchMinigame : BaseMinigame {
 
 		lastPos = currPos;
 
-		debugTextField.text = $"Progress: {dist.ToString("0")}/{neededDist.ToString("0")}   Last: {deltaPos.magnitude.ToString("0")}";
+		debugTextField.text = $"Progress: {dist.ToString("0")}/{difficulty.neededDist.ToString("0")}   Last: {deltaPos.magnitude.ToString("0")}";
 	}
 
 	protected override void ShowLoseAnimation() {

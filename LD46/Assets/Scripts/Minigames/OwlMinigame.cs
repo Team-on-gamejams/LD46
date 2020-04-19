@@ -6,11 +6,6 @@ using UnityEngine.InputSystem;
 using System.Linq;
 
 public class OwlMinigame : BaseMinigame {
-	[Header("Balance")]
-	[SerializeField] float maxAngle = 85;
-	[SerializeField] float fallSpeedAcceleration = 1;
-	[SerializeField] float fallSpeedMax = 20;
-	[SerializeField] float chengeByClick = 10;
 	float fallSpeed;
 	float currZ;
 	bool isFallLeft;
@@ -25,14 +20,16 @@ public class OwlMinigame : BaseMinigame {
 	[Header("Debug")]
 	[SerializeField] TextMeshProUGUI debugTextField = null;
 
-
-	public override void Init() {
-		base.Init();
+	OwlMinigameDifficulty difficulty;
+	
+	public override void Init(byte usedDIfficulty) {
+		base.Init(usedDIfficulty);
+		difficulty = difficultyBase as OwlMinigameDifficulty;
 
 		isFallLeft = Random.Range(0, 2) == 1;
 		owl.SetParent(isFallLeft ? leftAhchor : rightAhchor);
 
-		currZ = isFallLeft ? Random.Range(maxAngle / 4, maxAngle / 2) : Random.Range(-maxAngle / 2, -maxAngle / 4);
+		currZ = isFallLeft ? Random.Range(difficulty.maxAngle / 4, difficulty.maxAngle / 2) : Random.Range(-difficulty.maxAngle / 2, -difficulty.maxAngle / 4);
 
 		CheckIsNeedOtherSide();
 		SetRotation();
@@ -49,22 +46,22 @@ public class OwlMinigame : BaseMinigame {
 			CheckIsNeedOtherSide();
 
 			if (isFallLeft)
-				fallSpeed += fallSpeedAcceleration * Time.deltaTime;
+				fallSpeed += difficulty.fallSpeedAcceleration * Time.deltaTime;
 			else
-				fallSpeed -= fallSpeedAcceleration * Time.deltaTime;
-			fallSpeed = Mathf.Clamp(fallSpeed, -fallSpeedMax, fallSpeedMax);
+				fallSpeed -= difficulty.fallSpeedAcceleration * Time.deltaTime;
+			fallSpeed = Mathf.Clamp(fallSpeed, -difficulty.fallSpeedMax, difficulty.fallSpeedMax);
 
 			currZ += fallSpeed * Time.deltaTime;
 			CheckIsNeedOtherSide();
 
 			SetRotation();
 
-			if (currZ < -maxAngle || maxAngle < currZ) {
+			if (currZ < -difficulty.maxAngle || difficulty.maxAngle < currZ) {
 				isPlaying = false;
 				ShowLoseAnimation();
 			}
 
-			debugTextField.text = $"Angle: {(int)currZ}/{(int)maxAngle}  Speed: {fallSpeed.ToString("0.0")}/{fallSpeedMax.ToString("0.0")}";
+			debugTextField.text = $"Angle: {(int)currZ}/{(int)difficulty.maxAngle}  Speed: {fallSpeed.ToString("0.0")}/{difficulty.fallSpeedMax.ToString("0.0")}";
 		}
 	}
 
@@ -107,15 +104,15 @@ public class OwlMinigame : BaseMinigame {
 	}
 
 	public void OnLeftClick() {
-		currZ -= chengeByClick;
+		currZ -= difficulty.chengeByClick;
 		if (!isFallLeft)
-			fallSpeed -= chengeByClick * Time.deltaTime;
+			fallSpeed -= difficulty.chengeByClick * Time.deltaTime;
 	}
 
 	public void OnRightClick() {
-		currZ += chengeByClick;
+		currZ += difficulty.chengeByClick;
 		if (isFallLeft)
-			fallSpeed += chengeByClick * Time.deltaTime;
+			fallSpeed += difficulty.chengeByClick * Time.deltaTime;
 	}
 
 	protected override void ShowLoseAnimation() {

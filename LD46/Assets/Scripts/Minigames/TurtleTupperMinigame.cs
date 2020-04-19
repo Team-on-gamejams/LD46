@@ -5,7 +5,7 @@ using TMPro;
 using NaughtyAttributes;
 
 public class TurtleTupperMinigame : BaseMinigame {
-	[Header("Rets")]
+	[Header("Refs")]
 	[SerializeField] SpriteRendererAnimator2[] turtles = null;
 	[SerializeField] SpriteRendererAnimator2[] turtleShadows = null;
 	bool[] turtlesState = null;
@@ -65,8 +65,8 @@ public class TurtleTupperMinigame : BaseMinigame {
 		}
 	}
 
-	public override void Init() {
-		base.Init();
+	public override void Init(byte usedDifficulty) {
+		base.Init(usedDifficulty);
 
 		turtlesState = new bool[turtles.Length];
 		for(byte i = 0; i < turtlesState.Length; ++i) {

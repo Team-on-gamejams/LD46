@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using TMPro;
 
 public class Player : MonoBehaviour {
+	const string SAVE_PROGRESS_KEY = "Difficulty";
+
 	[Header("Minigames")]
 	[SerializeField] [ReorderableList] List<BaseBaseMinigame> minigames = null;
 
@@ -12,9 +15,16 @@ public class Player : MonoBehaviour {
 
 	[Header("Refs")]
 	[SerializeField] GameMenu gameMenu = null;
+	[SerializeField] TextMeshProUGUI debugTextField = null;
 
 	BaseBaseMinigame currMinigame = null;
 	byte currMinigameId = 0;
+	byte currDifficulty = 0;
+
+	private void Awake() {
+		currDifficulty = (byte)PlayerPrefs.GetInt(SAVE_PROGRESS_KEY, 0);
+		debugTextField.text = $"Difficulty: {currDifficulty}";
+	}
 
 	private void Start() {
 		if (mainTheme != null) {
@@ -24,9 +34,21 @@ public class Player : MonoBehaviour {
 		}
 	}
 
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.Alpha1)) {
+			debugTextField.gameObject.SetActive(!debugTextField.gameObject.activeSelf);
+		}
+	}
+
+	public void OnClearDifficultyClick() {
+		currDifficulty = 0;
+		PlayerPrefs.SetInt(SAVE_PROGRESS_KEY, currDifficulty);
+		debugTextField.text = $"Difficulty: {currDifficulty}";
+	}
+
 	public void StartLoop() {
 		gameMenu.HideMainMenu();
-		StartNewMinigame();
+		StartNewMinigameInSequence();
 	}
 	
 	public void PlayMinigame(MinigameType type) {
@@ -44,50 +66,58 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	void OnWinMinigame() {
-		++currMinigameId;
-		if (currMinigameId == minigames.Count) {
-			OnEndSequence();
-			return;
-		}
+	void StartNewMinigameInSequence() {
+		Debug.Log($"Start new minigame. Id: {currMinigameId}");
+		currMinigame = Instantiate(minigames[currMinigameId].gameObject, transform).GetComponent<BaseBaseMinigame>();
 
-		StartNewMinigame();
+		currMinigame.onWinEvent += OnWinMinigameInSequence;
+		currMinigame.onLoseEvent += OnLoseMinigameInSequence;
+
+		currMinigame.Init(currDifficulty);
 	}
 
-	void OnLoseMinigame() {
+	void OnWinMinigameInSequence() {
 		++currMinigameId;
 		if (currMinigameId == minigames.Count) {
 			OnEndSequence();
 			return;
 		}
 
-		StartNewMinigame();
+		StartNewMinigameInSequence();
+	}
+
+	void OnLoseMinigameInSequence() {
+		++currMinigameId;
+		if (currMinigameId == minigames.Count) {
+			OnEndSequence();
+			return;
+		}
+
+		StartNewMinigameInSequence();
 	}
 
 	void OnEndSequence() {
 		minigames.Shuffle();
 		currMinigameId = 0;
 
+		++currDifficulty;
+		PlayerPrefs.SetInt(SAVE_PROGRESS_KEY, currDifficulty);
+		debugTextField.text = $"Difficulty: {currDifficulty}";
+
 		gameMenu.ShowMainMenu();
-	}
-
-	void StartNewMinigame() {
-		Debug.Log($"Start new minigame. Id: {currMinigameId}");
-		currMinigame = Instantiate(minigames[currMinigameId].gameObject, transform).GetComponent<BaseBaseMinigame>();
-
-		currMinigame.onWinEvent += OnWinMinigame;
-		currMinigame.onLoseEvent += OnLoseMinigame;
-
-		currMinigame.Init();
 	}
 
 	void StartSingleMinigame(BaseBaseMinigame minigame) {
 		Debug.Log($"Start new minigame. Single: {minigame.transform.name}");
 		currMinigame = Instantiate(minigame.gameObject, transform).GetComponent<BaseBaseMinigame>();
 
-		currMinigame.onWinEvent += OnEndSequence;
-		currMinigame.onLoseEvent += OnEndSequence;
+		currMinigame.onWinEvent += OnEndSingle;
+		currMinigame.onLoseEvent += OnEndSingle;
 
-		currMinigame.Init();
+		currMinigame.Init(currDifficulty);
+	}
+
+	void OnEndSingle() {
+		gameMenu.ShowMainMenu();
 	}
 }

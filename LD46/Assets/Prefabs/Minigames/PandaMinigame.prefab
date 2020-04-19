@@ -741,13 +741,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  delayBeforePlay: 1
-  isWinIfTimerEnds: 0
+  difficulties:
+  - {fileID: 11400000, guid: eaae23c7b07380f4cbc7da21706003a6, type: 2}
+  - {fileID: 11400000, guid: e735e926552ef7a4eb8d708f5ce5a136, type: 2}
+  - {fileID: 11400000, guid: 9f868ba4095ffd1459751d3d5f1c63b6, type: 2}
+  - {fileID: 11400000, guid: 5914e75fcf164f548b8e390fd8b9b026, type: 2}
+  - {fileID: 11400000, guid: bc40f6707b5a22943a35c9b8b43582ae, type: 2}
+  - {fileID: 11400000, guid: 910bfa42682999a449d07c9594ca38a4, type: 2}
+  - {fileID: 11400000, guid: b2b3f378d96f04e4883000648b1dbfc0, type: 2}
+  - {fileID: 11400000, guid: e846df483d3175143a46c75afbd3d0e5, type: 2}
   timerTextField: {fileID: 5942632001445486968}
-  maxTime: 10
-  matchs: 4
-  maxWrongMatchs: 2
-  randomLeftRight: 0
   centerPanda: {fileID: 1501879435436536544}
   leftPanda: {fileID: 6918836378293847464}
   rightPanda: {fileID: 6814029420397618406}

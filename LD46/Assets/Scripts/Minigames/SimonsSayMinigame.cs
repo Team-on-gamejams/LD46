@@ -6,8 +6,7 @@ using TMPro;
 using UnityEngine.EventSystems;
 
 public class SimonsSayMinigame : BaseBaseMinigame {
-	[Header("Balance")]
-	[SerializeField] byte maxSequenceLength = 6;
+	[Header("Refs")]
 	[SerializeField] AudioClip[] sounds;
 	[SerializeField] SpriteRenderer[] sr;
 
@@ -24,23 +23,26 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 	AudioSource currAudio;
 	LTDescr currDelayedUp;
 
+	BirdMinigameDifficulty difficulty;
+
 	private void Update() {
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			debugTextField.enabled = !debugTextField.enabled;
 		}
 	}
 
-	public override void Init() {
-		base.Init();
+	public override void Init(byte usedDifficulty) {
+		base.Init(usedDifficulty);
 
 		defaultSprites = new Sprite[sr.Length];
 		for (byte i = 0; i < defaultSprites.Length; ++i) {
 			defaultSprites[i] = sr[i].sprite;
 		}
 
-		sequence = new List<byte>(maxSequenceLength);
+		difficulty = (difficultyBase as BirdMinigameDifficulty);
+		sequence = new List<byte>(difficulty.maxSequenceLength);
 
-		LeanTween.delayedCall(delayBeforePlay, () => { 
+		LeanTween.delayedCall(difficultyBase.delayBeforePlay, () => { 
 			ContinueSequence();
 		});
 	}
@@ -78,7 +80,7 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 			HightlightButton(lastClickId, defaultSprites[lastClickId], false);
 
 			if (currSequenceId == sequence.Count) {
-				if (sequence.Count >= maxSequenceLength) {
+				if (sequence.Count >= difficulty.maxSequenceLength) {
 					ShowWinAnimation();
 				}
 				else {
@@ -86,7 +88,7 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 				}
 			}
 			else {
-				debugTextField.text = $"Curr Id: {currSequenceId}/{sequence.Count} Seq len: {sequence.Count}/{maxSequenceLength} CurrNote: {sequence[currSequenceId]}";
+				debugTextField.text = $"Curr Id: {currSequenceId}/{sequence.Count} Seq len: {sequence.Count}/{difficulty.maxSequenceLength} CurrNote: {sequence[currSequenceId]}";
 			}
 
 		}
@@ -126,7 +128,7 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 			allDelay += sounds[sequence[currId]].length;
 		}
 
-		debugTextField.text = $"Curr Id: {currSequenceId}/{sequence.Count} Seq len: {sequence.Count}/{maxSequenceLength} CurrNote: {sequence[currSequenceId]}";
+		debugTextField.text = $"Curr Id: {currSequenceId}/{sequence.Count} Seq len: {sequence.Count}/{difficulty.maxSequenceLength} CurrNote: {sequence[currSequenceId]}";
 	}
 
 	void HightlightButton(int id, Sprite sprite, bool isToSprite) {
