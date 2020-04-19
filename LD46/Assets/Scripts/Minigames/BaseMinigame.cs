@@ -7,6 +7,7 @@ using TMPro;
 //TODO: rename to timer minigame
 public class BaseMinigame : BaseBaseMinigame {
 	[Header("Timer")]
+	[SerializeField] bool isWinIfTimerEnds = false;
 	[SerializeField] TextMeshProUGUI timerTextField = null;
 	[SerializeField] float maxTime = 5.0f;
 	float currTime;
@@ -19,7 +20,10 @@ public class BaseMinigame : BaseBaseMinigame {
 		if (isPlaying) {
 			currTime -= Time.deltaTime;
 			if (currTime <= 0) {
-				ShowLoseAnimation();
+				if (isWinIfTimerEnds)
+					ShowWinAnimation();
+				else
+					ShowLoseAnimation();
 				isPlaying = false;
 				currTime = 0;
 			}

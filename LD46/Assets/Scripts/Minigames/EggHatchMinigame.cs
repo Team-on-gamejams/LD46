@@ -22,9 +22,12 @@ public class EggHatchMinigame : BaseMinigame {
 		base.Init();
 
 		neededDistHalf = neededDist / 2;
+		debugTextField.text = $"Progress: {dist.ToString("0")}/{neededDist.ToString("0")}   Last: {deltaPos.magnitude.ToString("0")}";
 	}
 
-	private void Update() {
+	private new void Update() {
+		base.Update();
+
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			debugTextField.enabled = !debugTextField.enabled;
 		}
