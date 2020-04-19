@@ -1,45 +1,57 @@
-﻿using NaughtyAttributes;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using NaughtyAttributes;
 
+public class TurtleFlipper : BaseMinigame {
+	[Header("Balance")]
+	public GameObject Arrow;
 
-public class TurtleFlipper : BaseMinigame
-{
-  public GameObject Arrow;
-  public float arrowRotateSpeed = 90;
-  [SerializeField] [ReorderableList] TurtleActions[] taList = null;
-  
-    public Vector3 getAngle()
-    {
-      return Arrow.transform.eulerAngles;
-    }
+	[SerializeField] [ReorderableList] TurtleActions[] taList = null;
+	[SerializeField] float arrowRotateSpeed = 90;
 
-    public void GameCondition(){
-    bool result = true;
-      foreach(TurtleActions ta in taList)
-      {
-        if (!ta.getWinState()) result = false;
-      }
-    if (result)
-    {
-      print("WON!");
-    }
-    else
-      {
-        print("Not now!");
-      }
-    }
+	[Header("Debug")]
+	public TextMeshProUGUI debugTextField = null;
 
-    void Rotate(GameObject obj)
-    {
-      obj.transform.Rotate(new Vector3(0, 0, arrowRotateSpeed) * Time.deltaTime, Space.Self);
-    }
+	new void Update() {
+		base.Update();
 
+		if (Input.GetKeyDown(KeyCode.Alpha1)) {
+			debugTextField.enabled = !debugTextField.enabled;
+		}
 
-    void Update()
-    {
-      Rotate(Arrow);
-    }
-  }
+		if(isPlaying)
+			Arrow.transform.Rotate(new Vector3(0, 0, arrowRotateSpeed) * Time.deltaTime, Space.Self);
+	}
+
+	public void GameCondition() {
+		bool result = true;
+
+		foreach (TurtleActions ta in taList) {
+			if (!ta.GetWinState()) {
+				result = false;
+				break;
+			}
+		}
+
+		if (result) {
+			ShowWinAnimation();
+		}
+	}
+
+	protected override void ShowLoseAnimation() {
+		debugTextField.text = "Loser, ahahahah";
+		LeanTween.delayedCall(1.0f, () => {
+			base.ShowLoseAnimation();
+		});
+	}
+
+	protected override void ShowWinAnimation() {
+		debugTextField.text = "You win";
+		LeanTween.delayedCall(1.0f, () => {
+			base.ShowWinAnimation();
+		});
+	}
+}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1752860536745270220}
-  - component: {fileID: 1752860536745270223}
+  - component: {fileID: 6225337160938865358}
   m_Layer: 0
   m_Name: MinHeight
   m_TagString: Untagged
@@ -31,8 +31,8 @@ Transform:
   m_Father: {fileID: 1752860538325962305}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1752860536745270223
-BoxCollider2D:
+--- !u!60 &6225337160938865358
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -44,7 +44,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.9862573, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -54,9 +54,21 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 17.803879, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 9.04883, y: 0.5510318}
+      - {x: 7.1427727, y: 0.5785098}
+      - {x: 5.604026, y: 0.36510706}
+      - {x: 3.287613, y: 0.40917826}
+      - {x: 2.6080024, y: -0.11608267}
+      - {x: -3.6034238, y: -0.0924201}
+      - {x: -5.141034, y: 1.1592276}
+      - {x: -7.0742455, y: 1.1459389}
+      - {x: -7.428219, y: 0.46096754}
+      - {x: -7.96821, y: 0.43594217}
+      - {x: -7.9503717, y: -0.58384514}
+      - {x: 9.985685, y: -0.47843742}
+      - {x: 9.900313, y: 0.47430706}
 --- !u!1 &1752860536851715868
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,10 +136,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1338812095
+  m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 236f32690cca70942831427df059e4bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 287d0deb8cb93bc4687d09ef0b9a5ce2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -320,11 +332,11 @@ RectTransform:
   m_Father: {fileID: 1752860537841885832}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 7.0302734, y: 0}
-  m_SizeDelta: {x: 1235.3999, y: 102.400024}
-  m_Pivot: {x: 0, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1308, y: 102.4}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &1752860536969714514
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -351,7 +363,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0:00
+  m_text: DEBUG
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -424,10 +436,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1752860536969714509}
-    characterCount: 4
+    characterCount: 5
     spriteCount: 0
     spaceCount: 0
-    wordCount: 2
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -532,7 +544,7 @@ GameObject:
   - component: {fileID: 1752860537115430474}
   - component: {fileID: 1752860537115430469}
   - component: {fileID: 1752860537115430468}
-  - component: {fileID: 1752860537115430473}
+  - component: {fileID: 8422400545980506922}
   m_Layer: 0
   m_Name: Turtle (4)
   m_TagString: Turtle
@@ -547,13 +559,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752860537115430471}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9676885, w: 0.25214875}
-  m_LocalPosition: {x: 7.05, y: -3.38, z: 9.004429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.05, y: -2.97, z: 9.004429}
   m_LocalScale: {x: 0.35317, y: 0.35317, z: 0.35316998}
   m_Children: []
   m_Father: {fileID: 1752860538325962305}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 150.791}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1752860537115430475
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -593,13 +605,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8793915729297761979, guid: 1541bb00192acb14eb8ab37416315e88,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.78, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -617,9 +628,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0097f82e4042d4d8ac4c0dd0975d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Turtle: {fileID: 1752860537115430472}
-  angle: {fileID: 1752860538199484051}
-  winAngle: 25
+  angle: {fileID: 778089129869212416}
+  winAngle: 45
+  sr: {fileID: 1752860537115430475}
+  sranim: {fileID: 8422400545980506922}
 --- !u!70 &1752860537115430469
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -650,14 +662,14 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1752860537115430473
+--- !u!114 &8422400545980506922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -666,15 +678,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1752860537115430471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f57aedfc2ed1774ebd6f8d62aea999f, type: 3}
+  m_Script: {fileID: 11500000, guid: 271702ff5e28bdb49b51a6a354c2c175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currSequence: 0
   startWithRandom: 1
-  secondsForOneSprite: 0.25
-  sprites:
-  - {fileID: -3164809056393425246, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
-  - {fileID: -5225540622116197949, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
-  - {fileID: 8793915729297761979, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  secondsForOneSprite: 0.35
+  sprites0:
+  - {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  - {fileID: 21300000, guid: a14b8668266a3c04eaf44cf720d42cb2, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  sprites1:
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
   sr: {fileID: 1752860537115430475}
 --- !u!1 &1752860537327167598
 GameObject:
@@ -839,7 +858,7 @@ GameObject:
   - component: {fileID: 1752860537709588326}
   - component: {fileID: 1752860537709588321}
   - component: {fileID: 1752860537709588320}
-  - component: {fileID: 1752860537709588325}
+  - component: {fileID: 8457669557464595819}
   m_Layer: 0
   m_Name: Turtle (3)
   m_TagString: Turtle
@@ -854,13 +873,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752860537709588323}
-  m_LocalRotation: {x: -0, y: -0, z: -0.9970176, w: 0.077175245}
-  m_LocalPosition: {x: 3.37, y: -3.02, z: 9.004429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.37, y: -3.241, z: 9.004429}
   m_LocalScale: {x: 0.35316998, y: 0.35316998, z: 0.35316998}
   m_Children: []
   m_Father: {fileID: 1752860538325962305}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -171.14801}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1752860537709588327
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -900,13 +919,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8793915729297761979, guid: 1541bb00192acb14eb8ab37416315e88,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.78, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -924,9 +942,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0097f82e4042d4d8ac4c0dd0975d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Turtle: {fileID: 1752860537709588324}
-  angle: {fileID: 1752860538199484051}
-  winAngle: 25
+  angle: {fileID: 778089129869212416}
+  winAngle: 45
+  sr: {fileID: 1752860537709588327}
+  sranim: {fileID: 8457669557464595819}
 --- !u!70 &1752860537709588321
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -957,14 +976,14 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1752860537709588325
+--- !u!114 &8457669557464595819
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -973,15 +992,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1752860537709588323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f57aedfc2ed1774ebd6f8d62aea999f, type: 3}
+  m_Script: {fileID: 11500000, guid: 271702ff5e28bdb49b51a6a354c2c175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currSequence: 0
   startWithRandom: 1
   secondsForOneSprite: 0.35
-  sprites:
-  - {fileID: -3164809056393425246, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
-  - {fileID: -5225540622116197949, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
-  - {fileID: 8793915729297761979, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  sprites0:
+  - {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  - {fileID: 21300000, guid: a14b8668266a3c04eaf44cf720d42cb2, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  sprites1:
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
   sr: {fileID: 1752860537709588327}
 --- !u!1 &1752860537785223323
 GameObject:
@@ -1008,7 +1034,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752860537785223323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.95, y: 0.29, z: -2.0570946}
+  m_LocalPosition: {x: -0.95, y: 0.43, z: -2.0570946}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1752860538325962305}
@@ -1154,7 +1180,7 @@ GameObject:
   - component: {fileID: 1752860538029537099}
   - component: {fileID: 1752860538029537098}
   - component: {fileID: 1752860538029537093}
-  - component: {fileID: 1752860538029537102}
+  - component: {fileID: 1133276405599839021}
   m_Layer: 0
   m_Name: Turtle (2)
   m_TagString: Turtle
@@ -1169,13 +1195,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752860538029537092}
-  m_LocalRotation: {x: -0, y: -0, z: 0.996043, w: -0.0888724}
-  m_LocalPosition: {x: -3.9, y: -3.07, z: 9.004429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.684, y: -3.682, z: 9.004429}
   m_LocalScale: {x: 0.35316998, y: 0.35316998, z: 0.35316998}
   m_Children: []
   m_Father: {fileID: 1752860538325962305}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 190.19699}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1752860538029537096
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1215,13 +1241,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8793915729297761979, guid: 1541bb00192acb14eb8ab37416315e88,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.78, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1239,9 +1264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0097f82e4042d4d8ac4c0dd0975d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Turtle: {fileID: 1752860538029537097}
-  angle: {fileID: 1752860538199484051}
-  winAngle: 25
+  angle: {fileID: 778089129869212416}
+  winAngle: 45
+  sr: {fileID: 1752860538029537096}
+  sranim: {fileID: 1133276405599839021}
 --- !u!70 &1752860538029537098
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1272,14 +1298,14 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1752860538029537102
+--- !u!114 &1133276405599839021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1288,15 +1314,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1752860538029537092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f57aedfc2ed1774ebd6f8d62aea999f, type: 3}
+  m_Script: {fileID: 11500000, guid: 271702ff5e28bdb49b51a6a354c2c175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currSequence: 0
   startWithRandom: 1
-  secondsForOneSprite: 0.3
-  sprites:
-  - {fileID: -3164809056393425246, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
-  - {fileID: -5225540622116197949, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
-  - {fileID: 8793915729297761979, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  secondsForOneSprite: 0.35
+  sprites0:
+  - {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  - {fileID: 21300000, guid: a14b8668266a3c04eaf44cf720d42cb2, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  sprites1:
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
   sr: {fileID: 1752860538029537096}
 --- !u!1 &1752860538199484044
 GameObject:
@@ -1308,7 +1341,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1752860538199484050}
   - component: {fileID: 1752860538199484045}
-  - component: {fileID: 1752860538199484051}
   m_Layer: 0
   m_Name: CircleBG
   m_TagString: Untagged
@@ -1381,22 +1413,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1752860538199484051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752860538199484044}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fb3080d2aa678a46b3010aaf913088b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerTextField: {fileID: 0}
-  maxTime: 5
-  Arrow: {fileID: 1752860537076126510}
-  taList: []
 --- !u!1 &1752860538325962304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,9 +1446,9 @@ Transform:
   - {fileID: 1752860538199484050}
   - {fileID: 1752860537785223321}
   - {fileID: 1752860536745270220}
-  - {fileID: 1752860538739107370}
   - {fileID: 1752860538837140770}
   - {fileID: 1752860538029537097}
+  - {fileID: 1752860538739107370}
   - {fileID: 1752860537709588324}
   - {fileID: 1752860537115430472}
   m_Father: {fileID: 0}
@@ -1451,14 +1467,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerTextField: {fileID: 1752860536867127474}
-  maxTime: 5
+  maxTime: 60
   Arrow: {fileID: 1752860537076126510}
   taList:
-  - {fileID: 1752860538739107364}
+  - {fileID: 1752860538837140828}
   - {fileID: 1752860538029537099}
+  - {fileID: 1752860538739107364}
   - {fileID: 1752860537709588326}
   - {fileID: 1752860537115430474}
-  - {fileID: 1752860538837140828}
+  arrowRotateSpeed: 90
+  debugTextField: {fileID: 1752860536969714509}
 --- !u!1 &1752860538739107367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,7 +1490,7 @@ GameObject:
   - component: {fileID: 1752860538739107364}
   - component: {fileID: 1752860538739107371}
   - component: {fileID: 1752860538739107368}
-  - component: {fileID: 1752860538739107369}
+  - component: {fileID: 6989174262600601875}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Turtle
@@ -1487,13 +1505,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752860538739107367}
-  m_LocalRotation: {x: -0, y: -0, z: -0.9929615, w: -0.118437454}
-  m_LocalPosition: {x: -0.1, y: -3.13, z: 9.004429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1, y: -3.619, z: 9.004429}
   m_LocalScale: {x: 0.35316998, y: 0.35316998, z: 0.35316998}
   m_Children: []
   m_Father: {fileID: 1752860538325962305}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -193.60399}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1752860538739107365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1533,13 +1551,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8793915729297761979, guid: 1541bb00192acb14eb8ab37416315e88,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.78, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1557,9 +1574,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0097f82e4042d4d8ac4c0dd0975d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Turtle: {fileID: 1752860538739107370}
-  angle: {fileID: 1752860538199484051}
-  winAngle: 25
+  angle: {fileID: 778089129869212416}
+  winAngle: 45
+  sr: {fileID: 1752860538739107365}
+  sranim: {fileID: 6989174262600601875}
 --- !u!70 &1752860538739107371
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1590,14 +1608,14 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1752860538739107369
+--- !u!114 &6989174262600601875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1606,15 +1624,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1752860538739107367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f57aedfc2ed1774ebd6f8d62aea999f, type: 3}
+  m_Script: {fileID: 11500000, guid: 271702ff5e28bdb49b51a6a354c2c175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currSequence: 0
   startWithRandom: 1
   secondsForOneSprite: 0.35
-  sprites:
-  - {fileID: -3164809056393425246, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
-  - {fileID: -5225540622116197949, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
-  - {fileID: 8793915729297761979, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  sprites0:
+  - {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  - {fileID: 21300000, guid: a14b8668266a3c04eaf44cf720d42cb2, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  sprites1:
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
   sr: {fileID: 1752860538739107365}
 --- !u!1 &1752860538837140825
 GameObject:
@@ -1629,7 +1654,7 @@ GameObject:
   - component: {fileID: 1752860538837140828}
   - component: {fileID: 1752860538837140831}
   - component: {fileID: 1752860538837140830}
-  - component: {fileID: 1752860538837140771}
+  - component: {fileID: 6930647419307367510}
   m_Layer: 0
   m_Name: Turtle (1)
   m_TagString: Turtle
@@ -1644,13 +1669,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752860538837140825}
-  m_LocalRotation: {x: -0, y: -0, z: -0.9987637, w: -0.04971023}
-  m_LocalPosition: {x: -7.18, y: -2.97, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.18, y: -2.478, z: 0}
   m_LocalScale: {x: 0.35316998, y: 0.35316998, z: 0.35316998}
   m_Children: []
   m_Father: {fileID: 1752860538325962305}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -185.69899}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1752860538837140829
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1690,13 +1715,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8793915729297761979, guid: 1541bb00192acb14eb8ab37416315e88,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.78, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1714,9 +1738,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0097f82e4042d4d8ac4c0dd0975d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Turtle: {fileID: 1752860538837140770}
-  angle: {fileID: 1752860538199484051}
-  winAngle: 25
+  angle: {fileID: 778089129869212416}
+  winAngle: 45
+  sr: {fileID: 1752860538837140829}
+  sranim: {fileID: 6930647419307367510}
 --- !u!70 &1752860538837140831
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1747,14 +1772,14 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1752860538837140771
+--- !u!114 &6930647419307367510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1763,13 +1788,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1752860538837140825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f57aedfc2ed1774ebd6f8d62aea999f, type: 3}
+  m_Script: {fileID: 11500000, guid: 271702ff5e28bdb49b51a6a354c2c175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currSequence: 0
   startWithRandom: 1
   secondsForOneSprite: 0.35
-  sprites:
-  - {fileID: -3164809056393425246, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
-  - {fileID: -5225540622116197949, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
-  - {fileID: 8793915729297761979, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  sprites0:
+  - {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  - {fileID: 21300000, guid: a14b8668266a3c04eaf44cf720d42cb2, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  sprites1:
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
   sr: {fileID: 1752860538837140829}
