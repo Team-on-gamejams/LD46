@@ -4,10 +4,7 @@ using UnityEngine;
 using TMPro;
 
 public class PandaMinigame : BaseMinigame {
-	[Header("Balance")]
-	[SerializeField] byte matchs = 4;
-	[SerializeField] byte maxWrongMatchs = 2;
-	[SerializeField] bool randomLeftRight = false;
+	byte matchs = 0;
 	byte wrongMatchs = 0;
 
 	[Header("Refs")]
@@ -30,8 +27,12 @@ public class PandaMinigame : BaseMinigame {
 	bool leftGender;
 	bool rightGender;
 
-	public override void Init() {
-		base.Init();
+	PandaMinigameDifficulty difficulty;
+
+	public override void Init(byte usedDIfficulty) {
+		base.Init(usedDIfficulty);
+		difficulty = difficultyBase as PandaMinigameDifficulty;
+		matchs = difficulty.matchs;
 
 		centerPos = centerPanda.position;
 		leftPos = leftPanda.position;
@@ -51,6 +52,8 @@ public class PandaMinigame : BaseMinigame {
 	}
 
 	public void LeftClick() {
+		if (!isPlaying)
+			return;
 		if (leftGender == centerGender)
 			WrongMatch();
 		else
@@ -58,6 +61,8 @@ public class PandaMinigame : BaseMinigame {
 	}
 
 	public void RightClick() {
+		if (!isPlaying)
+			return;
 		if (rightGender == centerGender)
 			WrongMatch();
 		else
@@ -84,7 +89,7 @@ public class PandaMinigame : BaseMinigame {
 
 		debugTextField.text = $"Prev math wrong.";
 
-		if (wrongMatchs >= maxWrongMatchs) {
+		if (wrongMatchs >= difficulty.maxWrongMatchs) {
 			isPlaying = false;
 			ShowLoseAnimation();
 		}
@@ -97,9 +102,9 @@ public class PandaMinigame : BaseMinigame {
 		debugTextField.text += $" Total: {matchs} WrongLeft: {wrongMatchs}";
 
 		centerGender = Random.Range(0, 2) == 0;
-		if (randomLeftRight) {
+		if (difficulty.randomLeftRight) {
 			leftGender = Random.Range(0, 2) == 0;
-			rightGender = Random.Range(0, 2) == 0;
+			rightGender = !leftGender;
 		}
 		else {
 			leftGender = false;

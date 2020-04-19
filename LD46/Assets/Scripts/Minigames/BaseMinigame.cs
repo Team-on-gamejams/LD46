@@ -4,20 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-//TODO: rename to timer minigame
+//TODO: rename to TimerMinigame
 public class BaseMinigame : BaseBaseMinigame {
+
 	[Header("Timer")]
-	[SerializeField] bool isWinIfTimerEnds = false;
 	[SerializeField] TextMeshProUGUI timerTextField = null;
-	[SerializeField] float maxTime = 5.0f;
 	float currTime;
 
-	public override void Init() {
-		base.Init();
-		currTime = maxTime;
+	public override void Init(byte usedDifficulty) {
+		base.Init(usedDifficulty);
+		currTime = difficultyBase.timer;
 		timerTextField.text = currTime.ToString("0.00");
 
-		LeanTween.delayedCall(delayBeforePlay, () => {
+		LeanTween.delayedCall(difficultyBase.delayBeforePlay, () => {
 			isPlaying = true;
 		});
 	}
@@ -27,7 +26,7 @@ public class BaseMinigame : BaseBaseMinigame {
 			currTime -= Time.deltaTime;
 			if (currTime <= 0) {
 				isPlaying = false;
-				if (isWinIfTimerEnds)
+				if (difficultyBase.isWinIfTimerEnds)
 					ShowWinAnimation();
 				else
 					ShowLoseAnimation();

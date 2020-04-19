@@ -405,14 +405,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 6
-  delayBeforePlay: 1
-  isWinIfTimerEnds: 1
+  difficulties:
+  - {fileID: 11400000, guid: b6e4d5e4184ea8e41b540d2ce875c85c, type: 2}
+  - {fileID: 11400000, guid: 238c14825c2be2841a3958d8fa3cd014, type: 2}
+  - {fileID: 11400000, guid: 1890f9a0251784647ba0616ca96cf1aa, type: 2}
+  - {fileID: 11400000, guid: 178b69f574d75e54e96130f7b9a04b6e, type: 2}
+  - {fileID: 11400000, guid: 50e2c822e007af142946ff066dd17a3a, type: 2}
+  - {fileID: 11400000, guid: 34c2be2886e8dfb4aa304b619bce7ea8, type: 2}
+  - {fileID: 11400000, guid: 05c76b731a47ae74fb99bca95ef91a2f, type: 2}
+  - {fileID: 11400000, guid: 7c43d6d0983afbe42a2df1b2a5426745, type: 2}
   timerTextField: {fileID: 5942632001445486968}
-  maxTime: 10
-  maxAngle: 70
-  fallSpeedAcceleration: 4
-  fallSpeedMax: 20
-  chengeByClick: 5
   owl: {fileID: 2663621291094941970}
   leftAhchor: {fileID: 1056924042641564161}
   rightAhchor: {fileID: 8225858231242019412}

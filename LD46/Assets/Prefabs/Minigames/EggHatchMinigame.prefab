@@ -380,11 +380,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  delayBeforePlay: 1
-  isWinIfTimerEnds: 0
+  difficulties:
+  - {fileID: 11400000, guid: 7c83d91574d36e6448b8ec3d56864f75, type: 2}
+  - {fileID: 11400000, guid: 96595680f79dbbb45a516414c6c4d300, type: 2}
+  - {fileID: 11400000, guid: f4ac9103a34801b46a4e9f6d90583dee, type: 2}
+  - {fileID: 11400000, guid: 35fb39e3cb5a49647a8ef4ca71d43f2f, type: 2}
+  - {fileID: 11400000, guid: 00107ccb62ff9194dbcd605a24e1bbb2, type: 2}
+  - {fileID: 11400000, guid: 75ac81e0d1d27b340a8c1a8a1ca2dddb, type: 2}
+  - {fileID: 11400000, guid: 81bef5a6c1dfc89449ba7202fe3d7a3d, type: 2}
+  - {fileID: 11400000, guid: f46107ed1d24e1f4e88202aa91c2c43d, type: 2}
   timerTextField: {fileID: 5942632001445486968}
-  maxTime: 10
-  neededDist: 16000
   sranim: {fileID: 2471482564051274207}
   debugTextField: {fileID: 3324853973642178043}
 --- !u!1 &5942632001224054568

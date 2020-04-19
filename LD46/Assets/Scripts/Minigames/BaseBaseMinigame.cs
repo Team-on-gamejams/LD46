@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using NaughtyAttributes;
 
 //TODO: rename to BaseMinigame
 public class BaseBaseMinigame : MonoBehaviour {
@@ -13,10 +14,16 @@ public class BaseBaseMinigame : MonoBehaviour {
 
 	[NonSerialized] public bool isPlaying = false;
 
-	[SerializeField] protected float delayBeforePlay = 1.0f;
+	[SerializeField] /*[ReorderableList]*/ protected BaseMinigameDifficulty[] difficulties;
+
+	protected BaseMinigameDifficulty difficultyBase => difficulties[usedDifficulty];
+	byte usedDifficulty = 0;
 
 	//Spaw objects for minigame, subscribe events, etc
-	public virtual void Init() {
+	public virtual void Init(byte _usedDifficulty) {
+		usedDifficulty = _usedDifficulty;
+		if (usedDifficulty >= difficulties.Length)
+			usedDifficulty = (byte)(difficulties.Length - 1);
 		Debug.Log($"Init minigame {transform.name}");
 	}
 

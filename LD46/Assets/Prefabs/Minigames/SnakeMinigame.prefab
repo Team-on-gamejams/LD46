@@ -686,10 +686,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  delayBeforePlay: 1
-  isWinIfTimerEnds: 0
+  difficulties:
+  - {fileID: 11400000, guid: 4b271e100a12edc4aa21d3a6c47b1d81, type: 2}
+  - {fileID: 11400000, guid: bb2723f2b93b64646adef6fc430d01ab, type: 2}
+  - {fileID: 11400000, guid: f481e3ba9f9540241bdec13992122d34, type: 2}
+  - {fileID: 11400000, guid: 04ea74123cd7ea845966d1d144853e3a, type: 2}
+  - {fileID: 11400000, guid: d9f80270bcd90024988fb747ffa79218, type: 2}
+  - {fileID: 11400000, guid: 940bdee3a9f1902449312246259b7de8, type: 2}
+  - {fileID: 11400000, guid: 4a3077581522c1b42b182dc3a56b28ab, type: 2}
+  - {fileID: 11400000, guid: 8f902e8f41b1d204e8c89fb5ef736640, type: 2}
   timerTextField: {fileID: 8493170087221762003}
-  maxTime: 10
 --- !u!1 &7432903275849754795
 GameObject:
   m_ObjectHideFlags: 0
