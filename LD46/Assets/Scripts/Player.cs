@@ -21,11 +21,21 @@ public class Player : MonoBehaviour {
 
 	void OnWinMinigame() {
 		++currMinigameId;
+		if (currMinigameId == minigames.Count) {
+			minigames.Shuffle();
+			currMinigameId = 0;
+		}
+
 		StartNewMinigame();
 	}
 
 	void OnLoseMinigame() {
 		++currMinigameId;
+		if (currMinigameId == minigames.Count) {
+			minigames.Shuffle();
+			currMinigameId = 0;
+		}
+
 		StartNewMinigame();
 	}
 
