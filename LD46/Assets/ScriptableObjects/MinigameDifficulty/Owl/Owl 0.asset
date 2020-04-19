@@ -16,6 +16,6 @@ MonoBehaviour:
   timer: 10
   isWinIfTimerEnds: 1
   maxAngle: 70
-  fallSpeedAcceleration: 1
-  fallSpeedMax: 20
+  fallSpeedAcceleration: 12
+  fallSpeedMax: 30
   chengeByClick: 10

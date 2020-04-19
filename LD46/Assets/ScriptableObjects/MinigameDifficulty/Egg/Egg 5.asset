@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Egg 5
   m_EditorClassIdentifier: 
   delayBeforePlay: 1
-  timer: 7
+  timer: 6
   isWinIfTimerEnds: 0
-  neededDist: 24000
+  neededDist: 26000

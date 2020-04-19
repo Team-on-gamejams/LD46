@@ -15,4 +15,4 @@ MonoBehaviour:
   delayBeforePlay: 1
   timer: 6
   isWinIfTimerEnds: 0
-  neededDist: 32000
+  neededDist: 30000
