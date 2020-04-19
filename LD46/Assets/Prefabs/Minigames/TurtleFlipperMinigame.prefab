@@ -729,8 +729,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -83.67}
-  m_SizeDelta: {x: 771.30005, y: 117}
+  m_AnchoredPosition: {x: 0, y: -72}
+  m_SizeDelta: {x: 1122.9, y: 117}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1752860537327167597
 CanvasRenderer:
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Flip a turtle!
+  m_text: Flip a turtle while arrow pointing up!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -831,10 +831,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1752860537327167596}
-    characterCount: 14
+    characterCount: 38
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 6
+    wordCount: 7
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1466,6 +1466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb3080d2aa678a46b3010aaf913088b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWinIfTimerEnds: 0
   timerTextField: {fileID: 1752860536867127474}
   maxTime: 60
   Arrow: {fileID: 1752860537076126510}
