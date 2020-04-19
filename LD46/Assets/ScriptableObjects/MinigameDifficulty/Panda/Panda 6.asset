@@ -15,6 +15,6 @@ MonoBehaviour:
   delayBeforePlay: 1
   timer: 10
   isWinIfTimerEnds: 0
-  matchs: 7
-  maxWrongMatchs: 1
+  matchs: 12
+  maxWrongMatchs: 0
   randomLeftRight: 1
