@@ -20,11 +20,11 @@ public class BaseMinigame : BaseBaseMinigame {
 		if (isPlaying) {
 			currTime -= Time.deltaTime;
 			if (currTime <= 0) {
+				isPlaying = false;
 				if (isWinIfTimerEnds)
 					ShowWinAnimation();
 				else
 					ShowLoseAnimation();
-				isPlaying = false;
 				currTime = 0;
 			}
 			timerTextField.text = currTime.ToString("0.00");

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -10,7 +9,7 @@ public class TurtleFlipper : BaseMinigame {
 	public GameObject Arrow;
 
 	[SerializeField] [ReorderableList] TurtleActions[] taList = null;
-	[SerializeField] float arrowRotateSpeed = 90;
+	float arrowRotateSpeed;
 
 	[Header("Debug")]
 	public TextMeshProUGUI debugTextField = null;
@@ -26,7 +25,17 @@ public class TurtleFlipper : BaseMinigame {
 			Arrow.transform.Rotate(new Vector3(0, 0, arrowRotateSpeed) * Time.deltaTime, Space.Self);
 	}
 
+	public override void Init() {
+		base.Init();
+
+		Arrow.transform.Rotate(new Vector3(0, 0, Random.Range(0, 360)), Space.Self);
+		arrowRotateSpeed = Random.Range(0, 2) == 1 ? Random.Range(70f, 120f) : Random.Range(-120f, -70f);
+	}
+
 	public void GameCondition() {
+		if (!isPlaying)
+			return;
+
 		bool result = true;
 
 		foreach (TurtleActions ta in taList) {
@@ -37,6 +46,7 @@ public class TurtleFlipper : BaseMinigame {
 		}
 
 		if (result) {
+			isPlaying = false;
 			ShowWinAnimation();
 		}
 	}
