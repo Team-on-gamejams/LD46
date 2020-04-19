@@ -10,11 +10,22 @@ public class CrocoMinigame : BaseMinigame {
   public GameObject FrontCaries;
   [SerializeField] List<Transform> Caries;
   bool flip = false;
+  public bool wonState = false;
 
-	public void Win() {
+
+  public void Win() {
 		isPlaying = false;
 		ShowWinAnimation();
 	}
+
+  private void CheckWonState()
+  {
+    wonState = true;
+    foreach (Transform obj in Caries)
+    {
+      if (obj.gameObject.active) wonState = false;
+    }
+  }
 
 	protected override void ShowLoseAnimation() {
 		LeanTween.delayedCall(1.0f, () => {
@@ -41,6 +52,9 @@ public class CrocoMinigame : BaseMinigame {
 
   void Update()
   {
+    CheckWonState();
+    //if (wonState) Win();
+
     if (Input.GetKeyDown(KeyCode.Mouse1))
     {
       flip = !flip;

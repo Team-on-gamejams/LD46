@@ -36,6 +36,10 @@ public class CrocoBrush : MonoBehaviour
       isDragging = false;
       transform.Translate(new Vector3(-0.5f, 0f, 0));
     }
+    if (colide.gameObject.name.Contains("Caries"))
+    {
+      colide.gameObject.active = false;;
+    }
   }
 
 
