@@ -61,11 +61,11 @@ public class CrocoMinigame : BaseMinigame {
       Toothbrush.GetComponent<SpriteRenderer>().flipY = flip;
       if (flip)
       {
-        Toothbrush.GetComponent<CapsuleCollider2D>().offset = new Vector2(5, -0.32f);
+        Toothbrush.GetComponent<CapsuleCollider2D>().offset = new Vector2(5, -0.7f);
       }
       else
       {
-        Toothbrush.GetComponent<CapsuleCollider2D>().offset = new Vector2(5, 0.32f);
+        Toothbrush.GetComponent<CapsuleCollider2D>().offset = new Vector2(5, 0.5f);
       }
     }
   }

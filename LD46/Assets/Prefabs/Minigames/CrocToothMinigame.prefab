@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4400173053216963514}
   - component: {fileID: 1025711370}
-  - component: {fileID: 1025711371}
+  - component: {fileID: 1892836078}
   m_Layer: 0
   m_Name: CariesSpawner (2)
   m_TagString: Untagged
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936169410935831854}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.06, y: 1.63, z: 3.1855123}
+  m_LocalRotation: {x: -0, y: -0, z: -0.49054793, w: 0.8714143}
+  m_LocalPosition: {x: -3.17, y: 1.78, z: 3.1855123}
   m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
   m_Children: []
   m_Father: {fileID: 3901050500326097547}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -58.753002}
 --- !u!212 &1025711370
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7482011f1dca20147b563b7b564eb262, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c91fbcdda3158db4ab24a62f0c4e10d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,8 +82,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1025711371
-BoxCollider2D:
+--- !u!58 &1892836078
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,19 +95,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5058824, y: 1}
-    newSize: {x: 1.5058824, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.055725597, y: 0.033810925}
   serializedVersion: 2
-  m_Size: {x: 1.5058824, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.2898193
 --- !u!1 &3218357149893648743
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5846242954605624996}
   - component: {fileID: 1155529090}
-  - component: {fileID: 1155529091}
+  - component: {fileID: 1412334269}
   m_Layer: 0
   m_Name: CariesSpawner (5)
   m_TagString: Untagged
@@ -133,13 +123,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3218357149893648743}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5099998, y: -1.32, z: 3.1855123}
+  m_LocalRotation: {x: -0, y: -0, z: -0.5337731, w: 0.8456278}
+  m_LocalPosition: {x: -2.5099995, y: -1.32, z: 3.1855123}
   m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
   m_Children: []
   m_Father: {fileID: 3901050500326097547}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -64.521}
 --- !u!212 &1155529090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -179,7 +169,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ba819174422bfeb4bac57853e95cc8d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c07238dbe06392248b7a3d5699f39dad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -190,8 +180,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1155529091
-BoxCollider2D:
+--- !u!58 &1412334269
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -203,19 +193,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.08458485, y: -0.040306024}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.23130265
 --- !u!1 &4961521406792790973
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +263,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6535911599146856189}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6535911597878719814
 BoxCollider2D:
@@ -335,13 +315,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5211499834657279518}
-  m_LocalRotation: {x: -0, y: -0, z: -0.04700477, w: 0.9988947}
-  m_LocalPosition: {x: -0.13, y: 0.13, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.053098295, w: 0.99858934}
+  m_LocalPosition: {x: -0.2, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6535911599146856189}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.3880005}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6.0870004}
 --- !u!61 &6535911597878719816
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -355,7 +335,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.783462, y: 0}
+  m_Offset: {x: -1.783462, y: 0.37117428}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -366,7 +346,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.313648, y: 1}
+  m_Size: {x: 8.207917, y: 1.7423486}
   m_EdgeRadius: 0
 --- !u!1 &5235516764338134324
 GameObject:
@@ -378,7 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2351811606005570676}
   - component: {fileID: 758760638}
-  - component: {fileID: 758760639}
+  - component: {fileID: 789038792}
   m_Layer: 0
   m_Name: CariesSpawner (3)
   m_TagString: Untagged
@@ -393,13 +373,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5235516764338134324}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.24, y: 1.8399999, z: 3.1855123}
+  m_LocalRotation: {x: -0, y: -0, z: 0.5175098, w: 0.8556773}
+  m_LocalPosition: {x: -5.3, y: 2, z: 3.1855123}
   m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
   m_Children: []
   m_Father: {fileID: 3901050500326097547}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 62.331}
 --- !u!212 &758760638
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -439,7 +419,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bddae3aceb3c720438ba301940cc6358, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c07238dbe06392248b7a3d5699f39dad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -450,8 +430,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &758760639
-BoxCollider2D:
+--- !u!58 &789038792
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -463,19 +443,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.79, y: 1}
-    newSize: {x: 0.79, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.05772675, y: 0.03026781}
   serializedVersion: 2
-  m_Size: {x: 0.79, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.2598192
 --- !u!1 &6535911597381574355
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,10 +557,10 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6535911597381574355}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1273,7 +1243,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.3067155, y: 0}
+  m_Offset: {x: 0.031567574, y: -0.08475539}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1284,7 +1254,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.5258665, y: 1.36}
+  m_Size: {x: 12.202433, y: 1.190489}
   m_EdgeRadius: 0
 --- !u!70 &383354343
 CapsuleCollider2D:
@@ -1299,8 +1269,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.0991864, y: 0.5560935}
-  m_Size: {x: 1.7931522, y: 0.5621046}
+  m_Offset: {x: 5.005015, y: 0.5560943}
+  m_Size: {x: 1.8308209, y: 0.5621064}
   m_Direction: 1
 --- !u!50 &383354344
 Rigidbody2D:
@@ -1322,97 +1292,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!1 &6535911597620513323
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6535911597620513320}
-  m_Layer: 0
-  m_Name: CariesSpawner (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 00bee90030e433c45936f536638fe8d4, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6535911597620513320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535911597620513323}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.93, y: 1.27, z: 3.1855123}
-  m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
-  m_Children: []
-  m_Father: {fileID: 5161622903895048212}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6535911597624605179
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6535911597624605176}
-  m_Layer: 0
-  m_Name: CariesSpawner (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 00bee90030e433c45936f536638fe8d4, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6535911597624605176
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535911597624605179}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.43, y: -1.22, z: 3.1855123}
-  m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
-  m_Children: []
-  m_Father: {fileID: 5161622903895048212}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6535911597703573522
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6535911597703573523}
-  m_Layer: 0
-  m_Name: CariesSpawner (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 00bee90030e433c45936f536638fe8d4, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6535911597703573523
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535911597703573522}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.21, y: -1.24, z: 3.1855123}
-  m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
-  m_Children: []
-  m_Father: {fileID: 5161622903895048212}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Constraints: 4
 --- !u!1 &6535911597733146693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,36 +1443,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &6535911598043351266
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6535911598043351267}
-  m_Layer: 0
-  m_Name: CariesSpawner (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 00bee90030e433c45936f536638fe8d4, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6535911598043351267
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535911598043351266}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.51, y: -1.36, z: 3.1855123}
-  m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
-  m_Children: []
-  m_Father: {fileID: 5161622903895048212}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6535911598133641186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,147 +1775,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &6535911599020223506
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6535911599020223507}
-  m_Layer: 0
-  m_Name: CariesSpawner (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 00bee90030e433c45936f536638fe8d4, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6535911599020223507
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535911599020223506}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.17, y: 1.44, z: 3.1855123}
-  m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
-  m_Children: []
-  m_Father: {fileID: 5161622903895048212}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6535911599028912143
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6535911599028912140}
-  m_Layer: 0
-  m_Name: CariesSpawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 00bee90030e433c45936f536638fe8d4, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6535911599028912140
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535911599028912143}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.18, y: 1.67, z: 3.1855123}
-  m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
-  m_Children: []
-  m_Father: {fileID: 5161622903895048212}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6535911599049958254
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6535911599049958255}
-  - component: {fileID: 902111243}
-  m_Layer: 0
-  m_Name: CariesSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6535911599049958255
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535911599049958254}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.48, y: 1.86, z: 45.55}
-  m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
-  m_Children: []
-  m_Father: {fileID: 5161622903895048212}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &902111243
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535911599049958254}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ba819174422bfeb4bac57853e95cc8d2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 6.6666665, y: 6.6666665}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &6535911599146856191
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,7 +1808,6 @@ Transform:
   - {fileID: 6535911597381574358}
   - {fileID: 6535911597606796006}
   - {fileID: 3901050500326097547}
-  - {fileID: 5161622903895048212}
   - {fileID: 9026345995526729613}
   - {fileID: 6325889074422878872}
   - {fileID: 3108626278817071152}
@@ -2128,80 +1836,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 456d9d8eff4c639488bc3a615472385c, type: 2}
   - {fileID: 11400000, guid: 41154d5554f708f46888dd59b31e5b09, type: 2}
   - {fileID: 11400000, guid: b5a1e7d7f2be1b9419644469ed9d698b, type: 2}
-  timerTextField: {fileID: 0}
+  timerTextField: {fileID: 6535911597515280880}
   Crocodile: {fileID: 6535911597381574358}
   Toothbrush: {fileID: 6535911597606796006}
   FrontCaries: {fileID: 4961521406792790973}
   Caries: []
   wonState: 0
---- !u!1 &6535911599155152071
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6535911599155152068}
-  m_Layer: 0
-  m_Name: CariesSpawner (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 00bee90030e433c45936f536638fe8d4, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6535911599155152068
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535911599155152071}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.62, y: -1.17, z: 3.1855123}
-  m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
-  m_Children: []
-  m_Father: {fileID: 5161622903895048212}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7619310536933858580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5161622903895048212}
-  m_Layer: 0
-  m_Name: Back
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &5161622903895048212
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7619310536933858580}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.18, y: -1.535, z: -2.5292969}
-  m_LocalScale: {x: 0.794, y: 0.794, z: 0.794}
-  m_Children:
-  - {fileID: 6535911599049958255}
-  - {fileID: 6535911599028912140}
-  - {fileID: 6535911599020223507}
-  - {fileID: 6535911597620513320}
-  - {fileID: 6535911597703573523}
-  - {fileID: 6535911599155152068}
-  - {fileID: 6535911597624605176}
-  - {fileID: 6535911598043351267}
-  m_Father: {fileID: 6535911599146856189}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8113716077376423525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,7 +1852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8732816547948389181}
   - component: {fileID: 2043683008}
-  - component: {fileID: 2043683009}
+  - component: {fileID: 1708177642}
   m_Layer: 0
   m_Name: CariesSpawner (6)
   m_TagString: Untagged
@@ -2227,13 +1867,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8113716077376423525}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.68290997, w: 0.73050255}
   m_LocalPosition: {x: -0.53999996, y: -1.1099998, z: 26.36}
   m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
   m_Children: []
   m_Father: {fileID: 3901050500326097547}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -86.143005}
 --- !u!212 &2043683008
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2273,7 +1913,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bddae3aceb3c720438ba301940cc6358, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c91fbcdda3158db4ab24a62f0c4e10d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2284,8 +1924,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2043683009
-BoxCollider2D:
+--- !u!58 &1708177642
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2297,19 +1937,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.79, y: 1}
-    newSize: {x: 10, y: 10}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.13006651, y: -0.00876923}
   serializedVersion: 2
-  m_Size: {x: 0.79, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.22463822
 --- !u!1 &8137696387337045803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,7 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228745580195430153}
   - component: {fileID: 1946394087}
-  - component: {fileID: 1946394088}
+  - component: {fileID: 1706490787}
   m_Layer: 0
   m_Name: CariesSpawner (4)
   m_TagString: Untagged
@@ -2335,13 +1965,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8137696387337045803}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.56, y: -1.2800001, z: 3.1855123}
+  m_LocalRotation: {x: -0, y: -0, z: 0.6013592, w: 0.7989788}
+  m_LocalPosition: {x: -4.56, y: -1.3899999, z: 3.1855123}
   m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
   m_Children: []
   m_Father: {fileID: 3901050500326097547}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 73.935005}
 --- !u!212 &1946394087
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2381,7 +2011,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 135427c69ca9fd14c9a77c60701078cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d5c092610e09be419397fe47ddd5737, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2392,8 +2022,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1946394088
-BoxCollider2D:
+--- !u!58 &1706490787
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2405,19 +2035,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.04306196, y: -0.012401019}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.22018796
 --- !u!1 &8364728217214958333
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,7 +2048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694999256259668502}
   - component: {fileID: 1102238576}
-  - component: {fileID: 1102238577}
+  - component: {fileID: 187831496}
   m_Layer: 0
   m_Name: CariesSpawner (1)
   m_TagString: Untagged
@@ -2444,7 +2064,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8364728217214958333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.97, y: 1.3699999, z: 3.1855123}
+  m_LocalPosition: {x: -0.93, y: 1.63, z: 3.1855123}
   m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
   m_Children: []
   m_Father: {fileID: 3901050500326097547}
@@ -2489,7 +2109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 54240df153d2a504c881cd6d40d2b829, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d5c092610e09be419397fe47ddd5737, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2500,8 +2120,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1102238577
-BoxCollider2D:
+--- !u!58 &187831496
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2513,19 +2133,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0.044811845}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.22018814
 --- !u!1 &8653448583117774378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,7 +2146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2163148025963939677}
   - component: {fileID: 977942260}
-  - component: {fileID: 977942261}
+  - component: {fileID: 1040120476}
   m_Layer: 0
   m_Name: CariesSpawner (7)
   m_TagString: Untagged
@@ -2551,13 +2161,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8653448583117774378}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.08, y: -0.97999984, z: 3.1855123}
+  m_LocalRotation: {x: 0, y: -0, z: 0.987206, w: -0.15945046}
+  m_LocalPosition: {x: 1.15, y: -1.2400001, z: 3.1855123}
   m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
   m_Children: []
   m_Father: {fileID: 3901050500326097547}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 198.35}
 --- !u!212 &977942260
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2597,7 +2207,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ae08e8b80e376fc4fbce986bc31cc122, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d5c092610e09be419397fe47ddd5737, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2608,8 +2218,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &977942261
-BoxCollider2D:
+--- !u!58 &1040120476
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2621,19 +2231,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.00029961756, y: 0.0009031255}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.26404852
 --- !u!1 &8714327914478172970
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,7 +2244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8805685711142820328}
   - component: {fileID: 199472656}
-  - component: {fileID: 199472657}
+  - component: {fileID: 359999107}
   m_Layer: 0
   m_Name: CariesSpawner
   m_TagString: Untagged
@@ -2659,13 +2259,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8714327914478172970}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.08, z: 3.1855123}
+  m_LocalRotation: {x: -0, y: -0, z: -0.4655139, w: 0.88504064}
+  m_LocalPosition: {x: 0.89, y: 1.41, z: 3.1855123}
   m_LocalScale: {x: 1.2594458, y: 1.2594458, z: 1.2594458}
   m_Children: []
   m_Father: {fileID: 3901050500326097547}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -55.487003}
 --- !u!212 &199472656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2705,7 +2305,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ec02013256c3e0c40b06d46162f1108a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c91fbcdda3158db4ab24a62f0c4e10d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2716,8 +2316,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &199472657
-BoxCollider2D:
+--- !u!58 &359999107
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2729,19 +2329,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.060422376, y: 0.04154752}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.28167152
 --- !u!1 &9117150541427044439
 GameObject:
   m_ObjectHideFlags: 0
@@ -2771,7 +2361,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6535911599146856189}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.693}
 --- !u!61 &6535911597878719815
 BoxCollider2D:
@@ -2786,7 +2376,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.5675974, y: -0.4953779}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2797,5 +2387,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.9680233, y: 1}
+  m_Size: {x: 8.103217, y: 1.6207051}
   m_EdgeRadius: 0

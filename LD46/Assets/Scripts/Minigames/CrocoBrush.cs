@@ -6,38 +6,27 @@ public class CrocoBrush : MonoBehaviour
 {
   private bool isDragging;
   private Vector2 mousePosition;
+
+  Vector3 mouseCurrLocation, diff;
+  Vector3 currVelocity;
+  Vector3 force;
+
+
+
   public void OnMouseDown()
   {
     isDragging = true;
-    transform.GetComponent<BoxCollider2D>().enabled = false;
   }
 
   public void OnMouseUp()
   {
     isDragging = false;
-    transform.GetComponent<BoxCollider2D>().enabled = true;
     transform.GetComponent<Rigidbody2D>().velocity = new Vector2();
   }
 
   public void OnTriggerEnter2D(Collider2D colide) {   
-    if (colide.gameObject.name == "Top")
-    {
-      //isDragging = false;
-      transform.GetComponent<Rigidbody2D>().velocity *= -1.2f;
-    }
 
-    if (colide.gameObject.name == "Bottom")
-    {
 
-      transform.GetComponent<Rigidbody2D>().velocity *= -1.2f;
-      ;
-    }
-
-    if (colide.gameObject.name == "Right")
-    {
-      transform.GetComponent<Rigidbody2D>().velocity *= -1.2f;
-
-    }
     if (colide.gameObject.name.Contains("Caries"))
     {
       colide.gameObject.active = false;
@@ -45,15 +34,19 @@ public class CrocoBrush : MonoBehaviour
   }
 
 
-  // Update is called once per frame
-  void Update()
+
+
+  public void FixedUpdate()
+  {
+
+    if (isDragging)
     {
-      if (isDragging)
-      {
       mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-      //transform.Translate(mousePosition);
+
       transform.GetComponent<Rigidbody2D>().velocity = mousePosition * 5;
-      }
-      
     }
+
+  }
+
+
 }
