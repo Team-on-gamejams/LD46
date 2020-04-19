@@ -45,7 +45,8 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 	public void OnNoteDown(int id) {
 		if (isPlaying) {
 			if (lastClickId != -1) {
-				currAudio.volume = 0.0f;
+				if(currAudio)
+					currAudio.volume = 0.0f;
 				LeanTween.cancel(currDelayedUp.uniqueId, false);
 				NoteUpAction();
 				currDelayedUp = null;
