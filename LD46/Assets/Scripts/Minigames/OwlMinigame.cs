@@ -33,6 +33,9 @@ public class OwlMinigame : BaseMinigame {
 		owl.SetParent(isFallLeft ? leftAhchor : rightAhchor);
 
 		currZ = isFallLeft ? Random.Range(maxAngle / 4, maxAngle / 2) : Random.Range(-maxAngle / 2, -maxAngle / 4);
+
+		CheckIsNeedOtherSide();
+		SetRotation();
 	}
 
 	new void Update() {
@@ -54,15 +57,7 @@ public class OwlMinigame : BaseMinigame {
 			currZ += fallSpeed * Time.deltaTime;
 			CheckIsNeedOtherSide();
 
-
-			if (isFallLeft) {
-				leftAhchor.rotation = Quaternion.Euler(0, 0, currZ);
-				leftLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
-			}
-			else {
-				rightAhchor.rotation = Quaternion.Euler(0, 0, currZ);
-				rightLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
-			}
+			SetRotation();
 
 			if (currZ < -maxAngle || maxAngle < currZ) {
 				isPlaying = false;
@@ -71,32 +66,43 @@ public class OwlMinigame : BaseMinigame {
 
 			debugTextField.text = $"Angle: {(int)currZ}/{(int)maxAngle}  Speed: {fallSpeed.ToString("0.0")}/{fallSpeedMax.ToString("0.0")}";
 		}
+	}
 
-		void CheckIsNeedOtherSide() {
-			if (isFallLeft && currZ <= 0) {
-				isFallLeft = false;
-				fallSpeed = currZ;
+	void SetRotation() {
+		if (isFallLeft) {
+			leftAhchor.rotation = Quaternion.Euler(0, 0, currZ);
+			leftLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
+		}
+		else {
+			rightAhchor.rotation = Quaternion.Euler(0, 0, currZ);
+			rightLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
+		}
+	}
 
-				leftLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
-				rightLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
+	void CheckIsNeedOtherSide() {
+		if (isFallLeft && currZ <= 0) {
+			isFallLeft = false;
+			fallSpeed = currZ;
 
-				owl.SetParent(rightAhchor.parent);
-				owl.localPosition = Vector3.zero;
-				owl.rotation = leftAhchor.rotation = Quaternion.Euler(Vector3.zero);
-				owl.SetParent(rightAhchor);
-			}
-			else if (!isFallLeft && currZ >= 0) {
-				isFallLeft = true;
-				fallSpeed = currZ;
+			leftLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
+			rightLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
 
-				leftLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
-				rightLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
+			owl.SetParent(rightAhchor.parent);
+			owl.localPosition = Vector3.zero;
+			owl.rotation = leftAhchor.rotation = Quaternion.Euler(Vector3.zero);
+			owl.SetParent(rightAhchor);
+		}
+		else if (!isFallLeft && currZ >= 0) {
+			isFallLeft = true;
+			fallSpeed = currZ;
 
-				owl.SetParent(leftAhchor.parent);
-				owl.localPosition = Vector3.zero;
-				owl.rotation = rightAhchor.rotation = Quaternion.Euler(Vector3.zero);
-				owl.SetParent(leftAhchor);
-			}
+			leftLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
+			rightLeg.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+			owl.SetParent(leftAhchor.parent);
+			owl.localPosition = Vector3.zero;
+			owl.rotation = rightAhchor.rotation = Quaternion.Euler(Vector3.zero);
+			owl.SetParent(leftAhchor);
 		}
 	}
 

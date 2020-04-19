@@ -28,18 +28,23 @@ public class TurtleTupperMinigame : BaseMinigame {
 		turtlesState[id] = true;
 
 		GameObject t = turtles[id].gameObject;
+		SpriteRenderer sr = t.GetComponent<SpriteRenderer>();
+		SpriteRenderer srShadow = turtleShadows[id].GetComponent<SpriteRenderer>();
 		float moveY = Random.Range(1.0f, 3.0f);
 		float moveX = (Random.Range(0, 2) == 1 ? Random.Range(1f, 2f) : Random.Range(-2f, -1f));
 
-		t.GetComponent<SpriteRenderer>().sortingOrder = id + 1;
+		sr.sortingOrder = id + 1;
 		LeanTween.moveLocalY(t, t.transform.position.y + moveY, 0.3f)
 			.setEase(LeanTweenType.easeOutCubic)
 			.setOnComplete(()=> {
-				turtleShadows[id].currSequence = turtles[id].currSequence = 1;
+				turtleShadows[id].SetSequenceForce(1);
+				turtles[id].SetSequenceForce(1);
+				sr.flipX = moveX < 0;
+				srShadow.flipX = moveX < 0;
 				LeanTween.moveLocalY(t, t.transform.position.y - moveY, 0.3f)
 				.setEase(LeanTweenType.easeInCubic)
-				.setOnComplete(()=> { 
-					t.GetComponent<SpriteRenderer>().sortingOrder = 0;
+				.setOnComplete(()=> {
+					sr.sortingOrder = 0;
 				});
 			});
 		LeanTween.moveLocalX(t, t.transform.position.x + moveX, 0.6f);
@@ -67,8 +72,11 @@ public class TurtleTupperMinigame : BaseMinigame {
 		for(byte i = 0; i < turtlesState.Length; ++i) {
 			turtlesState[i] = false;
 
-			//turtles[i].GetComponent<SpriteRenderer>().sortingOrder = i;
-			//turtleShadows[i].GetComponent<SpriteRenderer>().sortingOrder = i;
+			SpriteRenderer sr = turtles[i].GetComponent<SpriteRenderer>();
+			SpriteRenderer srShadow = turtleShadows[i].GetComponent<SpriteRenderer>();
+
+			sr.flipX = Random.Range(0, 2) == 1;
+			srShadow.flipX = Random.Range(0, 2) == 1;
 		}
 	}
 

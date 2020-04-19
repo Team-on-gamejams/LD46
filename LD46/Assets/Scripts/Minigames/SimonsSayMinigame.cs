@@ -39,7 +39,10 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 		}
 
 		sequence = new List<byte>(maxSequenceLength);
-		ContinueSequence();
+
+		LeanTween.delayedCall(delayBeforePlay, () => { 
+			ContinueSequence();
+		});
 	}
 
 	public void OnNoteDown(int id) {

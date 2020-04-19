@@ -12,8 +12,14 @@ public class BaseMinigame : BaseBaseMinigame {
 	[SerializeField] float maxTime = 5.0f;
 	float currTime;
 
-	protected void Awake() {
+	public override void Init() {
+		base.Init();
 		currTime = maxTime;
+		timerTextField.text = currTime.ToString("0.00");
+
+		LeanTween.delayedCall(delayBeforePlay, () => {
+			isPlaying = true;
+		});
 	}
 
 	protected void Update() {
