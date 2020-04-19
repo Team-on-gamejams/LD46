@@ -29,6 +29,7 @@ public class SpriteRendererAnimator2 : MonoBehaviour {
 		if (startWithRandom) {
 			currSprite = (byte)Random.Range(0, sprites.Length);
 			sr.sprite = sprites[currSprite];
+			time = Random.Range(0, secondsForOneSprite - Time.deltaTime);
 		}
 		else {
 			sr.sprite = sprites[currSprite];

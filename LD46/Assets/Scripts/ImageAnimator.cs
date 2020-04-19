@@ -1,34 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using NaughtyAttributes;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class SpriteRendererAnimator : MonoBehaviour {
+public class ImageAnimator : MonoBehaviour {
 	[SerializeField] bool startWithRandom = true;
+	[SerializeField] bool stopAfterAnim = false;
 	[SerializeField] float secondsForOneSprite = 0.35f;
 	[SerializeField] [ReorderableList] Sprite[] sprites = null;
-	[ReadOnly] [SerializeField] SpriteRenderer sr = null;
+	[ReadOnly] [SerializeField] Image img = null;
 
 	byte currSprite = 0;
 	float time = 0;
 
 #if UNITY_EDITOR
 	private void OnValidate() {
-		if (sr == null)
-			sr = GetComponent<SpriteRenderer>();
+		if (img == null)
+			img = GetComponent<Image>();
 	}
 #endif
 
 	private void Awake() {
 		if (startWithRandom) {
 			currSprite = (byte)Random.Range(0, sprites.Length);
-			sr.sprite = sprites[currSprite];
+			img.sprite = sprites[currSprite];
 			time = Random.Range(0, secondsForOneSprite - Time.deltaTime);
 		}
 		else {
-
-			sr.sprite = sprites[currSprite];
+			img.sprite = sprites[currSprite];
 		}
 	}
 
@@ -37,9 +38,18 @@ public class SpriteRendererAnimator : MonoBehaviour {
 		if(time >= secondsForOneSprite) {
 			time -= secondsForOneSprite;
 			++currSprite;
-			if (currSprite == sprites.Length)
+			if (currSprite == sprites.Length) {
+				if (stopAfterAnim) {
+					enabled = false;
+					return;
+				}
 				currSprite = 0;
-			sr.sprite = sprites[currSprite];
+			}
+			img.sprite = sprites[currSprite];
 		}
+	}
+
+	public float GetDuration() {
+		return secondsForOneSprite * sprites.Length + secondsForOneSprite / 2;
 	}
 }

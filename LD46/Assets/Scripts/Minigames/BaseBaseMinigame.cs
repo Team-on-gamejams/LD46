@@ -9,12 +9,19 @@ public class BaseBaseMinigame : MonoBehaviour {
 	public Action onWinEvent = null;
 	public Action onLoseEvent = null;
 
+	public MinigameType type = MinigameType.None;
+
 	[NonSerialized] public bool isPlaying = false;
+
+	[SerializeField] float delayBeforePlay = 1.0f;
 
 	//Spaw objects for minigame, subscribe events, etc
 	public virtual void Init() {
 		Debug.Log($"Init minigame {transform.name}");
-		isPlaying = true;
+
+		LeanTween.delayedCall(delayBeforePlay, () => { 
+			isPlaying = true;
+		});
 	}
 
 	//Destroy minigame after animations

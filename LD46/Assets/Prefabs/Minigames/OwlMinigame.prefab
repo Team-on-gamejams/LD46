@@ -404,6 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16918a0d6b8baba4188431bb7b6ec13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 6
+  delayBeforePlay: 1
   isWinIfTimerEnds: 1
   timerTextField: {fileID: 5942632001445486968}
   maxTime: 10

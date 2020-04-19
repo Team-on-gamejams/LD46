@@ -14,8 +14,15 @@ public class Player : MonoBehaviour {
 	byte currMinigameId = 0;
 
 	private void Start() {
-		if(mainTheme != null)
+		if (mainTheme != null)
 			AudioManager.Instance.PlayLoop(mainTheme, 0.7f, channel: AudioManager.AudioChannel.Music);
+	}
+
+	public void StartLoop() {
+		StartNewMinigame();
+	}
+	
+	public void PlayMinigame(MinigameType type) {
 		StartNewMinigame();
 	}
 

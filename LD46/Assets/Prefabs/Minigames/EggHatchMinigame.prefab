@@ -379,10 +379,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f38bf8d7d79aba498897760fa59d694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 3
+  delayBeforePlay: 1
   isWinIfTimerEnds: 0
   timerTextField: {fileID: 5942632001445486968}
   maxTime: 10
-  neededDist: 8000
+  neededDist: 16000
   sranim: {fileID: 2471482564051274207}
   debugTextField: {fileID: 3324853973642178043}
 --- !u!1 &5942632001224054568
