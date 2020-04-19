@@ -32,7 +32,6 @@ public class CrocoMinigame : BaseMinigame {
   void WithForeachLoop()
   {
     foreach (Transform child in FrontCaries.transform) Caries.Add(child);
-    print("Done");
   }
 
   void Awake()
@@ -46,6 +45,14 @@ public class CrocoMinigame : BaseMinigame {
     {
       flip = !flip;
       Toothbrush.GetComponent<SpriteRenderer>().flipY = flip;
+      if (flip)
+      {
+        Toothbrush.GetComponent<CapsuleCollider2D>().offset = new Vector2(5, -0.32f);
+      }
+      else
+      {
+        Toothbrush.GetComponent<CapsuleCollider2D>().offset = new Vector2(5, 0.32f);
+      }
     }
   }
 }
