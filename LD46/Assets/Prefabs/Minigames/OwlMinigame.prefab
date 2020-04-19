@@ -408,7 +408,7 @@ MonoBehaviour:
   timerTextField: {fileID: 5942632001445486968}
   maxTime: 10
   maxAngle: 70
-  fallSpeedAcceleration: 2
+  fallSpeedAcceleration: 4
   fallSpeedMax: 20
   chengeByClick: 5
   owl: {fileID: 2663621291094941970}

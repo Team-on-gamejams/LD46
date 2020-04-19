@@ -45,24 +45,23 @@ public class PandaMinigame : BaseMinigame {
 	protected new void Update() {
 		base.Update();
 
-		if (isPlaying) {
-			if (Input.GetMouseButtonDown(0)) {
-				if (leftGender == centerGender)
-					WrongMatch();
-				else
-					RightMatch();
-			}
-			if (Input.GetMouseButtonDown(1)) {
-				if (rightGender == centerGender)
-					WrongMatch();
-				else
-					RightMatch();
-			}
-		}
-
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			debugTextField.enabled = !debugTextField.enabled;
 		}
+	}
+
+	public void LeftClick() {
+		if (leftGender == centerGender)
+			WrongMatch();
+		else
+			RightMatch();
+	}
+
+	public void RightClick() {
+		if (rightGender == centerGender)
+			WrongMatch();
+		else
+			RightMatch();
 	}
 
 	void RightMatch() {

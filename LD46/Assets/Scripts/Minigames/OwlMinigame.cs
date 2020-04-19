@@ -101,15 +101,15 @@ public class OwlMinigame : BaseMinigame {
 	}
 
 	public void OnLeftClick() {
-		currZ += chengeByClick;
-		if (isFallLeft)
-			fallSpeed += chengeByClick * Time.deltaTime;
-	}
-
-	public void OnRightClick() {
 		currZ -= chengeByClick;
 		if (!isFallLeft)
 			fallSpeed -= chengeByClick * Time.deltaTime;
+	}
+
+	public void OnRightClick() {
+		currZ += chengeByClick;
+		if (isFallLeft)
+			fallSpeed += chengeByClick * Time.deltaTime;
 	}
 
 	protected override void ShowLoseAnimation() {
