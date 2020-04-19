@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWinIfTimerEnds: 0
   timerTextField: {fileID: 1752860536867127474}
-  maxTime: 20
+  maxTime: 10
   turtles:
   - {fileID: 6989174262600601875}
   - {fileID: 6415557406448825435}
