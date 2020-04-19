@@ -1,5 +1,5 @@
 # Ludum dara 46
-Theme: THEME  
+Theme: Keep it alive  
 
 Game_name  
 Descr  
@@ -14,7 +14,7 @@ Available in [Windows, Linux, OSX and Web](itch.io). If you encounter any proble
 
 # Ludum Dare?
 Ludum Dare is one of the world's largest and longest running Game Jam events. Is an event where you create a game from scratch in a weekend based on a theme.  
-[GAME_NAME in Ludum Dare #45](https://ldjam.com/events/ludum-dare/46/$178354)  
+[GAME_NAME in Ludum Dare #46](https://ldjam.com/events/ludum-dare/46/$178354)  
 
 # Tools:
  * Unity 2019.2.5f1
