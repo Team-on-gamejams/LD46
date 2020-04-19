@@ -13,7 +13,7 @@ public class ShowTextPopupOnMouseHover : MonoBehaviour, IPointerEnterHandler, IP
 
 	[Header("Refs")]
 	[SerializeField] TextPopup textPopupPrefab = null;
-	[HideInInspector] [SerializeField] RectTransform rc = null;
+	[SerializeField] RectTransform rc = null;
 	TextPopup textPopup = null;
 
 	bool isMouseHover = false;
@@ -42,6 +42,7 @@ public class ShowTextPopupOnMouseHover : MonoBehaviour, IPointerEnterHandler, IP
 		if (textPopup == null) {
 			textPopup = Instantiate(textPopupPrefab, transform);
 			textPopup.isUp = isUp;
+			textPopup.transform.localScale = Vector3.one / transform.localScale.x;
 		}
 
 		UpdatePos();

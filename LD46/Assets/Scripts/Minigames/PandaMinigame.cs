@@ -119,7 +119,7 @@ public class PandaMinigame : BaseMinigame {
 		leftPanda = Instantiate(genders[leftGender ? 1 : 0], leftPos, Quaternion.identity, transform).transform;
 		rightPanda = Instantiate(genders[rightGender ? 1 : 0], rightPos, Quaternion.identity, transform).transform;
 
-		centerPanda.transform.localScale = new Vector3(centerGender != rightGender ? 1 : -1, 1, 1);
+		//centerPanda.transform.localScale = new Vector3(centerGender != rightGender ? 1 : -1, 1, 1);
 		leftPanda.localScale = leftScale;
 		rightPanda.localScale = rightScale;
 	}
