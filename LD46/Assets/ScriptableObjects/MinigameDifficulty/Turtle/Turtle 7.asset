@@ -15,4 +15,4 @@ MonoBehaviour:
   delayBeforePlay: 1
   timer: 10
   isWinIfTimerEnds: 0
-  turtlesCount: 12
+  turtlesCount: 21
