@@ -712,18 +712,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99809cf5b63d79645a627fd7946b1e8b, type: 3}
---- !u!114 &905268031 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1752860536867127474, guid: e3ae9811068a22146baa9762fa6a4ebb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1752860537385247842}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1594797234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,16 +1006,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 778089129869212416, guid: e3ae9811068a22146baa9762fa6a4ebb,
-        type: 3}
-      propertyPath: timerTextField
-      value: 
-      objectReference: {fileID: 905268031}
-    - target: {fileID: 1752860536867127468, guid: e3ae9811068a22146baa9762fa6a4ebb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1752860538325962304, guid: e3ae9811068a22146baa9762fa6a4ebb,
         type: 3}
       propertyPath: m_Name
