@@ -9,6 +9,7 @@ public class TurtleTupperMinigame : BaseMinigame {
 	[Header("Refs")]
 	[SerializeField] GameObject turtlePrefab;
 	[SerializeField] GameObject turtleShadowPrefab;
+	[SerializeField] Transform[] turtleSpawnPosRandom;
 	SpriteRendererAnimator2[] turtles = null;
 	SpriteRendererAnimator2[] turtleShadows = null;
 	bool[] turtlesState = null;
@@ -27,11 +28,13 @@ public class TurtleTupperMinigame : BaseMinigame {
 		turtleShadows = new SpriteRendererAnimator2[i];
 		turtlesState = new bool[i];
 
+		turtleSpawnPosRandom.Shuffle();
+
 		while (i > 0) {
 			--i;
 			int id = i;
 
-			Vector3 pos = GameManager.Instance.Camera.ViewportToWorldPoint(new Vector3(Random.Range(0.05f, 0.95f), Random.Range(0.0f, 0.5f)));
+			Vector3 pos = turtleSpawnPosRandom[i].position;
 			pos.z = 0.0f;
 
 			turtles[i] = Instantiate(turtlePrefab,
