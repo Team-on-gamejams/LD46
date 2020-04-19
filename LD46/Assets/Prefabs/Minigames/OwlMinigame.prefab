@@ -406,7 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWinIfTimerEnds: 1
   timerTextField: {fileID: 5942632001445486968}
-  maxTime: 20
+  maxTime: 10
   maxAngle: 70
   fallSpeedAcceleration: 2
   fallSpeedMax: 20

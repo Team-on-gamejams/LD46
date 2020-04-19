@@ -653,6 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda814c4703421b44bd92772cbdd4d58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWinIfTimerEnds: 0
   timerTextField: {fileID: 5942632001445486968}
   maxTime: 10
   matchs: 4

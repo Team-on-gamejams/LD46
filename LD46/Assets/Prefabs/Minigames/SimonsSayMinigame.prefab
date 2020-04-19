@@ -718,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5692e8669709edf419247a873fb8cd31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSequenceLength: 6
+  maxSequenceLength: 4
   sounds:
   - {fileID: 8300000, guid: 8972a89b8d64f6f489fe83054e139e26, type: 3}
   - {fileID: 8300000, guid: 17ed3b61c38d7c44fa4e5af69de898d2, type: 3}

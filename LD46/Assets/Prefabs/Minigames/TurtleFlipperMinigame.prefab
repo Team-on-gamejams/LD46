@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWinIfTimerEnds: 0
   timerTextField: {fileID: 1752860536867127474}
-  maxTime: 60
+  maxTime: 15
   Arrow: {fileID: 1752860537076126510}
   taList:
   - {fileID: 1752860538837140828}
@@ -1476,7 +1476,6 @@ MonoBehaviour:
   - {fileID: 1752860538739107364}
   - {fileID: 1752860537709588326}
   - {fileID: 1752860537115430474}
-  arrowRotateSpeed: 90
   debugTextField: {fileID: 1752860536969714509}
 --- !u!1 &1752860538739107367
 GameObject:

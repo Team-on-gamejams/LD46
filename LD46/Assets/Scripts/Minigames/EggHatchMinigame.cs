@@ -55,7 +55,6 @@ public class EggHatchMinigame : BaseMinigame {
 		lastPos = currPos;
 
 		debugTextField.text = $"Progress: {dist.ToString("0")}/{neededDist.ToString("0")}   Last: {deltaPos.magnitude.ToString("0")}";
-		Debug.Log(deltaPos.magnitude);
 	}
 
 	protected override void ShowLoseAnimation() {

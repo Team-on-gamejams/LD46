@@ -551,7 +551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Get out of damn snake
+  m_text: Get out of damn snake!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2077966254215956114}
-    characterCount: 21
+    characterCount: 22
     spriteCount: 0
     spaceCount: 4
     wordCount: 5
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWinIfTimerEnds: 0
   timerTextField: {fileID: 8493170087221762003}
-  maxTime: 30
+  maxTime: 10
 --- !u!1 &7432903275849754795
 GameObject:
   m_ObjectHideFlags: 0
