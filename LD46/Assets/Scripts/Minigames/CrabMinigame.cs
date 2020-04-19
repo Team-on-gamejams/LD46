@@ -2,34 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrabMinigame : BaseBaseMinigame
+public class CrabMinigame : BaseMinigame
 {
 
     public GameObject Crab;
 
-    private Vector2 targetPos;
-    public float Range = 30;
-    public float maxHeight;
-    public float minHeight;
-    public float speed;
+    public float lineHeight = 3.5f;
+    Coroutine moveCoroutine;
+    int line = 0;
+
+    CrabMinigameDifficulty difficulty;
+
+    public override void Init(byte _usedDifficulty) {
+        base.Init(_usedDifficulty);
+        difficulty = difficultyBase as CrabMinigameDifficulty;
+    }
 
     public void GoUp()
     {
-        if (Crab.transform.position.y < maxHeight)
+        if (line < 1 && isPlaying)
         {
-            targetPos = new Vector2(Crab.transform.position.x, Crab.transform.position.y + Range);
-            //Crab.transform.position = targetPos;
-            Crab.transform.position = Vector2.MoveTowards(Crab.transform.position, targetPos, speed * Time.deltaTime);
+            ++line;
+            if (moveCoroutine != null)
+                StopCoroutine(moveCoroutine);
+            moveCoroutine = StartCoroutine(MoveCoroutine(lineHeight * line, difficulty.speed));
         }
 
     }
 
     public void GoDown()
     {
-        if (Crab.transform.position.y > minHeight)
+        if (line > -1 && isPlaying)
         {
-            targetPos = new Vector2(Crab.transform.position.x, Crab.transform.position.y - Range);
-            Crab.transform.position = targetPos;
+            --line;
+            if (moveCoroutine != null)
+                StopCoroutine(moveCoroutine);
+            moveCoroutine =  StartCoroutine(MoveCoroutine(lineHeight * line, -difficulty.speed));
+        }
+    }
+
+    IEnumerator MoveCoroutine(float desiredY, float speed) 
+    {
+        float moveTime = Mathf.Abs((desiredY - Crab.transform.position.y) / speed);
+
+        while (moveTime > 0) {
+            moveTime -= Time.deltaTime;
+
+            Crab.transform.position = new Vector3(Crab.transform.position.x, Crab.transform.position.y + speed * Time.deltaTime);
+            yield return null;
         }
     }
 

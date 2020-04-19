@@ -4,5 +4,5 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Turtle", menuName = "MinigameDifficulty/Turtle")]
 public class TurtleMinigameDifficulty : BaseMinigameDifficulty {
-	
+	public byte turtlesCount = 10;
 }
