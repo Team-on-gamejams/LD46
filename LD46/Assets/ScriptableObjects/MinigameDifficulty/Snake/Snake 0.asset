@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Snake 0
   m_EditorClassIdentifier: 
   delayBeforePlay: 1
-  timer: 10
+  timer: 8
   isWinIfTimerEnds: 0
-  speed: 2
+  speed: 5
   maxSpeed: 10
