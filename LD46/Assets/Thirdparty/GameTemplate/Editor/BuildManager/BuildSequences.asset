@@ -21,10 +21,10 @@ MonoBehaviour:
       targetGroup: 1
       target: 5
       options: 8
-      needZip: 1
+      needZip: 0
       compressDirPath: $NAME_$VERSION_$DAY_$TIME
       needItchPush: 1
-      itchChannel: windows-32
+      itchChannel: windows-32-testing
       itchDirPath: $NAME_$VERSION_$DAY_$TIME
       itchAddLastChangelogUpdateNameToVerison: 1
       itchLastChangelogUpdateName: 0.1 - Set this changelog from local polyglot file
@@ -257,7 +257,7 @@ MonoBehaviour:
       itchChannel: windows-32
       itchDirPath: $NAME_$VERSION_$PLATFORM
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 
+      itchLastChangelogUpdateName: 0.1 - Set this changelog from local polyglot file
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
       itchChannel: windows-64
       itchDirPath: $NAME_$VERSION_$PLATFORM
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 
+      itchLastChangelogUpdateName: 0.1 - Set this changelog from local polyglot file
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -291,7 +291,7 @@ MonoBehaviour:
       itchChannel: linux-universal
       itchDirPath: $NAME_$VERSION_$PLATFORM
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 
+      itchLastChangelogUpdateName: 0.1 - Set this changelog from local polyglot file
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -308,7 +308,7 @@ MonoBehaviour:
       itchChannel: osx-universal
       itchDirPath: $NAME_$VERSION_$PLATFORM
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 
+      itchLastChangelogUpdateName: 0.1 - Set this changelog from local polyglot file
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -325,7 +325,7 @@ MonoBehaviour:
       itchChannel: webgl
       itchDirPath: $NAME_$VERSION_$PLATFORM
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 
+      itchLastChangelogUpdateName: 0.1 - Set this changelog from local polyglot file
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
       itchChannel: android
       itchDirPath: $NAME_$VERSION_$PLATFORM$EXECUTABLE
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 
+      itchLastChangelogUpdateName: 0.1 - Set this changelog from local polyglot file
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
