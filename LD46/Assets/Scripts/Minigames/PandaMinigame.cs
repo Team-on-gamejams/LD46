@@ -11,6 +11,9 @@ public class PandaMinigame : BaseMinigame {
 	[SerializeField] Transform centerPanda = null;
 	[SerializeField] Transform leftPanda = null;
 	[SerializeField] Transform rightPanda = null;
+	[SerializeField] GameObject[] health = null;
+	[SerializeField] ParticleSystem winParticles = null;
+	[SerializeField] ParticleSystem loseParticles = null;
 
 	[SerializeField] SpriteRendererAnimator[] genders = null;
 
@@ -39,6 +42,11 @@ public class PandaMinigame : BaseMinigame {
 		rightPos = rightPanda.position;
 		leftScale = leftPanda.localScale;
 		rightScale = rightPanda.localScale;
+		debugTextField.enabled = false;
+
+		for (byte i = difficulty.maxWrongMatchs; i < health.Length; ++i) {
+			health[i].SetActive(false);
+		}
 
 		SpawnNewPanda();
 	}
@@ -72,6 +80,11 @@ public class PandaMinigame : BaseMinigame {
 	void RightMatch() {
 		--matchs;
 
+		loseParticles.Stop();
+		winParticles.Play();
+		LeanTween.cancel(winParticles.gameObject, false);
+		LeanTween.delayedCall(winParticles.gameObject, 0.1f, () => winParticles.Stop());
+
 		debugTextField.text = $"Prev math right.";
 
 		if (matchs <= 0) {
@@ -85,7 +98,14 @@ public class PandaMinigame : BaseMinigame {
 
 	void WrongMatch() {
 		--matchs;
+
+		health[difficulty.maxWrongMatchs - 1 - wrongMatchs].SetActive(false);
 		++wrongMatchs;
+
+		winParticles.Stop();
+		loseParticles.Play();
+		LeanTween.cancel(loseParticles.gameObject, false);
+		LeanTween.delayedCall(loseParticles.gameObject, 0.1f, () => loseParticles.Stop());
 
 		debugTextField.text = $"Prev math wrong.";
 
