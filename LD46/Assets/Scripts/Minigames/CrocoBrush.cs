@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrocoBrush : MonoBehaviour
 {
   private bool isDragging;
-
+  private Vector2 mousePosition;
   public void OnMouseDown()
   {
     isDragging = true;
@@ -16,29 +16,31 @@ public class CrocoBrush : MonoBehaviour
   {
     isDragging = false;
     transform.GetComponent<BoxCollider2D>().enabled = true;
+    transform.GetComponent<Rigidbody2D>().velocity = new Vector2();
   }
 
   public void OnTriggerEnter2D(Collider2D colide) {   
     if (colide.gameObject.name == "Top")
     {
-      isDragging = false;
-      transform.Translate(new Vector3(0f,-0.5f,0));
+      //isDragging = false;
+      transform.GetComponent<Rigidbody2D>().velocity *= -1.2f;
     }
 
     if (colide.gameObject.name == "Bottom")
     {
-      isDragging = false;
-      transform.Translate(new Vector3(0f, 0.5f, 0));
+
+      transform.GetComponent<Rigidbody2D>().velocity *= -1.2f;
+      ;
     }
 
     if (colide.gameObject.name == "Right")
     {
-      isDragging = false;
-      transform.Translate(new Vector3(-0.5f, 0f, 0));
+      transform.GetComponent<Rigidbody2D>().velocity *= -1.2f;
+
     }
     if (colide.gameObject.name.Contains("Caries"))
     {
-      colide.gameObject.active = false;;
+      colide.gameObject.active = false;
     }
   }
 
@@ -48,8 +50,9 @@ public class CrocoBrush : MonoBehaviour
     {
       if (isDragging)
       {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        transform.Translate(mousePosition);
+      mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+      //transform.Translate(mousePosition);
+      transform.GetComponent<Rigidbody2D>().velocity = mousePosition * 5;
       }
       
     }
