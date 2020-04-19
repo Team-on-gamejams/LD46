@@ -12,18 +12,5 @@ public class DebugHotkeys : MonoBehaviour {
 		else if (Input.GetKeyDown(KeyCode.Escape)) {
 			QuitGame.QuitApp();
 		}
-		else if (Input.mouseScrollDelta.y != 0) {
-			if (cam == null) {
-				cam = GameManager.Instance.Camera.GetComponent<CinemachineVirtualCamera>();
-				if(cam == null) {
-					cam = GameManager.Instance.Camera.GetComponent<CinemachineBrain>()?.ActiveVirtualCamera as CinemachineVirtualCamera;
-					if (cam == null)
-						cam = FindObjectOfType<CinemachineVirtualCamera>();
-				}
-			}
-
-			if (cam != null)
-				cam.m_Lens.OrthographicSize -= 0.3f * Input.mouseScrollDelta.y;
-		}
 	}
 }
