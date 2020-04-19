@@ -1396,6 +1396,7 @@ MonoBehaviour:
   timerTextField: {fileID: 0}
   maxTime: 5
   Arrow: {fileID: 1752860537076126510}
+  taList: []
 --- !u!1 &1752860538325962304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,9 +1450,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb3080d2aa678a46b3010aaf913088b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerTextField: {fileID: 0}
+  timerTextField: {fileID: 1752860536867127474}
   maxTime: 5
   Arrow: {fileID: 1752860537076126510}
+  taList:
+  - {fileID: 1752860538739107364}
+  - {fileID: 1752860538029537099}
+  - {fileID: 1752860537709588326}
+  - {fileID: 1752860537115430474}
+  - {fileID: 1752860538837140828}
 --- !u!1 &1752860538739107367
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,8 +10,14 @@ public class TurtleActions : MonoBehaviour
   public float winAngle;
   private bool isJumping = false;
   private bool isFaling = false;
-
   private float startPosition;
+  private bool isStay = false;
+
+
+  public bool getWinState()
+  {
+    return isStay;
+  }
 
   void Setup()
   {
@@ -44,6 +50,7 @@ public class TurtleActions : MonoBehaviour
   {
     if (gameObject.tag == "Turtle")
     {
+      
       if (!isFaling && !isJumping) { isJumping = true; isFaling = true; }
       Vector3 curRotation = angle.getAngle();
       Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -56,17 +63,16 @@ public class TurtleActions : MonoBehaviour
       {
         Turtle.transform.rotation = Quaternion.Euler(curRotation);
         Vector3 startPosition = Turtle.transform.position;
-
+        isStay = true;
       }
       else
       {
         Turtle.transform.rotation = new Quaternion(0f, 0f, rndAng, 1f);
+        isStay = false;
       }
+     
     }
-    else
-    {
-      Debug.Log("Did not hit anything");
-    }
+    angle.GameCondition();
   }
 
 
