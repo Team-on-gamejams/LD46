@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Crab 7
   m_EditorClassIdentifier: 
   delayBeforePlay: 1
-  timer: 10000
+  timer: 10
   isWinIfTimerEnds: 1
   speed: 10
   startTime: 1

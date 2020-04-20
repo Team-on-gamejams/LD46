@@ -66,13 +66,13 @@ public class CrabMinigame : BaseMinigame
     //Obstacle
     private float spawnTimeObstacle;
     public List<Sprite> AllSprites;
+    GameObject obstacleClone;
 
     protected new void Update()
     {
         base.Update();
         if (spawnTimeObstacle <= 0 && isPlaying)
         {
-            GameObject obstacleClone;
             Transform activeSpawner = spawners.Random().transform;
             obstacleClone = Instantiate(Obstacle, activeSpawner.position, Quaternion.identity, activeSpawner);
             SpriteRenderer sr = obstacleClone.GetComponent<SpriteRenderer>();
@@ -88,12 +88,16 @@ public class CrabMinigame : BaseMinigame
 
     public void Lose()
     {
+        Crab.transform.position = new Vector3(0, 0, 0);
+        obstacleClone.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.zero);
         ShowLoseAnimation();
         isPlaying = false;
     }
     //Obstacle end
     public void Win()
     {
+        Crab.transform.position = new Vector3(0, 0, 0);
+        obstacleClone.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.zero);
         ShowWinAnimation();
         isPlaying = false;
     }
@@ -101,7 +105,7 @@ public class CrabMinigame : BaseMinigame
     protected override void ShowLoseAnimation()
     {
         Crab.GetComponent<Animator>().SetBool("Lose", true);
-        LeanTween.delayedCall(1.0f, () =>
+        LeanTween.delayedCall(3.0f, () =>
         {
             base.ShowLoseAnimation();
         });
