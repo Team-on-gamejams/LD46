@@ -86,6 +86,12 @@ public class CrabMinigame : BaseMinigame
             spawnTimeObstacle -= Time.deltaTime;
         }
     }
+
+    public void Lose()
+    {
+        ShowLoseAnimation();
+        isPlaying = false;
+    }
     //Obstacle end
     public void Win()
     {
