@@ -111,6 +111,8 @@ public class Player : MonoBehaviour {
 		IncreaseDifficulty();
 
 		gameMenu.ShowMainMenu();
+		if (currDifficulty == minigamesSingle.Count)
+			gameMenu.PlayEndAnimation();
 	}
 
 	void StartSingleMinigame(BaseBaseMinigame minigame) {

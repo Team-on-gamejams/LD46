@@ -54,6 +54,10 @@ public class GameMenu : MonoBehaviour {
 #endif
 	}
 
+	public void PlayEndAnimation() {
+		anim.Play("EndGameAnimation");
+	}
+
 	public void ShowMainMenu() {
 		cg.interactable = cg.blocksRaycasts = true;
 		LeanTweenEx.ChangeCanvasGroupAlpha(cg, 1.0f, 0.2f);
@@ -66,6 +70,11 @@ public class GameMenu : MonoBehaviour {
 
 	public void OnPlayClick() {
 		player.StartLoop();
+	}
+
+	public void ShowCreditsLong() {
+		creditscg.interactable = creditscg.blocksRaycasts = true;
+		LeanTweenEx.ChangeCanvasGroupAlpha(creditscg, 1.0f, 0.5f);
 	}
 
 	public void OnCreditsClick() {

@@ -9,10 +9,21 @@ public class DialogPlayer : MonoBehaviour {
 		"No visitors for a long time.",
 		"Damaged animal enclosures. Sad animals. If nothing changes, the zoo is gonna shut down.",
 		"You need to make it beatiful again. You are the new zookepeer. Keep this zoo alive, and take a good care of our animal friends.",
+		"Oh my! You do it!!",
+		"Don't forget to checkout online hightscores.",
 	};
 	byte i = 0;
 
 	public TextMeshProUGUI text;
+	public GameMenu menu;
+
+	public void ShowCredits() {
+		menu.ShowCreditsLong();
+	}
+
+	public void SetDialogId(int id) {
+		i = (byte)id;
+	}
 
 	public void ShowDialog() {
 		StartCoroutine(Show(dialogs[i++]));

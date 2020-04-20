@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
 
-[RequireComponent(typeof(SpriteRenderer))]
 public class ImageAnimator : MonoBehaviour {
 	[SerializeField] bool startWithRandom = true;
 	[SerializeField] bool stopAfterAnim = false;
