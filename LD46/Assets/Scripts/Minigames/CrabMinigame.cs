@@ -9,6 +9,7 @@ public class CrabMinigame : BaseMinigame
     public GameObject Obstacle;
     public GameObject[] spawners;
     public Animator crabAnimator;
+    public AudioClip winClip;
 
 
     //Crab
@@ -90,17 +91,17 @@ public class CrabMinigame : BaseMinigame
     {
         if (!isPlaying)
             return;
+        if (moveCoroutine != null)
+            StopCoroutine(moveCoroutine);
         Crab.transform.position = new Vector3(0, 0, 0);
-        obstacleClone.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.zero);
+        Destroy(obstacleClone.gameObject);
         ShowLoseAnimation();
         isPlaying = false;
     }
 
     protected override void ShowLoseAnimation()
     {
-        if (!isPlaying)
-            return;
-        Crab.GetComponent<Animator>().SetBool("Lose", true);
+        crabAnimator.SetBool("Lose", true);
         LeanTween.delayedCall(3.0f, () =>
         {
             base.ShowLoseAnimation();
@@ -109,16 +110,19 @@ public class CrabMinigame : BaseMinigame
 
     protected override void ShowWinAnimation()
     {
-        if (!isPlaying)
-            return;
         if (moveCoroutine != null)
             StopCoroutine(moveCoroutine);
         isPlaying = false;
-        obstacleClone.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.zero);
+        Destroy(obstacleClone.gameObject);
         Crab.transform.position = new Vector3(0, 0, 0);
-        Crab.GetComponent<Animator>().SetBool("Won", true);
-        LeanTween.delayedCall(2.0f, () =>
+        crabAnimator.SetBool("Won", true);
+
+        float volume = AudioManager.Instance.GetVolume(AudioManager.AudioChannel.Music);
+        AudioManager.Instance.SetVolume(AudioManager.AudioChannel.Music, 0.0f);
+        AudioManager.Instance.Play(winClip, channel: AudioManager.AudioChannel.Sound);
+        LeanTween.delayedCall(4.0f, () =>
         {
+            AudioManager.Instance.SetVolume(AudioManager.AudioChannel.Music, volume);
             base.ShowWinAnimation();
         });
     }
