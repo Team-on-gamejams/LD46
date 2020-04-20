@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 543f07f09511a0942b20568a3f8f227c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5b1df123aec14b4bb34c9ce8630c933, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6546,8 +6546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -69.9, y: -42.6}
+  m_AnchoredPosition: {x: 0, y: -31.9}
+  m_SizeDelta: {x: -69.9, y: -106.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1349562663
 MonoBehaviour:
@@ -7080,7 +7080,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 287.5}
+  m_SizeDelta: {x: 0, y: 348.7}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1386112960
 MonoBehaviour:
@@ -7100,7 +7100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 3a8f8aedb2b682b48894253810bba399, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7109,7 +7109,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.2
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1386112961
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10224,8 +10224,8 @@ MonoBehaviour:
   creditscg: {fileID: 1463295059}
   SoundImage: {fileID: 182269458}
   SoundImageState:
-  - {fileID: 21300000, guid: cd66867f62719cf478a3bd384c6e05dc, type: 3}
-  - {fileID: 21300000, guid: 543f07f09511a0942b20568a3f8f227c, type: 3}
+  - {fileID: 21300000, guid: 360044c9bdd70bd42a937a29a67b2463, type: 3}
+  - {fileID: 21300000, guid: b5b1df123aec14b4bb34c9ce8630c933, type: 3}
   logo: {fileID: 1699728029}
   logoAnim: {fileID: 1699728030}
   cg: {fileID: 2107989039}
