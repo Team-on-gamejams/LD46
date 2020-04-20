@@ -17,6 +17,11 @@ public class TurtleTupperMinigame : BaseMinigame {
 	[Header("Debug")]
 	[SerializeField] TextMeshProUGUI debugTextField = null;
 
+	[Header("Animations")]
+	[SerializeField] GameObject minigame;
+	[SerializeField] GameObject winAnimation;
+	[SerializeField] GameObject loseAnimation;
+
 	TurtleMinigameDifficulty difficulty;
 
 	public override void Init(byte usedDifficulty) {
@@ -39,12 +44,12 @@ public class TurtleTupperMinigame : BaseMinigame {
 
 			turtles[i] = Instantiate(turtlePrefab,
 				pos,
-				Quaternion.identity, transform)
+				Quaternion.identity, minigame.transform)
 				.GetComponent<SpriteRendererAnimator2>();
 
 			turtleShadows[i] = Instantiate(turtleShadowPrefab,
 				pos,
-				Quaternion.identity, transform)
+				Quaternion.identity, minigame.transform)
 				.GetComponent<SpriteRendererAnimator2>();
 
 			EventTrigger et = turtles[i].GetComponent<EventTrigger>();
@@ -114,15 +119,22 @@ public class TurtleTupperMinigame : BaseMinigame {
 
 	protected override void ShowLoseAnimation() {
 		debugTextField.text = "Loser, ahahahah";
-		LeanTween.delayedCall(1.0f, () => {
+		minigame.SetActive(false);
+		loseAnimation.SetActive(true);
+		LeanTween.delayedCall(2.0f, () => {
 			base.ShowLoseAnimation();
 		});
 	}
 
 	protected override void ShowWinAnimation() {
 		debugTextField.text = "You win";
+
 		LeanTween.delayedCall(1.0f, () => {
-			base.ShowWinAnimation();
+			minigame.SetActive(false);
+			winAnimation.SetActive(true);
+			LeanTween.delayedCall(2.0f, () => {
+				base.ShowWinAnimation();
+			});
 		});
 	}
 }
