@@ -7,5 +7,5 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/TeamScene2D.unity
-    guid: be0b539de48544149898588ad38f43a6
+    guid: af79f14d7d9e3cf40aa2089f837eb91f
   m_configObjects: {}

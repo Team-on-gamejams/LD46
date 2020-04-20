@@ -20,6 +20,11 @@ public class PandaMinigame : BaseMinigame {
 	[Header("Debug")]
 	[SerializeField] TextMeshProUGUI debugTextField = null;
 
+	[Header("Animations")]
+	[SerializeField] GameObject minigame;
+	[SerializeField] GameObject winAnimation;
+	[SerializeField] GameObject loseAnimation;
+
 	Vector3 centerPos;
 	Vector3 leftPos;
 	Vector3 rightPos;
@@ -136,9 +141,9 @@ public class PandaMinigame : BaseMinigame {
 		Destroy(leftPanda.gameObject);
 		Destroy(rightPanda.gameObject);
 
-		centerPanda = Instantiate(genders[centerGender ? 1 : 0], centerPos, Quaternion.identity, transform).transform;
-		leftPanda = Instantiate(genders[leftGender ? 1 : 0], leftPos, Quaternion.identity, transform).transform;
-		rightPanda = Instantiate(genders[rightGender ? 1 : 0], rightPos, Quaternion.identity, transform).transform;
+		centerPanda = Instantiate(genders[centerGender ? 1 : 0], centerPos, Quaternion.identity, minigame.transform).transform;
+		leftPanda = Instantiate(genders[leftGender ? 1 : 0], leftPos, Quaternion.identity, minigame.transform).transform;
+		rightPanda = Instantiate(genders[rightGender ? 1 : 0], rightPos, Quaternion.identity, minigame.transform).transform;
 
 		//centerPanda.transform.localScale = new Vector3(centerGender != rightGender ? 1 : -1, 1, 1);
 		leftPanda.localScale = leftScale;
@@ -147,14 +152,17 @@ public class PandaMinigame : BaseMinigame {
 
 	protected override void ShowLoseAnimation() {
 		debugTextField.text = "Loser, ahahahah";
-		LeanTween.delayedCall(1.0f, () => { 
+		minigame.SetActive(false);
+		loseAnimation.SetActive(true);
+		LeanTween.delayedCall(2.5f, () => { 
 			base.ShowLoseAnimation();
 		});
 	}
 
 	protected override void ShowWinAnimation() {
 		debugTextField.text = "You win";
-		LeanTween.delayedCall(1.0f, () => {
+		winAnimation.SetActive(true);
+		LeanTween.delayedCall(2.0f, () => {
 			base.ShowWinAnimation();
 		});
 	}

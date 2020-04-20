@@ -8,7 +8,6 @@ public class CrabMinigame : BaseMinigame
     public GameObject Crab;
     public GameObject Obstacle;
     public GameObject[] spawners;
-    public GameObject[] patterns;
 
 
     //Crab
@@ -23,6 +22,7 @@ public class CrabMinigame : BaseMinigame
     {
         base.Init(_usedDifficulty);
         difficulty = difficultyBase as CrabMinigameDifficulty;
+
     }
 
     public void GoUp()
@@ -64,23 +64,26 @@ public class CrabMinigame : BaseMinigame
 
     //Obstacle
     public int damage = 1;
-    public float obstacleSpeed = 5f;
-    private float spawnTime;
-    public float startTime;
+    private float spawnTimeObstacle;
 
-    private void Update()
+    public List<Sprite> AllSprites;
+
+    protected new void Update()
     {
-        if (spawnTime <= 0)
+        base.Update();
+        if (spawnTimeObstacle <= 0)
         {
-            //Vector3 activeSpawner = spawners.Random().transform.position;
-            //Instantiate(Obstacle, activeSpawner, Quaternion.identity);
-            int rand = Random.Range(0, patterns.Length);
-            Instantiate(patterns[rand], transform.position, Quaternion.identity);
-            spawnTime = startTime;
+            GameObject obstacleClone;
+            Transform activeSpawner = spawners.Random().transform;
+            obstacleClone = Instantiate(Obstacle, activeSpawner.position, Quaternion.identity, activeSpawner);
+            SpriteRenderer sr = obstacleClone.GetComponent<SpriteRenderer>();
+            if (sr) sr.sprite = AllSprites[Random.Range(0, AllSprites.Count)];
+            obstacleClone.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.left * difficulty.obstacleSpeed);
+            spawnTimeObstacle = difficulty.startTime;
         }
         else
         {
-            spawnTime -= Time.deltaTime;
+            spawnTimeObstacle -= Time.deltaTime;
         }
     }
     //Obstacle end

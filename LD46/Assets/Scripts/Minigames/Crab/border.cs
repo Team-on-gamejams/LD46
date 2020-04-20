@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class border : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name=="crab" || other.gameObject.name == "die")
+        if (other.gameObject.name == "die")
         {
             Destroy(gameObject);
         }

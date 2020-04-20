@@ -16,4 +16,5 @@ MonoBehaviour:
   timer: 10
   isWinIfTimerEnds: 1
   speed: 10
-  spawnTimer: 1
+  startTime: 1
+  obstacleSpeed: 10
