@@ -18,7 +18,10 @@ public class EggHatchMinigame : BaseMinigame {
 	float dist = 0;
 	Vector3 lastPos, currPos, deltaPos;
 
-	EggHatchMinigameDifficulty difficulty;
+  public GameObject LoseAnimation;
+  public GameObject WinAnimation;
+
+  EggHatchMinigameDifficulty difficulty;
 
 	public override void Init(byte usedDIfficulty) {
 		base.Init(usedDIfficulty);
@@ -70,14 +73,16 @@ public class EggHatchMinigame : BaseMinigame {
 
 	protected override void ShowLoseAnimation() {
 		debugTextField.text = "Loser, ahahahah";
-		LeanTween.delayedCall(1.0f, () => {
+    LoseAnimation.SetActive(true);
+    LeanTween.delayedCall(1.0f, () => {
 			base.ShowLoseAnimation();
 		});
 	}
 
 	protected override void ShowWinAnimation() {
 		debugTextField.text = "You win";
-		LeanTween.delayedCall(1.0f, () => {
+    WinAnimation.SetActive(true);
+    LeanTween.delayedCall(1.0f, () => {
 			base.ShowWinAnimation();
 		});
 	}
