@@ -67,13 +67,15 @@ public class CrocoMinigame : BaseMinigame {
 	}
 
 	protected override void ShowLoseAnimation() {
-		LeanTween.delayedCall(1.0f, () => {
-			base.ShowLoseAnimation();
+		LeanTween.delayedCall(5.0f, () => {
+      print("Looser");
+      base.ShowLoseAnimation();
 		});
 	}
 
 	protected override void ShowWinAnimation() {
-		LeanTween.delayedCall(1.0f, () => {
+		LeanTween.delayedCall(5.0f, () => {
+      print("Winner");
 			base.ShowWinAnimation();
 		});
 	}
