@@ -14,6 +14,7 @@ public class EggHatchMinigame : BaseMinigame {
 	[Header("Debug")]
 	[SerializeField] TextMeshProUGUI debugTextField = null;
 
+	bool isPointerInside = false;
 	float dist = 0;
 	Vector3 lastPos, currPos, deltaPos;
 
@@ -35,12 +36,20 @@ public class EggHatchMinigame : BaseMinigame {
 		}
 	}
 
+	public void OnEnterPointer() {
+		isPointerInside = true;
+	}
+
+	public void OnExitPointer() {
+		isPointerInside = false;
+	}
+
 	public void OnDragEgg() {
 		currPos = Input.mousePosition;
 		if (lastPos == Vector3.zero)
 			lastPos = currPos;
 
-		if (isPlaying) {
+		if (isPlaying && isPointerInside) {
 			deltaPos = currPos - lastPos;
 			dist += deltaPos.magnitude;
 

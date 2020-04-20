@@ -99,7 +99,8 @@ public class PandaMinigame : BaseMinigame {
 	void WrongMatch() {
 		--matchs;
 
-		health[difficulty.maxWrongMatchs - 1 - wrongMatchs].SetActive(false);
+		if(difficulty.maxWrongMatchs != 0)
+			health[difficulty.maxWrongMatchs - 1 - wrongMatchs].SetActive(false);
 		++wrongMatchs;
 
 		winParticles.Stop();
