@@ -5,21 +5,24 @@ using UnityEngine.UI;
 
 public class GameMenu : MonoBehaviour {
 	[Header("Refs")]
-	[SerializeField] Player player;
-	[SerializeField] CanvasGroup creditscg;
+	[SerializeField] Player player = null;
+	[SerializeField] CanvasGroup creditscg = null;
 	[Space]
-	[SerializeField] Image SoundImage;
-	[SerializeField] Sprite[] SoundImageState;
+	[SerializeField] Image SoundImage = null;
+	[SerializeField] Sprite[] SoundImageState = null;
 
 	[Space]
-	[SerializeField] CanvasGroup logo;
-	[SerializeField] ImageAnimator logoAnim;
-	[SerializeField] CanvasGroup cg;
+	[SerializeField] CanvasGroup logo = null;
+	[SerializeField] ImageAnimator logoAnim = null;
+	[SerializeField] CanvasGroup cg = null;
+	[SerializeField] Animator anim = null;
 
 #if UNITY_EDITOR
 	private void OnValidate() {
 		if (cg == null)
 			cg = GetComponent<CanvasGroup>();
+		if (anim == null)
+			anim = GetComponent<Animator>();
 	}
 #endif
 
@@ -46,6 +49,7 @@ public class GameMenu : MonoBehaviour {
 			SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
 			SoundImage.SetNativeSize();
 			ShowMainMenu();
+			anim.Play("IntroAnimation");
 		});
 #endif
 	}
