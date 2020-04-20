@@ -93,14 +93,6 @@ public class CrabMinigame : BaseMinigame
         ShowLoseAnimation();
         isPlaying = false;
     }
-    //Obstacle end
-    public void Win()
-    {
-        Crab.transform.position = new Vector3(0, 0, 0);
-        obstacleClone.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.zero);
-        ShowWinAnimation();
-        isPlaying = false;
-    }
 
     protected override void ShowLoseAnimation()
     {
@@ -113,6 +105,9 @@ public class CrabMinigame : BaseMinigame
 
     protected override void ShowWinAnimation()
     {
+        isPlaying = false;
+        obstacleClone.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.zero);
+        Crab.transform.position = new Vector3(0, 0, 0);
         Crab.GetComponent<Animator>().SetBool("Won", true);
         LeanTween.delayedCall(2.0f, () =>
         {
