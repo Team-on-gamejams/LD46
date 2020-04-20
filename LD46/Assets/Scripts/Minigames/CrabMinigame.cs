@@ -74,8 +74,8 @@ public class CrabMinigame : BaseMinigame
         if (spawnTimeObstacle <= 0)
         {
             GameObject obstacleClone;
-            Vector3 activeSpawner = spawners.Random().transform.position;
-            obstacleClone = Instantiate(Obstacle, activeSpawner, Quaternion.identity, transform);
+            Transform activeSpawner = spawners.Random().transform;
+            obstacleClone = Instantiate(Obstacle, activeSpawner.position, Quaternion.identity, activeSpawner);
             SpriteRenderer sr = obstacleClone.GetComponent<SpriteRenderer>();
             if (sr) sr.sprite = AllSprites[Random.Range(0, AllSprites.Count)];
             obstacleClone.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.left * difficulty.obstacleSpeed);
