@@ -21,8 +21,11 @@ public class OwlMinigame : BaseMinigame {
 	[SerializeField] TextMeshProUGUI debugTextField = null;
 
 	OwlMinigameDifficulty difficulty;
-	
-	public override void Init(byte usedDIfficulty) {
+
+  public GameObject LoseAnimation;
+  public GameObject WinAnimation;
+
+  public override void Init(byte usedDIfficulty) {
 		base.Init(usedDIfficulty);
 		difficulty = difficultyBase as OwlMinigameDifficulty;
 
@@ -117,14 +120,18 @@ public class OwlMinigame : BaseMinigame {
 
 	protected override void ShowLoseAnimation() {
 		debugTextField.text = "Loser, ahahahah";
-		LeanTween.delayedCall(1.0f, () => {
-			base.ShowLoseAnimation();
-		});
+    owl.GetComponent<SpriteRenderer>().enabled = false;
+    LoseAnimation.SetActive(true);
+    LeanTween.delayedCall(3.0f, () => {
+      base.ShowLoseAnimation();
+    });
+
 	}
 
 	protected override void ShowWinAnimation() {
 		debugTextField.text = "You win";
-		LeanTween.delayedCall(1.0f, () => {
+    WinAnimation.SetActive(true);
+    LeanTween.delayedCall(3.0f, () => {
 			base.ShowWinAnimation();
 		});
 	}
