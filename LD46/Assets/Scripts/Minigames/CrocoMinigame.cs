@@ -38,14 +38,13 @@ public class CrocoMinigame : BaseMinigame {
 	protected new void Update() {
 		base.Update();
 
-		Debug.Log($"{center.position.y.ToString("0.00")} {Toothbrush.position.y.ToString("0.00")} {flip}");
-
 		if (isPlaying && 
 			((center.position.y > Toothbrush.position.y && !flip) || (center.position.y <= Toothbrush.position.y && flip))
 			) {
 			flip = !flip;
 			LeanTween.cancel(Toothbrush.gameObject, false);
-			LeanTween.rotateLocal(Toothbrush.gameObject, new Vector3(180.0f - (Toothbrush.localEulerAngles.x % 180), Toothbrush.localEulerAngles.y, Toothbrush.localEulerAngles.z), 0.2f);
+			LeanTween.value(Toothbrush.localScale.y, flip ? -0.46574f : 0.46574f, 0.2f)
+				.setOnUpdate(y => Toothbrush.localScale = new Vector3(0.46574f, y, 0.46574f));
 		}
 	}
 
