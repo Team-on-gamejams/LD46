@@ -10,6 +10,8 @@ public class EggHatchMinigame : BaseMinigame {
 
 	[Header("Refs")]
 	[SerializeField] SpriteRendererAnimator3 sranim = null;
+	[SerializeField] SpriteRenderer sr = null;
+	[SerializeField] Color loseColor = Color.white;
 
 	[Header("Debug")]
 	[SerializeField] TextMeshProUGUI debugTextField = null;
@@ -18,7 +20,7 @@ public class EggHatchMinigame : BaseMinigame {
 	float dist = 0;
 	Vector3 lastPos, currPos, deltaPos;
 
-  public GameObject LoseAnimation;
+  public GameObject minigame;
   public GameObject WinAnimation;
 
   EggHatchMinigameDifficulty difficulty;
@@ -72,17 +74,23 @@ public class EggHatchMinigame : BaseMinigame {
 	}
 
 	protected override void ShowLoseAnimation() {
-		debugTextField.text = "Loser, ahahahah";
-    LoseAnimation.SetActive(true);
-    LeanTween.delayedCall(1.0f, () => {
+	debugTextField.text = "Loser, ahahahah";
+	sranim.enabled = false;
+		LeanTween.value(gameObject, sr.color, loseColor, 1.0f)
+		.setDelay(0.5f)
+		.setOnUpdateColor(c=> {
+			sr.color = c;
+		});
+		LeanTween.delayedCall(2.0f, () => {
 			base.ShowLoseAnimation();
 		});
 	}
 
 	protected override void ShowWinAnimation() {
-		debugTextField.text = "You win";
+	debugTextField.text = "You win";
+    minigame.SetActive(false);
     WinAnimation.SetActive(true);
-    LeanTween.delayedCall(1.0f, () => {
+    LeanTween.delayedCall(4.3f, () => {
 			base.ShowWinAnimation();
 		});
 	}
