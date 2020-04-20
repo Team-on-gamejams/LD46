@@ -69,16 +69,13 @@ public class GameMenu : MonoBehaviour {
 	}
 
 	public void OnCreditsClick() {
-		cg.interactable = cg.blocksRaycasts = false;
 		creditscg.interactable = creditscg.blocksRaycasts = true;
-		LeanTweenEx.ChangeCanvasGroupAlpha(cg, 0.0f, 0.2f);
 		LeanTweenEx.ChangeCanvasGroupAlpha(creditscg, 1.0f, 0.2f);
 	}
 
 	public void OnCreditsBackClick() {
 		creditscg.interactable = creditscg.blocksRaycasts = false;
 		LeanTweenEx.ChangeCanvasGroupAlpha(creditscg, 0.0f, 0.2f);
-		ShowMainMenu();
 	}
 
 	public void OnExitClick() {
