@@ -11,7 +11,10 @@ public class CrocoMinigame : BaseMinigame {
 	[SerializeField] CrocoBrush brush = null;
 	[SerializeField] Transform center = null;
 
-	bool flip = false;
+  public GameObject LoseAnimation;
+  public GameObject WinAnimation;
+
+  bool flip = false;
 	bool wonState = false;
 
 	SpriteRenderer ToothbrushSr;
@@ -67,15 +70,15 @@ public class CrocoMinigame : BaseMinigame {
 	}
 
 	protected override void ShowLoseAnimation() {
-		LeanTween.delayedCall(5.0f, () => {
-      print("Looser");
+    LoseAnimation.SetActive(true);
+		LeanTween.delayedCall(3.0f, () => {
       base.ShowLoseAnimation();
 		});
 	}
 
 	protected override void ShowWinAnimation() {
-		LeanTween.delayedCall(5.0f, () => {
-      print("Winner");
+    WinAnimation.SetActive(true);
+    LeanTween.delayedCall(3.0f, () => {
 			base.ShowWinAnimation();
 		});
 	}
