@@ -702,9 +702,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5884855156080412792}
   - component: {fileID: 437515100365414396}
-  - component: {fileID: 8710136922009123905}
   - component: {fileID: 9161231198417150886}
   - component: {fileID: 5877675152502763171}
+  - component: {fileID: 5901711665574093965}
   m_Layer: 0
   m_Name: crab
   m_TagString: Crab
@@ -776,27 +776,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8710136922009123905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7824089641626436953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f57aedfc2ed1774ebd6f8d62aea999f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startWithRandom: 1
-  secondsForOneSprite: 0.35
-  sprites:
-  - {fileID: 21300000, guid: 5ffa8b13aee9d704385de5162d87beab, type: 3}
-  - {fileID: 21300000, guid: 8ede239f131a0d24882f6e87eb84f5c0, type: 3}
-  - {fileID: 21300000, guid: bb62f58c44b2f2d4ea7a1f44c111cce0, type: 3}
-  - {fileID: 21300000, guid: 5ffa8b13aee9d704385de5162d87beab, type: 3}
-  sr: {fileID: 437515100365414396}
-  image: {fileID: 0}
 --- !u!50 &9161231198417150886
 Rigidbody2D:
   serializedVersion: 4
@@ -834,6 +813,25 @@ CapsuleCollider2D:
   m_Offset: {x: -0.000007667235, y: -0.31741825}
   m_Size: {x: 4.4162245, y: 2.84586}
   m_Direction: 1
+--- !u!95 &5901711665574093965
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824089641626436953}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4004e83c327fc2645919a97c09fc171a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8138021191776804850
 GameObject:
   m_ObjectHideFlags: 0

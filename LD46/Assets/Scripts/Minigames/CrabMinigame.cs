@@ -8,6 +8,7 @@ public class CrabMinigame : BaseMinigame
     public GameObject Crab;
     public GameObject Obstacle;
     public GameObject[] spawners;
+    public Animator crabAnimator;
 
 
     //Crab
@@ -63,15 +64,13 @@ public class CrabMinigame : BaseMinigame
     //Crab End
 
     //Obstacle
-    public int damage = 1;
     private float spawnTimeObstacle;
-
     public List<Sprite> AllSprites;
 
     protected new void Update()
     {
         base.Update();
-        if (spawnTimeObstacle <= 0)
+        if (spawnTimeObstacle <= 0 && isPlaying)
         {
             GameObject obstacleClone;
             Transform activeSpawner = spawners.Random().transform;
@@ -95,14 +94,15 @@ public class CrabMinigame : BaseMinigame
     //Obstacle end
     public void Win()
     {
-        isPlaying = false;
         ShowWinAnimation();
+        isPlaying = false;
     }
 
     protected override void ShowLoseAnimation()
     {
         LeanTween.delayedCall(1.0f, () =>
         {
+            Crab.GetComponent<Animator>().SetBool("Lose", true);
             base.ShowLoseAnimation();
         });
     }
@@ -112,6 +112,7 @@ public class CrabMinigame : BaseMinigame
         LeanTween.delayedCall(1.0f, () =>
         {
             base.ShowWinAnimation();
+            Crab.GetComponent<Animator>().SetBool("Won", true);
         });
     }
 }
