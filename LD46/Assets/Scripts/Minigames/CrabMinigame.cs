@@ -100,19 +100,19 @@ public class CrabMinigame : BaseMinigame
 
     protected override void ShowLoseAnimation()
     {
+        Crab.GetComponent<Animator>().SetBool("Lose", true);
         LeanTween.delayedCall(1.0f, () =>
         {
-            Crab.GetComponent<Animator>().SetBool("Lose", true);
             base.ShowLoseAnimation();
         });
     }
 
     protected override void ShowWinAnimation()
     {
-        LeanTween.delayedCall(1.0f, () =>
+        Crab.GetComponent<Animator>().SetBool("Won", true);
+        LeanTween.delayedCall(2.0f, () =>
         {
             base.ShowWinAnimation();
-            Crab.GetComponent<Animator>().SetBool("Won", true);
         });
     }
 }

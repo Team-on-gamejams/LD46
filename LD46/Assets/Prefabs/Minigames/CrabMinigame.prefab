@@ -406,9 +406,9 @@ MonoBehaviour:
   - {fileID: 3902294794503318415}
   - {fileID: 6384301103721568580}
   - {fileID: 8776955864804259119}
+  crabAnimator: {fileID: 5901711665574093965}
   lineHeight: 3.5
   health: 5
-  damage: 1
   AllSprites:
   - {fileID: 21300000, guid: 4e0684bc373df2a4496f2b355c3c653e, type: 3}
   - {fileID: 21300000, guid: 35795b56f30f9784ab0cae1ea4e1e585, type: 3}
