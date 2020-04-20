@@ -178,8 +178,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Zoo keeper
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 21e7b938f9d4764419337321df975914, type: 2}
+  m_sharedMaterial: {fileID: 7763697515833537325, guid: 21e7b938f9d4764419337321df975914,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -954,7 +955,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -166.2002, y: -76}
-  m_SizeDelta: {x: 87, y: 100}
+  m_SizeDelta: {x: 139.12, y: 115.7}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &182269457
 MonoBehaviour:
@@ -6569,8 +6570,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 21e7b938f9d4764419337321df975914, type: 2}
+  m_sharedMaterial: {fileID: 7763697515833537325, guid: 21e7b938f9d4764419337321df975914,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6806,8 +6808,9 @@ MonoBehaviour:
     Trozeman
     - programmer'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 21e7b938f9d4764419337321df975914, type: 2}
+  m_sharedMaterial: {fileID: 7763697515833537325, guid: 21e7b938f9d4764419337321df975914,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7416,8 +7419,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Made in 72 hours for Ludum Dare 46
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 21e7b938f9d4764419337321df975914, type: 2}
+  m_sharedMaterial: {fileID: 7763697515833537325, guid: 21e7b938f9d4764419337321df975914,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7463,7 +7467,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_isTextTruncated: 0

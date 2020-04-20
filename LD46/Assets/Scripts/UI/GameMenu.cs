@@ -38,7 +38,7 @@ public class GameMenu : MonoBehaviour {
 		logo.interactable = logo.blocksRaycasts = false;
 		LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
 		SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
-		SoundImage.SetNativeSize();
+		//SoundImage.SetNativeSize();
 		ShowMainMenu();
 #else
 		logo.interactable = logo.blocksRaycasts = true;
@@ -47,7 +47,7 @@ public class GameMenu : MonoBehaviour {
 			logo.interactable = logo.blocksRaycasts = false;
 			LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
 			SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
-			SoundImage.SetNativeSize();
+			//SoundImage.SetNativeSize();
 			ShowMainMenu();
 			anim.Play("IntroAnimation");
 		});
@@ -98,6 +98,6 @@ public class GameMenu : MonoBehaviour {
 	public void OnSoundClick() {
 		AudioManager.Instance.IsEnabled = !AudioManager.Instance.IsEnabled;
 		SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
-		SoundImage.SetNativeSize();
+		//SoundImage.SetNativeSize();
 	}
 }

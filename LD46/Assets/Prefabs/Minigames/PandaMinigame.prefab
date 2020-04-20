@@ -5240,8 +5240,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tap on left/right side to select pair
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 21e7b938f9d4764419337321df975914, type: 2}
+  m_sharedMaterial: {fileID: 7763697515833537325, guid: 21e7b938f9d4764419337321df975914,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10503,8 +10504,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Math panda a pair!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 21e7b938f9d4764419337321df975914, type: 2}
+  m_sharedMaterial: {fileID: 7763697515833537325, guid: 21e7b938f9d4764419337321df975914,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

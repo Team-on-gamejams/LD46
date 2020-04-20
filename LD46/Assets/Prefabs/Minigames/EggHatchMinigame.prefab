@@ -1094,10 +1094,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Drag on egg to hatch it!
+  m_text: Rub on egg to hatch it!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 21e7b938f9d4764419337321df975914, type: 2}
+  m_sharedMaterial: {fileID: 7763697515833537325, guid: 21e7b938f9d4764419337321df975914,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1167,7 +1168,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 6976722521651881685}
-    characterCount: 24
+    characterCount: 23
     spriteCount: 0
     spaceCount: 5
     wordCount: 6
