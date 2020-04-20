@@ -9,6 +9,9 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 	[Header("Refs")]
 	[SerializeField] AudioClip[] sounds;
 	[SerializeField] SpriteRenderer[] sr;
+	[SerializeField] SpriteRendererAnimator2 sranim;
+	[SerializeField] GameObject winAnimation;
+	[SerializeField] GameObject loseAnimation;
 
 	[Header("Visual")]
 	[SerializeField] Sprite[] hightlightSprites;
@@ -141,7 +144,11 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 	protected override void ShowLoseAnimation() {
 		isPlaying = false;
 		debugTextField.text = "Loser, ahahahah";
-		LeanTween.delayedCall(1.0f, () => {
+		sranim.SetSequenceForce(1);
+
+		loseAnimation.SetActive(true);
+
+		LeanTween.delayedCall(2.50f, () => {
 			base.ShowLoseAnimation();
 		});
 	}
@@ -149,7 +156,11 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 	protected override void ShowWinAnimation() {
 		isPlaying = false;
 		debugTextField.text = "You win";
-		LeanTween.delayedCall(1.0f, () => {
+		sranim.SetSequenceForce(1);
+
+		winAnimation.SetActive(true);
+
+		LeanTween.delayedCall(2.5f, () => {
 			base.ShowWinAnimation();
 		});
 	}

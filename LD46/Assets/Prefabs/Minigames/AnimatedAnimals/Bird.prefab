@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2357845912296374153}
   - component: {fileID: 8290751985235993731}
-  - component: {fileID: 5371634358629799880}
+  - component: {fileID: 6612302551226485835}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5371634358629799880
+--- !u!114 &6612302551226485835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,16 +92,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 3639477277083373382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f57aedfc2ed1774ebd6f8d62aea999f, type: 3}
+  m_Script: {fileID: 11500000, guid: 271702ff5e28bdb49b51a6a354c2c175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currSequence: 0
   startWithRandom: 1
   secondsForOneSprite: 0.35
-  sprites:
+  sprites0:
   - {fileID: 21300000, guid: 4556f142503ea4047ac5bae32e8172db, type: 3}
   - {fileID: 21300000, guid: 5c61609221155fe44b35cfbebb393dc0, type: 3}
   - {fileID: 21300000, guid: f5a2d2d1228087b4eaee5849649228ae, type: 3}
   - {fileID: 21300000, guid: 5c61609221155fe44b35cfbebb393dc0, type: 3}
+  sprites1:
+  - {fileID: 21300000, guid: e8e46ffad7a1bfb4e94b6eef16e2da6b, type: 3}
+  - {fileID: 21300000, guid: 78ed2f9dcfd2f624baa3a3099b75bde1, type: 3}
+  - {fileID: 21300000, guid: f524c5e9e4c3dbf43a433eff66c10350, type: 3}
+  - {fileID: 21300000, guid: 78ed2f9dcfd2f624baa3a3099b75bde1, type: 3}
   sr: {fileID: 8290751985235993731}
 --- !u!1 &8429776210994630338
 GameObject:
