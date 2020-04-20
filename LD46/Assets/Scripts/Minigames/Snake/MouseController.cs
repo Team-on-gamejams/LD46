@@ -41,6 +41,7 @@ public class MouseController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {
-		minigame.Win();
+		if(minigame.isPlaying)
+			minigame.Win();
 	}
 }

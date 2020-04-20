@@ -23,17 +23,16 @@ public class SpriteRendererAnimator : MonoBehaviour {
 	}
 #endif
 
-	private void Awake() {
+	private void Start() {
 		if (startWithRandom) {
 			currSprite = (byte)Random.Range(0, sprites.Length);
-			if(sr)
+			if (sr)
 				sr.sprite = sprites[currSprite];
-			if(image)
+			if (image)
 				image.sprite = sprites[currSprite];
 			time = Random.Range(0, secondsForOneSprite - Time.deltaTime);
 		}
 		else {
-
 			sr.sprite = sprites[currSprite];
 		}
 	}
