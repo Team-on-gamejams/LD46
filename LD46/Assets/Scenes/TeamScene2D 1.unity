@@ -7556,5 +7556,3 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 543f07f09511a0942b20568a3f8f227c, type: 3}
   logo: {fileID: 1699728029}
   logoAnim: {fileID: 1699728030}
-  cg: {fileID: 2107989039}
-  anim: {fileID: 0}

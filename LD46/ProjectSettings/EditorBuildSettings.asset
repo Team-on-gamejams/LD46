@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TeamScene2D.unity
+    path: Assets/Scenes/DanScene.unity
     guid: be0b539de48544149898588ad38f43a6
   m_configObjects: {}
