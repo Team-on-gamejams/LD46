@@ -14,8 +14,7 @@ public class GameMenu : MonoBehaviour {
 	[Space]
 	[SerializeField] CanvasGroup logo;
 	[SerializeField] ImageAnimator logoAnim;
-
-	CanvasGroup cg;
+	[SerializeField] CanvasGroup cg;
 
 #if UNITY_EDITOR
 	private void OnValidate() {
@@ -26,18 +25,17 @@ public class GameMenu : MonoBehaviour {
 
 	private void Awake() {
 		cg.interactable = cg.blocksRaycasts = false;
-		creditscg.interactable = creditscg.blocksRaycasts = false;
 		cg.alpha = 0.0f;
+		creditscg.interactable = creditscg.blocksRaycasts = false;
 		creditscg.alpha = 0.0f;
-
-		SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0 ];
-		SoundImage.SetNativeSize();
 	}
 
 	private void Start() {
 #if UNITY_EDITOR
 		logo.interactable = logo.blocksRaycasts = false;
 		LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
+		SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
+		SoundImage.SetNativeSize();
 		ShowMainMenu();
 #else
 		logo.interactable = logo.blocksRaycasts = true;
@@ -45,6 +43,8 @@ public class GameMenu : MonoBehaviour {
 		LeanTween.delayedCall(logoAnim.GetDuration(), () => {
 			logo.interactable = logo.blocksRaycasts = false;
 			LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
+			SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
+			SoundImage.SetNativeSize();
 			ShowMainMenu();
 		});
 #endif
