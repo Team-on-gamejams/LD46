@@ -105,6 +105,8 @@ public class CrabMinigame : BaseMinigame
 
     protected override void ShowWinAnimation()
     {
+        if (moveCoroutine != null)
+            StopCoroutine(moveCoroutine);
         isPlaying = false;
         obstacleClone.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.zero);
         Crab.transform.position = new Vector3(0, 0, 0);
