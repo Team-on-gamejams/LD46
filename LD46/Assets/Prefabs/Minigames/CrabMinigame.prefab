@@ -553,8 +553,8 @@ GameObject:
   - component: {fileID: 5884855156080412792}
   - component: {fileID: 437515100365414396}
   - component: {fileID: 9161231198417150886}
-  - component: {fileID: 5877675152502763171}
   - component: {fileID: 5901711665574093965}
+  - component: {fileID: 4779268957803008842}
   m_Layer: 0
   m_Name: crab
   m_TagString: Crab
@@ -647,22 +647,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &5877675152502763171
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7824089641626436953}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.000007667235, y: -0.31741825}
-  m_Size: {x: 4.4162245, y: 2.84586}
-  m_Direction: 1
 --- !u!95 &5901711665574093965
 Animator:
   serializedVersion: 3
@@ -682,6 +666,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &4779268957803008842
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824089641626436953}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.45}
+  m_Size: {x: 3, y: 1.9}
+  m_Direction: 1
 --- !u!1 &8138021191776804850
 GameObject:
   m_ObjectHideFlags: 0
