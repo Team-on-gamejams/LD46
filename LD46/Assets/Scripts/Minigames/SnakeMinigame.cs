@@ -12,6 +12,7 @@ public class SnakeMinigame : BaseMinigame {
 
 	[SerializeField] Sprite winSprite;
 
+	[Header("Animations")]
 	[SerializeField] GameObject minigame;
 	[SerializeField] GameObject winAnimation;
 	[SerializeField] GameObject loseAnimation;
