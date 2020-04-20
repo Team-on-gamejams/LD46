@@ -15,6 +15,6 @@ MonoBehaviour:
   delayBeforePlay: 1
   timer: 10
   isWinIfTimerEnds: 1
-  speed: 10
+  speed: 12
   startTime: 1
   obstacleSpeed: 10
