@@ -2,19 +2,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 //TODO: rename to TimerMinigame
 public class BaseMinigame : BaseBaseMinigame {
 
 	[Header("Timer")]
-	[SerializeField] TextMeshProUGUI timerTextField = null;
+	[SerializeField] Slider timerTextField = null;
 	float currTime;
 
 	public override void Init(byte usedDifficulty) {
 		base.Init(usedDifficulty);
 		currTime = difficultyBase.timer;
-		timerTextField.text = currTime.ToString("0.00");
+		timerTextField.value = 1.0f;
 
 		LeanTween.delayedCall(difficultyBase.delayBeforePlay, () => {
 			isPlaying = true;
@@ -32,7 +33,7 @@ public class BaseMinigame : BaseBaseMinigame {
 					ShowLoseAnimation();
 				currTime = 0;
 			}
-			timerTextField.text = currTime.ToString("0.00");
+			timerTextField.value = currTime / difficultyBase.timer;
 		}
 	}
 }
