@@ -15,5 +15,5 @@ MonoBehaviour:
   delayBeforePlay: 1
   timer: 5
   isWinIfTimerEnds: 0
-  speed: 1
+  speed: 2
   maxSpeed: 10
