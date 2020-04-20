@@ -6,14 +6,21 @@ public class CrabMinigame : BaseMinigame
 {
 
     public GameObject Crab;
+    public GameObject Obstacle;
+    public GameObject[] spawners;
+    public GameObject[] patterns;
 
+
+    //Crab
     public float lineHeight = 3.5f;
     Coroutine moveCoroutine;
     int line = 0;
+    public int health = 5;
 
     CrabMinigameDifficulty difficulty;
 
-    public override void Init(byte _usedDifficulty) {
+    public override void Init(byte _usedDifficulty)
+    {
         base.Init(_usedDifficulty);
         difficulty = difficultyBase as CrabMinigameDifficulty;
     }
@@ -37,22 +44,46 @@ public class CrabMinigame : BaseMinigame
             --line;
             if (moveCoroutine != null)
                 StopCoroutine(moveCoroutine);
-            moveCoroutine =  StartCoroutine(MoveCoroutine(lineHeight * line, -difficulty.speed));
+            moveCoroutine = StartCoroutine(MoveCoroutine(lineHeight * line, -difficulty.speed));
         }
     }
 
-    IEnumerator MoveCoroutine(float desiredY, float speed) 
+    IEnumerator MoveCoroutine(float desiredY, float speed)
     {
         float moveTime = Mathf.Abs((desiredY - Crab.transform.position.y) / speed);
 
-        while (moveTime > 0) {
+        while (moveTime > 0)
+        {
             moveTime -= Time.deltaTime;
 
             Crab.transform.position = new Vector3(Crab.transform.position.x, Crab.transform.position.y + speed * Time.deltaTime);
             yield return null;
         }
     }
+    //Crab End
 
+    //Obstacle
+    public int damage = 1;
+    public float obstacleSpeed = 5f;
+    private float spawnTime;
+    public float startTime;
+
+    private void Update()
+    {
+        if (spawnTime <= 0)
+        {
+            //Vector3 activeSpawner = spawners.Random().transform.position;
+            //Instantiate(Obstacle, activeSpawner, Quaternion.identity);
+            int rand = Random.Range(0, patterns.Length);
+            Instantiate(patterns[rand], transform.position, Quaternion.identity);
+            spawnTime = startTime;
+        }
+        else
+        {
+            spawnTime -= Time.deltaTime;
+        }
+    }
+    //Obstacle end
     public void Win()
     {
         isPlaying = false;
