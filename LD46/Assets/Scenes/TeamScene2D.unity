@@ -570,6 +570,7 @@ MonoBehaviour:
   - {fileID: 3971116899240692745, guid: b93618d11ea61f1429ca84251b530d35, type: 3}
   - {fileID: 6535911599146856188, guid: c167ca97e16a1704fbab576cf2c1195c, type: 3}
   minigamesSingle:
+  - {fileID: 508617930}
   - {fileID: 844991027}
   - {fileID: 1746020356}
   - {fileID: 1550950025}
@@ -577,7 +578,6 @@ MonoBehaviour:
   - {fileID: 1734077209}
   - {fileID: 206245071}
   - {fileID: 1303747320}
-  - {fileID: 508617930}
   mainTheme: {fileID: 8300000, guid: b543e3199dc4bb448a3508d2352af51e, type: 3}
   gameMenu: {fileID: 2107989040}
   debugTextField: {fileID: 790314332}
@@ -5049,13 +5049,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379444121}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.14956273, y: 0.18865815, z: -0.02908435, w: 0.9701511}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1117106639}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -16.214, y: 22.972002, z: -6.7500005}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 440, y: 7}

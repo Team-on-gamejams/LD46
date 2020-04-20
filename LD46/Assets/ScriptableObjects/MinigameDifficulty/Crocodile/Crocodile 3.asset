@@ -15,3 +15,6 @@ MonoBehaviour:
   delayBeforePlay: 1
   timer: 10
   isWinIfTimerEnds: 0
+  toothBrushFlyForce: 15
+  alphaChangePerEnter: 0.08
+  alphaChangePerUnit: 0.7

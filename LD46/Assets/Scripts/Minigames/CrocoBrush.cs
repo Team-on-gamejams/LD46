@@ -1,57 +1,57 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrocoBrush : MonoBehaviour
-{
-  private bool isDragging;
-  private Vector2 mousePosition;
+public class CrocoBrush : MonoBehaviour {
+	[NonSerialized] public float force;
+	[NonSerialized] public float alphaChangePerEnter;
+	[NonSerialized] public float alphaChangePerUnit;
 
-  Vector3 mouseCurrLocation, diff;
-  Vector3 currVelocity;
-  Vector3 force;
+	[SerializeField] CrocoMinigame minigame = null;
 
+	private bool isDragging;
+	private Vector2 mousePosition;
+	private Vector3 prevPos, currPos;
 
+	public void OnMouseDown() {
+		isDragging = true;
+	}
 
-  public void OnMouseDown()
-  {
-    isDragging = true;
-  }
+	public void OnMouseUp() {
+		isDragging = false;
+		transform.GetComponent<Rigidbody2D>().velocity = new Vector2();
+	}
 
-  public void OnMouseUp()
-  {
-    isDragging = false;
-    transform.GetComponent<Rigidbody2D>().velocity = new Vector2();
-  }
+	public void OnTriggerEnter2D(Collider2D colide) {
+		if (colide.gameObject.name.Contains("Caries")) {
+			colide.GetComponent<SpriteRenderer>().color = colide.GetComponent<SpriteRenderer>().color - new Color(0, 0, 0, alphaChangePerEnter);
 
-  public void OnTriggerEnter2D(Collider2D colide) {   
+			if (colide.GetComponent<SpriteRenderer>().color.a <= 0.3f) {
+				colide.gameObject.SetActive(false);
+				minigame.CheckWonState();
+			}
+		}
+	}
 
+	private void OnTriggerStay2D(Collider2D colide) {
+		if (colide.gameObject.name.Contains("Caries")) {
+			colide.GetComponent<SpriteRenderer>().color = colide.GetComponent<SpriteRenderer>().color - new Color(0, 0, 0, alphaChangePerUnit * (currPos - prevPos).magnitude);
 
-    if (colide.gameObject.name.Contains("Caries"))
-    {
-      colide.GetComponent<SpriteRenderer>().color = colide.GetComponent<SpriteRenderer>().color - new Color(0, 0, 0, 0.05f);
+			if (colide.GetComponent<SpriteRenderer>().color.a <= 0.3f) {
+				colide.gameObject.SetActive(false);
+				minigame.CheckWonState();
+			}
+		}
+	}
 
-      if (colide.GetComponent<SpriteRenderer>().color.a <= 0.3f)
-      {
-        colide.gameObject.active = false;
-      }
-    }
-  }
+	public void FixedUpdate() {
+		prevPos = currPos;
+		currPos = transform.position;
 
-
-
-
-  public void FixedUpdate()
-  {
-
-    if (isDragging)
-    {
-      mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-
-      transform.GetComponent<Rigidbody2D>().velocity = mousePosition * 5;
-    }
-
-  }
-
-
+		if (isDragging && minigame.isPlaying) {
+			mousePosition = GameManager.Instance.Camera.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+			transform.GetComponent<Rigidbody2D>().velocity = mousePosition * force;
+		}
+	}
 }
