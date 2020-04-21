@@ -16,7 +16,7 @@ Ludum Dare is one of the world's largest and longest running Game Jam events. Is
 [Zoo Keeper in Ludum Dare #46](https://ldjam.com/events/ludum-dare/46/$178354)  
 
 # Tools
- * Unity 2019.2.5f1
+ * Unity 2019.3.9f1
  * Visual Studio 2019
  * Procreate
  * FlipaClip
