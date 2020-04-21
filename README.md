@@ -25,10 +25,9 @@ Ludum Dare is one of the world's largest and longest running Game Jam events. Is
 # Credits
  * [Team-on](https://github.com/Team-on) - programmer
  * [Long-as-Python](https://github.com/Long-as-Python) - programmer
- * [mary.ggrusha](https://www.instagram.com/ggrusha_art/) - 2d artist
+ * [ggrusha art](https://www.instagram.com/ggrusha_art/) - 2d artist
  * [shintaro-kk](https://www.instagram.com/shintaro_kk) - sound designer/narrative designer/game designer
  * [Trozeman](https://github.com/Trozeman) - programmer
- * [preasmh](https://www.instagram.com/preasmh/) - 2d artist
 
 # Screenshots
 ![Screenshot1](Screenshots/1.jpeg)  
