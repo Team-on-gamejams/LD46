@@ -1,22 +1,21 @@
-# [Ludum dara 46](https://ldjam.com/)
+# [Ludum dare 46](https://ldjam.com/)
 Theme: Keep it alive  
 
-Game_name  
-Descr  
-![Cover](Screenshots/Cover1.jpg)  
+![Cover](Screenshots/ZooKeeperLong.png)  
+This game is about abondoned Zoo, and you are a new zookepeer.  
+You need to entertain, feed and take care of various animals.  
+This game contains 8 minigames with 7 difficulty levels.  
+All minigames played with click(or taps), it’s easy to get how to play it=)   
 
 # Downloads and Links
-Available in [Windows, Linux, OSX and Web](itch.io). If you encounter any problem, please leave a issue! 
-
-# Controls
- * X - Y
- * A - B
+Available in [Windows, Linux, OSX and Web](https://teamon.itch.io/zoo-keeper). If you encounter any problem, please leave a issue!  
+Actually, OSX build have never been tested, so please leave feedback is it work properly.
 
 # Ludum Dare?
 Ludum Dare is one of the world's largest and longest running Game Jam events. Is an event where you create a game from scratch in a weekend based on a theme.  
-[GAME_NAME in Ludum Dare #46](https://ldjam.com/events/ludum-dare/46/$178354)  
+[Zoo Keeper in Ludum Dare #46](https://ldjam.com/events/ludum-dare/46/$178354)  
 
-# Tools:
+# Tools
  * Unity 2019.2.5f1
  * Visual Studio 2019
  * Procreate
@@ -30,6 +29,7 @@ Ludum Dare is one of the world's largest and longest running Game Jam events. Is
  * [Trozeman](https://github.com/Trozeman) - programmer
 
 # Screenshots
-![Screenshot1](Screenshots/1.jpeg)  
-![Screenshot2](Screenshots/2.jpeg)  
-![Screenshot3](Screenshots/3.jpeg)  
+![Screenshot1](Screenshots/AllMenuSmall.jpg)  
+![Screenshot1](Screenshots/AllGameplaySmall.jpg)  
+![Screenshot1](Screenshots/AllWinSmall.jpg)  
+![Screenshot1](Screenshots/AllLoseSmall.jpg)  
