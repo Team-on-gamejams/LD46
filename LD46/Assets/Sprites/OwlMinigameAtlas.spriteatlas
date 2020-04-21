@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OwlMinigameAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a23fe2522f74efd4daca3f1a0c4d4230, type: 3}
+    totalSpriteSurfaceArea: 22847792
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 6bf5ea10eb37328408610d6294e4ef66, type: 3}
+  - {fileID: 21300000, guid: 4eec0442bca2c7746a425df7695ec1e7, type: 3}
+  - {fileID: 21300000, guid: 60cf0f621258cb7479e00fa56241282a, type: 3}
+  - {fileID: 21300000, guid: 0794b8a24f8a3c340ad63ebb7297a9bf, type: 3}
+  - {fileID: 21300000, guid: 5911fa269cdc314418e352a98548b58b, type: 3}
+  - {fileID: 21300000, guid: 68e229573c126dd4998fe7592280ce08, type: 3}
+  - {fileID: 21300000, guid: 387ec6c94f527724083d60db8dcf52eb, type: 3}
+  - {fileID: 21300000, guid: 1117753ca34132d4fad85841eb7650b6, type: 3}
+  - {fileID: 21300000, guid: be46f15d51821c34c9297002f0fab2b6, type: 3}
+  - {fileID: 21300000, guid: 2654c1dd83fd85341a355f59ec62e7c4, type: 3}
+  - {fileID: 21300000, guid: 7a14aa4e406ea7943bb50b635a18a709, type: 3}
+  - {fileID: 21300000, guid: 90413e6e959609c44860bf7f043137bc, type: 3}
+  - {fileID: 21300000, guid: 9643e70fe54d5d24eb385949fd9835aa, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - OwlSleep_3
+  - Owl3
+  - OwlSleep_2
+  - OwlLose_2
+  - OwlLegLeft
+  - OwlLegRight
+  - OwlLose_3
+  - Owl1
+  - Owl2
+  - OwlSleep_1
+  - OwlHolder
+  - OwlLose_1
+  - OwlLegs
+  m_Tag: OwlMinigameAtlas
+  m_IsVariant: 0

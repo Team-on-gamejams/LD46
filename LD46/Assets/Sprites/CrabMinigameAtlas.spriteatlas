@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CrabMinigameAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 80ed24c395d07934bbb08921ad051b56, type: 3}
+    totalSpriteSurfaceArea: 4016512
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: f59e9bf1353041a4da1841adebee7e58, type: 3}
+  - {fileID: 21300000, guid: 5893924267ad0f14ebf3e1a3e762672f, type: 3}
+  - {fileID: 21300000, guid: 5ffa8b13aee9d704385de5162d87beab, type: 3}
+  - {fileID: 21300000, guid: c0ca0533f5b050d439d1783562bf5c50, type: 3}
+  - {fileID: 21300000, guid: 26fa61937663dfd4daa01514e6104609, type: 3}
+  - {fileID: 21300000, guid: 35795b56f30f9784ab0cae1ea4e1e585, type: 3}
+  - {fileID: 21300000, guid: 3c8405c657b187448b5014e269523580, type: 3}
+  - {fileID: 21300000, guid: fc514b17e488d8e4ca7248f2161ab24d, type: 3}
+  - {fileID: 21300000, guid: 92c10677c664d5140ac4ad1b828b7f8d, type: 3}
+  - {fileID: 21300000, guid: f15d1448ff3f3804a9e8d5ce27bcf023, type: 3}
+  - {fileID: 21300000, guid: 81fc9368fb84b764aad9ee810d9beb67, type: 3}
+  - {fileID: 21300000, guid: bb62f58c44b2f2d4ea7a1f44c111cce0, type: 3}
+  - {fileID: 21300000, guid: 4e0684bc373df2a4496f2b355c3c653e, type: 3}
+  - {fileID: 21300000, guid: 3f7fcbfe594e84241b37407402d7836b, type: 3}
+  - {fileID: 21300000, guid: 8ede239f131a0d24882f6e87eb84f5c0, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Win2
+  - crab 1
+  - crab
+  - crab3
+  - Lose2
+  - 2
+  - crab4
+  - Win1
+  - Lose3
+  - Win3
+  - 3
+  - crab2
+  - 1
+  - Lose1
+  - crab1
+  m_Tag: CrabMinigameAtlas
+  m_IsVariant: 0

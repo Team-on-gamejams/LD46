@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SnakeMinigameAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 8351175caed574f469354436149a8d50, type: 3}
+    totalSpriteSurfaceArea: 27248832
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ea57b906303e713499f9621bb5ead3bc, type: 3}
+  - {fileID: 21300000, guid: b2f4a8466771eff49a54fcb5c67aaa01, type: 3}
+  - {fileID: 21300000, guid: f89ef876355161946b02b8289e4735b3, type: 3}
+  - {fileID: 21300000, guid: be2cba57668cb2044a6ae5209dc3c9e8, type: 3}
+  - {fileID: 21300000, guid: 8e20506767b3ce046baefc9f0d150032, type: 3}
+  - {fileID: 21300000, guid: bc22da97f5a71e544b4bdd59ab7a1652, type: 3}
+  - {fileID: 21300000, guid: c767c029103c02241b05a354c6e084c2, type: 3}
+  - {fileID: 21300000, guid: 024a0b7a564bee0479aa32d8a56477d3, type: 3}
+  - {fileID: 21300000, guid: 8d664afc3e33f494daadbe60be950b0b, type: 3}
+  - {fileID: 21300000, guid: 075b1b0d5712554499937900dd44cd23, type: 3}
+  - {fileID: 21300000, guid: 7c94294df8758754c825f89b6ae06d1b, type: 3}
+  - {fileID: 21300000, guid: 04e952dd368bb6b4d860c033550870a3, type: 3}
+  - {fileID: 21300000, guid: 238d495ea396469499fa438c186107b5, type: 3}
+  - {fileID: 21300000, guid: 024e9afe1f01e6f4d99446c48f2555c2, type: 3}
+  - {fileID: 21300000, guid: 8899292f7c3a72142a7b29e4138823a9, type: 3}
+  - {fileID: 21300000, guid: 64d4727f2f5772046bfeb6130bc74fc8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - snake0
+  - SnakeWinMouse1
+  - snake1
+  - SnakeWin3
+  - SnakeWinMouse3
+  - SnakeWin2
+  - snake2
+  - SnakeLose3
+  - mouse1
+  - SnakeWinMouse2
+  - mouse0
+  - SnakeLose1
+  - SnakeLose2
+  - SnakeOpenMouse
+  - SnakeWin1
+  - mouse2
+  m_Tag: SnakeMinigameAtlas
+  m_IsVariant: 0

@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TurtleMinigameAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 7492ebe74b71fe44caef457e168561db, type: 3}
+    totalSpriteSurfaceArea: 5111981
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 5819b300f08feae49ac5ccff5c9b539d, type: 3}
+  - {fileID: 21300000, guid: 1541bb00192acb14eb8ab37416315e88, type: 3}
+  - {fileID: 21300000, guid: 33bad8f01c7964a45892b4a33a78a68b, type: 3}
+  - {fileID: 21300000, guid: 89b9de02da45838499cbfa993193705c, type: 3}
+  - {fileID: 21300000, guid: b8853d42f93655d41a21bde24740a15a, type: 3}
+  - {fileID: 21300000, guid: 0cc7e5c29f87f9746ae85b0e643bf25e, type: 3}
+  - {fileID: 21300000, guid: 20f1b1f21e847f24e963674673d9b3ec, type: 3}
+  - {fileID: 21300000, guid: bf1115f2bb168d14ab12f38ecff69203, type: 3}
+  - {fileID: 21300000, guid: e9ead75331a5459438377b1014304fbf, type: 3}
+  - {fileID: 21300000, guid: cc927714d5e79144ab7687017ebea269, type: 3}
+  - {fileID: 21300000, guid: f075479492b4e37449c20273a9875079, type: 3}
+  - {fileID: 21300000, guid: 66dacca4abc61104ca14aededcf360bb, type: 3}
+  - {fileID: 21300000, guid: f9d7b3e4e0b58e14795e2be773d68eaa, type: 3}
+  - {fileID: 21300000, guid: a0cc97e469accfb46b887f6c22c453d3, type: 3}
+  - {fileID: 21300000, guid: 39dc6a45e8da4cf4ba9ea45b7fa59cd2, type: 3}
+  - {fileID: 21300000, guid: e9832f85e582f6942bd8321d74173b49, type: 3}
+  - {fileID: 21300000, guid: a14b8668266a3c04eaf44cf720d42cb2, type: 3}
+  - {fileID: 21300000, guid: b0a028683cfea894a83d0c039be57ec4, type: 3}
+  - {fileID: 21300000, guid: 8a115a98cd6ac4746a1916ebbda1f197, type: 3}
+  - {fileID: 21300000, guid: 773d7cfcc294ccd4ea8733d92fdd1164, type: 3}
+  - {fileID: 21300000, guid: 3829eacdc65b48b49bda198c00996db2, type: 3}
+  - {fileID: 21300000, guid: 3da2891e794afc840813d6fbc957e46a, type: 3}
+  - {fileID: 21300000, guid: fa458d7e6f9cc8f49aaf9f7a14e5f862, type: 3}
+  - {fileID: 21300000, guid: 7e2af60f3496bee488347417ab5aa0cb, type: 3}
+  - {fileID: 21300000, guid: 0d2f347fd6ee5784e832a9ddf35a23e5, type: 3}
+  - {fileID: 21300000, guid: 691834bf1ec6cb249bbe3700e1abd9aa, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - IMG_4846
+  - TurtleHappy3
+  - IMG_4853
+  - IMG_4852
+  - IMG_4851
+  - IMG_4856
+  - IMG_4847
+  - TurtleShadowSad
+  - "\u0441\u043B\u044C\u043E\u0437\u043A\u0430 01"
+  - IMG_4857
+  - IMG_4850
+  - IMG_4855
+  - TurtleShadowHappy
+  - "\u0441\u043B\u044C\u043E\u0437\u043A\u0430 03"
+  - IMG_4859
+  - IMG_4845
+  - TurtleSad3
+  - IMG_4848
+  - IMG_4854
+  - "\u0441\u043B\u044C\u043E\u0437\u043A\u0430 02"
+  - IMG_4849
+  - TurtleHappy2
+  - TurtleSad1
+  - TurtleSad2
+  - TurtleHappy1
+  - IMG_4858
+  m_Tag: TurtleMinigameAtlas
+  m_IsVariant: 0

@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CrocodileMinigameAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: fe34891291077cd46b8682e68269cc4f, type: 3}
+    totalSpriteSurfaceArea: 4849584
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -2487129146693208671, guid: db50a0e0a909eb041aadac4e16216ada, type: 3}
+  - {fileID: 21300000, guid: 4565aae22197761458cd9ad4f8a4662a, type: 3}
+  - {fileID: -1127784927460920182, guid: 7cf34903839fbf14ea59d27efd93c121, type: 3}
+  - {fileID: 21300000, guid: 4d5c092610e09be419397fe47ddd5737, type: 3}
+  - {fileID: 21300000, guid: 6f929308a6b384840ab5dfb37e11ac4e, type: 3}
+  - {fileID: 8800650821965705619, guid: bc653fa81b2bef1418cccfe7fa7d55b3, type: 3}
+  - {fileID: -7585698552646942709, guid: 7f4ea1c9bfa229346b531116868bcc39, type: 3}
+  - {fileID: 21300000, guid: 4585a57ada223b94aa9c93bb363d7db4, type: 3}
+  - {fileID: 21300000, guid: c07238dbe06392248b7a3d5699f39dad, type: 3}
+  - {fileID: 21300000, guid: 0655ca5c269c58b41a8fe03d9e4f5c68, type: 3}
+  - {fileID: 21300000, guid: c91fbcdda3158db4ab24a62f0c4e10d1, type: 3}
+  - {fileID: 3427365730743344878, guid: b83529fd205d7e644a3583884a37dd4b, type: 3}
+  - {fileID: -3165346880219874379, guid: 57e7fe5f79c36524db3eebb0206c40fe, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - IMG_4776_0
+  - "\u0441\u0442\u0430\u0440 03"
+  - IMG_4774_0
+  - 2
+  - "\u0441\u0442\u0430\u0440 02"
+  - IMG_4772_0
+  - IMG_4777_0
+  - "\u0441\u0442\u0430\u0440 01"
+  - 3
+  - "\u0441\u0442\u0430\u0440 04"
+  - 1
+  - IMG_4775_0
+  - IMG_4773_0
+  m_Tag: CrocodileMinigameAtlas
+  m_IsVariant: 0

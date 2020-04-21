@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PandaMinigameAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: e392dc51c1a550a46baf60d0219ed921, type: 3}
+    totalSpriteSurfaceArea: 13327680
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 2a3fc0920d93150488c57dfe6931bd2e, type: 3}
+  - {fileID: 21300000, guid: 29711d33365e7a84ba8f0b43c8743e5b, type: 3}
+  - {fileID: 21300000, guid: a2dcfea4617851b46ac97b94812463e7, type: 3}
+  - {fileID: 21300000, guid: e9534525d22625343a28f20195d88f57, type: 3}
+  - {fileID: 21300000, guid: bd6a3236d4208d741bcb16e6126e5dc6, type: 3}
+  - {fileID: 21300000, guid: 5df0e296e2348fb4d887e4d7cdfdc139, type: 3}
+  - {fileID: 21300000, guid: 8d2986a6d48004148a50762fd0607aff, type: 3}
+  - {fileID: 21300000, guid: 28afa687b69a19d48b0b9b77d50fb235, type: 3}
+  - {fileID: 21300000, guid: f6f55ab711e84f048a8da9dea71a45ac, type: 3}
+  - {fileID: 21300000, guid: 1a5b2bb7f976322498119b3b388b09cb, type: 3}
+  - {fileID: 21300000, guid: 8a2c6cb7f04a24645903414ba5b07e53, type: 3}
+  - {fileID: 21300000, guid: 67e68b489f3e5cf46b7a24203cf4650c, type: 3}
+  - {fileID: 21300000, guid: ca020fd9bde04eb4e915710e827d323a, type: 3}
+  - {fileID: 21300000, guid: c5842c4a4dedbec40b5ecfadf4859dae, type: 3}
+  - {fileID: 21300000, guid: 86b9995b210aa294c947da0090896bda, type: 3}
+  - {fileID: 21300000, guid: ca0358bcafc94134987210240e5d5168, type: 3}
+  - {fileID: 21300000, guid: d10b479f73c127c46a0a1c69a435dd12, type: 3}
+  - {fileID: 21300000, guid: 115cdbbf4429602438fe0ea91b1daf4a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - IMG_4872
+  - Heart1
+  - Male (2)
+  - IMG_4871
+  - IMG_4873
+  - PandaShadow
+  - IMG_4875
+  - HeartBroken
+  - IMG_4874
+  - Female (1)
+  - Female (2)
+  - HeartBrokenGray
+  - Female (3)
+  - Male (3)
+  - Heart2
+  - IMG_4876
+  - Male (1)
+  - Heart3
+  m_Tag: PandaMinigameAtlas
+  m_IsVariant: 0

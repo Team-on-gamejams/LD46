@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BirdMinigameAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: beed89e3f1673c14e9122a578171ab05, type: 3}
+    totalSpriteSurfaceArea: 23819230
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 99ae9da09ba0dbf449573e28db7026be, type: 3}
+  - {fileID: 21300000, guid: 31a45fb00ad35c641a1663c51180a8c5, type: 3}
+  - {fileID: 21300000, guid: f5a2d2d1228087b4eaee5849649228ae, type: 3}
+  - {fileID: 21300000, guid: 4556f142503ea4047ac5bae32e8172db, type: 3}
+  - {fileID: 21300000, guid: 5c61609221155fe44b35cfbebb393dc0, type: 3}
+  - {fileID: 21300000, guid: 696f5de2a52d4d448bbe154cbf8f9c7d, type: 3}
+  - {fileID: 21300000, guid: 20700036218f5df45bbf8828db327413, type: 3}
+  - {fileID: 21300000, guid: f524c5e9e4c3dbf43a433eff66c10350, type: 3}
+  - {fileID: 21300000, guid: c26edbf933aa2cf4cb220f922c8595c8, type: 3}
+  - {fileID: 21300000, guid: b1e8d70a77d2a6649b3bbb0840f09cf1, type: 3}
+  - {fileID: 21300000, guid: 7c9de6aa7d5358749993f2c3c16be0df, type: 3}
+  - {fileID: 21300000, guid: e8e46ffad7a1bfb4e94b6eef16e2da6b, type: 3}
+  - {fileID: 21300000, guid: 57028d7b7d72a2a44928d93d9a30c10b, type: 3}
+  - {fileID: 21300000, guid: f284d53ce5c2be54f9f67ac0b39bda40, type: 3}
+  - {fileID: 21300000, guid: 9156ac9d2d4d7bd4db68655987ce6060, type: 3}
+  - {fileID: 21300000, guid: 78ed2f9dcfd2f624baa3a3099b75bde1, type: 3}
+  - {fileID: 21300000, guid: 379d5ddd65117f141b9a707ee727e763, type: 3}
+  - {fileID: 21300000, guid: 4fa6d5fdd1deac94b9b233372c041cc1, type: 3}
+  - {fileID: 21300000, guid: af773b0e4aee9b643bce648171ba543d, type: 3}
+  - {fileID: 21300000, guid: ef28a7de6bd8baf47b5ac011363b8471, type: 3}
+  - {fileID: 21300000, guid: 4b4f7c3f54d232e45b8db8aab53d1ecf, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - NoteWin2
+  - ButtonActive3
+  - Bird3
+  - Bird1
+  - Bird2
+  - NoteWin3
+  - ButtonActive0
+  - BirdWin3
+  - BirdShadow
+  - Button2
+  - ButtonActive2
+  - BirdWin1
+  - NoteLose1
+  - NoteLose2
+  - NoteWin1
+  - BirdWin2
+  - Button0
+  - ButtonActive1
+  - Button3
+  - Button1
+  - NoteLose3
+  m_Tag: BirdMinigameAtlas
+  m_IsVariant: 0
