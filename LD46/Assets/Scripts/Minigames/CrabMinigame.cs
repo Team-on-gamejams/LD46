@@ -10,6 +10,7 @@ public class CrabMinigame : BaseMinigame
     public GameObject[] spawners;
     public Animator crabAnimator;
     public AudioClip winClip;
+    public GameObject BlackLines;
 
 
     //Crab
@@ -101,6 +102,7 @@ public class CrabMinigame : BaseMinigame
 
     protected override void ShowLoseAnimation()
     {
+        BlackLines.SetActive(false);
         crabAnimator.SetBool("Lose", true);
         LeanTween.delayedCall(3.0f, () =>
         {
@@ -110,6 +112,7 @@ public class CrabMinigame : BaseMinigame
 
     protected override void ShowWinAnimation()
     {
+        BlackLines.SetActive(false);
         if (moveCoroutine != null)
             StopCoroutine(moveCoroutine);
         isPlaying = false;
