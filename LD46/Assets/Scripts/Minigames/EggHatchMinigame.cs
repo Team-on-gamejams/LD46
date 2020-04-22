@@ -20,16 +20,17 @@ public class EggHatchMinigame : BaseMinigame {
 	float dist = 0;
 	Vector3 lastPos, currPos, deltaPos;
 
-  public GameObject minigame;
-  public GameObject WinAnimation;
+	public GameObject minigame;
+	public GameObject WinAnimation;
+	public GameObject LoseAnimation;
 
-  EggHatchMinigameDifficulty difficulty;
+	EggHatchMinigameDifficulty difficulty;
 
 	public override void Init(byte usedDIfficulty) {
 		base.Init(usedDIfficulty);
 		difficulty = difficultyBase as EggHatchMinigameDifficulty;
 
-		neededDistHalf = difficulty.neededDist / 2;
+		neededDistHalf = difficulty.neededDist * 0.1f;
 		debugTextField.text = $"Progress: {dist.ToString("0")}/{difficulty.neededDist.ToString("0")}   Last: {deltaPos.magnitude.ToString("0")}";
 	}
 
@@ -74,11 +75,12 @@ public class EggHatchMinigame : BaseMinigame {
 	}
 
 	protected override void ShowLoseAnimation() {
-	debugTextField.text = "Loser, ahahahah";
-	sranim.enabled = false;
+		debugTextField.text = "Loser, ahahahah";
+		sranim.enabled = false;
+		LoseAnimation.SetActive(true);
 		LeanTween.value(gameObject, sr.color, loseColor, 1.0f)
 		.setDelay(0.5f)
-		.setOnUpdateColor(c=> {
+		.setOnUpdateColor(c => {
 			sr.color = c;
 		});
 		LeanTween.delayedCall(2.0f, () => {
@@ -87,10 +89,10 @@ public class EggHatchMinigame : BaseMinigame {
 	}
 
 	protected override void ShowWinAnimation() {
-	debugTextField.text = "You win";
-    minigame.SetActive(false);
-    WinAnimation.SetActive(true);
-    LeanTween.delayedCall(4.3f, () => {
+		debugTextField.text = "You win";
+		minigame.SetActive(false);
+		WinAnimation.SetActive(true);
+		LeanTween.delayedCall(4.3f, () => {
 			base.ShowWinAnimation();
 		});
 	}

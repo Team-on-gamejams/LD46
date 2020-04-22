@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28cb89a597ff81c4b81fde0b814c4579, type: 3}
   m_Name: Snake 3
   m_EditorClassIdentifier: 
-  delayBeforePlay: 1
+  delayBeforePlay: 3
   timer: 8
   isWinIfTimerEnds: 0
   speed: 2

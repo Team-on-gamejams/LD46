@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CrabMinigame : BaseMinigame
 {
@@ -12,6 +13,8 @@ public class CrabMinigame : BaseMinigame
     public AudioClip winClip;
     public GameObject BlackLines;
 
+    public TextMeshProUGUI winText;
+    public TextMeshProUGUI LoseText;
 
     //Crab
     public float lineHeight = 3.5f;
@@ -98,6 +101,7 @@ public class CrabMinigame : BaseMinigame
         Destroy(obstacleClone.gameObject);
         ShowLoseAnimation();
         isPlaying = false;
+        LeanTweenEx.ChangeTextAlpha(LoseText, 1.0f, 0.2f);
     }
 
     protected override void ShowLoseAnimation()
@@ -113,6 +117,7 @@ public class CrabMinigame : BaseMinigame
     protected override void ShowWinAnimation()
     {
         BlackLines.SetActive(false);
+        LeanTweenEx.ChangeTextAlpha(winText, 1.0f, 0.2f);
         if (moveCoroutine != null)
             StopCoroutine(moveCoroutine);
         isPlaying = false;

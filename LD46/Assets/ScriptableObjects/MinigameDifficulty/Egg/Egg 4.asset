@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e948a7a1b7c37c47b8095dc14bab1ab, type: 3}
   m_Name: Egg 4
   m_EditorClassIdentifier: 
-  delayBeforePlay: 1
+  delayBeforePlay: 3
   timer: 6
   isWinIfTimerEnds: 0
   neededDist: 14000

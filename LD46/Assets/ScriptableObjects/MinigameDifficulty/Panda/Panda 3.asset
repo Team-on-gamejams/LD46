@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5ffcadcf188004cabba1eb1907512c, type: 3}
   m_Name: Panda 3
   m_EditorClassIdentifier: 
-  delayBeforePlay: 1
+  delayBeforePlay: 3
   timer: 10
   isWinIfTimerEnds: 0
   matchs: 7
   maxWrongMatchs: 2
-  randomLeftRight: 1
+  randomLeftRight: 0

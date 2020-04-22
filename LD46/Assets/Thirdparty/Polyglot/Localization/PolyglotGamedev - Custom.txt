@@ -7,3 +7,13 @@ Polyglot	100
 Changelog_0.1		Ludum Dare 46																											
 Changelog_0.2		Ludum Dare 46																											
 Changelog_0.3		Ludum Dare 46																											
+Changelog_0.31		Ludum Dare 46 																											
+Changelog_0.32		Ludum Dare 46																											
+Changelog_0.33		Ludum Dare 46																											
+Changelog_0.34		Ludum Dare 46																											
+Changelog_0.35		Ludum Dare 46																											
+Changelog_0.36		Ludum Dare 46																											
+Changelog_0.37		Ludum Dare 46																											
+Changelog_0.38		Ludum Dare 46																											
+Changelog_0.39		Ludum Dare 46																											
+Changelog_0.4		Ludum Dare 46																											

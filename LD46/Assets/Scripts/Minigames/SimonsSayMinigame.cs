@@ -7,14 +7,15 @@ using UnityEngine.EventSystems;
 
 public class SimonsSayMinigame : BaseBaseMinigame {
 	[Header("Refs")]
-	[SerializeField] AudioClip[] sounds;
-	[SerializeField] SpriteRenderer[] sr;
-	[SerializeField] SpriteRendererAnimator2 sranim;
-	[SerializeField] GameObject winAnimation;
-	[SerializeField] GameObject loseAnimation;
+	[SerializeField] AudioClip[] sounds = null;
+	[SerializeField] SpriteRenderer[] sr = null;
+	[SerializeField] SpriteRendererAnimator2 sranim = null;
+	[SerializeField] GameObject winAnimation = null;
+	[SerializeField] GameObject loseAnimation = null;
+	[SerializeField] TextMeshProUGUI stateTextField = null;
 
 	[Header("Visual")]
-	[SerializeField] Sprite[] hightlightSprites;
+	[SerializeField] Sprite[] hightlightSprites = null;
 	Sprite[] defaultSprites;
 
 	[Header("Debug")]
@@ -106,6 +107,8 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 		const float additionalDelay = 0.1f;
 		float allDelay = additionalDelay;
 
+		stateTextField.text = "Listen and memorize bird sounds";
+
 		lastClickId = -1;
 		currSequenceId = 0;
 		isPlaying = false;
@@ -124,6 +127,7 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 					HightlightButton(sequence[currId], defaultSprites[sequence[currId]], false);
 					if (currId == sequence.Count - 1) {
 						isPlaying = true;
+						stateTextField.text = "Repeat bird sounds";
 					}
 				});
 			});
@@ -143,6 +147,7 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 
 	protected override void ShowLoseAnimation() {
 		isPlaying = false;
+		stateTextField.text = "";
 		debugTextField.text = "Loser, ahahahah";
 		sranim.SetSequenceForce(1);
 
@@ -155,6 +160,7 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 
 	protected override void ShowWinAnimation() {
 		isPlaying = false;
+		stateTextField.text = "";
 		debugTextField.text = "You win";
 		sranim.SetSequenceForce(1);
 

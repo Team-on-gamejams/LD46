@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59715c5fe7195a545b40f9fcbe7e1602, type: 3}
   m_Name: Turtle 2
   m_EditorClassIdentifier: 
-  delayBeforePlay: 1
+  delayBeforePlay: 3
   timer: 10
   isWinIfTimerEnds: 0
   turtlesCount: 11

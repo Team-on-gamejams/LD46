@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17df68b6219e866449e36b204910d163, type: 3}
   m_Name: Crab 1
   m_EditorClassIdentifier: 
-  delayBeforePlay: 1
+  delayBeforePlay: 3
   timer: 10
   isWinIfTimerEnds: 1
   speed: 11
