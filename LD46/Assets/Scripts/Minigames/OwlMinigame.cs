@@ -22,10 +22,12 @@ public class OwlMinigame : BaseMinigame {
 
 	OwlMinigameDifficulty difficulty;
 
-  public GameObject LoseAnimation;
-  public GameObject WinAnimation;
+	public GameObject LoseAnimation;
+	public GameObject WinAnimation;
+	public GameObject LoseCanvas;
+	public GameObject WinCanvas;
 
-  public override void Init(byte usedDIfficulty) {
+	public override void Init(byte usedDIfficulty) {
 		base.Init(usedDIfficulty);
 		difficulty = difficultyBase as OwlMinigameDifficulty;
 
@@ -120,18 +122,20 @@ public class OwlMinigame : BaseMinigame {
 
 	protected override void ShowLoseAnimation() {
 		debugTextField.text = "Loser, ahahahah";
-    owl.GetComponent<SpriteRenderer>().enabled = false;
-    LoseAnimation.SetActive(true);
-    LeanTween.delayedCall(3.0f, () => {
-      base.ShowLoseAnimation();
-    });
+		owl.GetComponent<SpriteRenderer>().enabled = false;
+		LoseAnimation.SetActive(true);
+		LoseCanvas.SetActive(true);
+		LeanTween.delayedCall(3.0f, () => {
+			base.ShowLoseAnimation();
+		});
 
 	}
 
 	protected override void ShowWinAnimation() {
 		debugTextField.text = "You win";
-    WinAnimation.SetActive(true);
-    LeanTween.delayedCall(3.0f, () => {
+		WinAnimation.SetActive(true);
+		WinCanvas.SetActive(true);
+		LeanTween.delayedCall(3.0f, () => {
 			base.ShowWinAnimation();
 		});
 	}

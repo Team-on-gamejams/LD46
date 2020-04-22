@@ -56,7 +56,7 @@ public class BaseMinigame : BaseBaseMinigame {
 		if (isFirstClick) {
 			isPlaying = true;
 			isFirstClick = false;
-			LeanTween.moveLocalY(helpGroup.gameObject, helpGroup.transform.position.y + 0.1f, 0.2f);
+			LeanTween.moveLocalY(helpGroup.gameObject, 100f, 0.2f);
 			LeanTweenEx.ChangeCanvasGroupAlpha(helpGroup, 0.0f, 0.2f);
 		}
 	}

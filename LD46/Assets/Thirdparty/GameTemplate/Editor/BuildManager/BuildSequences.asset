@@ -27,7 +27,7 @@ MonoBehaviour:
       itchChannel: windows-32-testing
       itchDirPath: $NAME_$DATESHORT
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.2 - Ludum Dare 46
+      itchLastChangelogUpdateName: 0.32 - Ludum Dare 46
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
