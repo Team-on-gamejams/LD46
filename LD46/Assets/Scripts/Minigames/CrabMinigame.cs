@@ -33,7 +33,7 @@ public class CrabMinigame : BaseMinigame
 
     public void GoUp()
     {
-        if (line < 1 && isPlaying)
+        if (line < 1)
         {
             ++line;
             if (moveCoroutine != null)
@@ -45,7 +45,7 @@ public class CrabMinigame : BaseMinigame
 
     public void GoDown()
     {
-        if (line > -1 && isPlaying)
+        if (line > -1)
         {
             --line;
             if (moveCoroutine != null)

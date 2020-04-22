@@ -43,7 +43,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: e392dc51c1a550a46baf60d0219ed921, type: 3}
-    totalSpriteSurfaceArea: 13327680
+    totalSpriteSurfaceArea: 13131072
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -54,17 +54,14 @@ SpriteAtlas:
   - {fileID: 21300000, guid: bd6a3236d4208d741bcb16e6126e5dc6, type: 3}
   - {fileID: 21300000, guid: 5df0e296e2348fb4d887e4d7cdfdc139, type: 3}
   - {fileID: 21300000, guid: 8d2986a6d48004148a50762fd0607aff, type: 3}
-  - {fileID: 21300000, guid: 28afa687b69a19d48b0b9b77d50fb235, type: 3}
   - {fileID: 21300000, guid: f6f55ab711e84f048a8da9dea71a45ac, type: 3}
   - {fileID: 21300000, guid: 1a5b2bb7f976322498119b3b388b09cb, type: 3}
   - {fileID: 21300000, guid: 8a2c6cb7f04a24645903414ba5b07e53, type: 3}
   - {fileID: 21300000, guid: 67e68b489f3e5cf46b7a24203cf4650c, type: 3}
   - {fileID: 21300000, guid: ca020fd9bde04eb4e915710e827d323a, type: 3}
   - {fileID: 21300000, guid: c5842c4a4dedbec40b5ecfadf4859dae, type: 3}
-  - {fileID: 21300000, guid: 86b9995b210aa294c947da0090896bda, type: 3}
   - {fileID: 21300000, guid: ca0358bcafc94134987210240e5d5168, type: 3}
   - {fileID: 21300000, guid: d10b479f73c127c46a0a1c69a435dd12, type: 3}
-  - {fileID: 21300000, guid: 115cdbbf4429602438fe0ea91b1daf4a, type: 3}
   m_PackedSpriteNamesToIndex:
   - IMG_4872
   - Heart1
@@ -73,16 +70,13 @@ SpriteAtlas:
   - IMG_4873
   - PandaShadow
   - IMG_4875
-  - HeartBroken
   - IMG_4874
   - Female (1)
   - Female (2)
   - HeartBrokenGray
   - Female (3)
   - Male (3)
-  - Heart2
   - IMG_4876
   - Male (1)
-  - Heart3
   m_Tag: PandaMinigameAtlas
   m_IsVariant: 0

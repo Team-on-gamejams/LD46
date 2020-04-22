@@ -65,8 +65,6 @@ public class PandaMinigame : BaseMinigame {
 	}
 
 	public void LeftClick() {
-		if (!isPlaying)
-			return;
 		if (leftGender == centerGender)
 			WrongMatch();
 		else
@@ -74,8 +72,6 @@ public class PandaMinigame : BaseMinigame {
 	}
 
 	public void RightClick() {
-		if (!isPlaying)
-			return;
 		if (rightGender == centerGender)
 			WrongMatch();
 		else

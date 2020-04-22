@@ -75,7 +75,7 @@ public class TurtleTupperMinigame : BaseMinigame {
 	}
 
 	public void OnTutrleClick(int id) {
-		if (!isPlaying || turtlesState[id])
+		if (turtlesState[id])
 			return;
 
 		turtlesState[id] = true;
