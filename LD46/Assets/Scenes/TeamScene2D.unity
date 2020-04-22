@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Practive in turtle minigame
+  text: Practice in turtle minigame
   isUp: 1
   textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
   rc: {fileID: 48392056}
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Practive in owl minigame
+  text: Practice in owl minigame
   isUp: 1
   textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
   rc: {fileID: 206245069}
@@ -2647,7 +2647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Practive in crocodile minigame
+  text: Practice in crocodile minigame
   isUp: 0
   textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
   rc: {fileID: 508617928}
@@ -4493,7 +4493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Practive in panda minigame
+  text: Practice in panda minigame
   isUp: 0
   textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
   rc: {fileID: 844991023}
@@ -5868,6 +5868,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205215117}
   m_CullTransparentMesh: 0
+--- !u!1 &1217741881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217741883}
+  - component: {fileID: 1217741882}
+  m_Layer: 0
+  m_Name: ~LeanTween
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1217741882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217741881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2f4b27196f84954b44753aaac214bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1217741883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217741881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1229899478
 GameObject:
   m_ObjectHideFlags: 0
@@ -6331,7 +6374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Practive in crab minigame
+  text: Practice in crab minigame
   isUp: 1
   textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
   rc: {fileID: 1303747318}
@@ -7166,7 +7209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1386112959
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7200,7 +7243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8101,7 +8144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Practive in egg hatch minigame
+  text: Practice in egg hatch minigame
   isUp: 0
   textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
   rc: {fileID: 1550950024}
@@ -9040,7 +9083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Practive in snake minigame
+  text: Practice in snake minigame
   isUp: 1
   textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
   rc: {fileID: 1734077207}
@@ -9357,7 +9400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a45218be1352c941a0ab14b2e765960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Practive in bird minigame
+  text: Practice in bird minigame
   isUp: 1
   textPopupPrefab: {fileID: 1926847044, guid: be3fcf2008bd6314786dc3db32450300, type: 3}
   rc: {fileID: 1746020355}
