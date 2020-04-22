@@ -8,7 +8,7 @@ public class DialogPlayer : MonoBehaviour {
 		"This zoo lost his zookeeper, and now animals suffer.",
 		"No visitors for a long time.",
 		"Damaged animal enclosures. Sad animals. If nothing changes, the zoo is gonna shut down.",
-		"You need to make it beatiful again. You are the new zookepeer. Keep this zoo alive, and take a good care of our animal friends.",
+		"You need to make it beautiful again. You are the new zookeeper. Keep this zoo alive, and take a good care of our animal friends.",
 		"Oh my! You do it!!",
 		"Don't forget to checkout online hightscores.",
 	};
@@ -22,6 +22,7 @@ public class DialogPlayer : MonoBehaviour {
 	}
 
 	public void SetDialogId(int id) {
+		text.text = "";
 		i = (byte)id;
 	}
 
