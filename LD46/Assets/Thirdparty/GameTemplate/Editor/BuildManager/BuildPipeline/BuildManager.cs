@@ -26,7 +26,7 @@ public static class BuildManager {
 		BuildTargetGroup targetGroupBeforeStart = BuildPipeline.GetBuildTargetGroup(targetBeforeStart);
 
 		string[] buildsPath = new string[sequence.builds.Length];
-		for(byte i = 0; i < sequence.builds.Length; ++i) {
+		for (byte i = 0; i < sequence.builds.Length; ++i) {
 			BuildData data = sequence.builds[i];
 			buildsPath[i] = BaseBuild(data.targetGroup, data.target, data.options, data.outputRoot + GetPathWithVars(data, data.middlePath));
 		}
@@ -41,9 +41,9 @@ public static class BuildManager {
 			if (!sequence.builds[i].needZip)
 				continue;
 
-			if (!string.IsNullOrEmpty(buildsPath[i])) 
+			if (!string.IsNullOrEmpty(buildsPath[i]))
 				BaseCompress(sequence.builds[i].outputRoot + GetPathWithVars(sequence.builds[i], sequence.builds[i].compressDirPath));
-			else 
+			else
 				Debug.LogWarning($"[Compressing] Can't find build for {GetBuildTargetExecutable(sequence.builds[i].target)}");
 		}
 
@@ -55,7 +55,7 @@ public static class BuildManager {
 				continue;
 
 			if (!string.IsNullOrEmpty(buildsPath[i])) {
-				if(sequence.builds[i].itchAddLastChangelogUpdateNameToVerison && !string.IsNullOrEmpty(changelog?.LocalizedUpdate)) {
+				if (sequence.builds[i].itchAddLastChangelogUpdateNameToVerison && !string.IsNullOrEmpty(changelog?.LocalizedUpdate)) {
 					sequence.builds[i].itchLastChangelogUpdateName = GameManager.InstanceEditor.buildNameString;
 				}
 				PushItch(sequence, sequence.builds[i]);
@@ -71,10 +71,10 @@ public static class BuildManager {
 		s = s.Replace("$NAME", GetProductName());
 		s = s.Replace("$PLATFORM", ConvertBuildTargetToString(data.target));
 		s = s.Replace("$VERSION", PlayerSettings.bundleVersion);
-		s = s.Replace("$DATE", $"{usedDate.Date.Year}_{usedDate.Date.Month}_{usedDate.Date.Day}");
 		s = s.Replace("$DATESHORT", $"{usedDate.Date.Year % 100}_{usedDate.Date.Month}_{usedDate.Date.Day}");
+		s = s.Replace("$YEARSHORT", $"{usedDate.Date.Year % 100}");
+		s = s.Replace("$DATE", $"{usedDate.Date.Year}_{usedDate.Date.Month}_{usedDate.Date.Day}");
 		s = s.Replace("$YEAR", $"{usedDate.Date.Year}");
-		s = s.Replace("$YEARSHORT", $"{usedDate.Date.Year}");
 		s = s.Replace("$MONTH", $"{usedDate.Date.Month}");
 		s = s.Replace("$DAY", $"{usedDate.Date.Day}");
 		s = s.Replace("$TIME", $"{usedDate.Hour}_{usedDate.Minute}");
