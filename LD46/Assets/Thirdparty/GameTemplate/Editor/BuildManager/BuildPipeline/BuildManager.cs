@@ -72,6 +72,10 @@ public static class BuildManager {
 		s = s.Replace("$PLATFORM", ConvertBuildTargetToString(data.target));
 		s = s.Replace("$VERSION", PlayerSettings.bundleVersion);
 		s = s.Replace("$DATE", $"{usedDate.Date.Year}_{usedDate.Date.Month}_{usedDate.Date.Day}");
+		s = s.Replace("$DATESHORT", $"{usedDate.Date.Year % 100}_{usedDate.Date.Month}_{usedDate.Date.Day}");
+		s = s.Replace("$YEAR", $"{usedDate.Date.Year}");
+		s = s.Replace("$YEARSHORT", $"{usedDate.Date.Year}");
+		s = s.Replace("$MONTH", $"{usedDate.Date.Month}");
 		s = s.Replace("$DAY", $"{usedDate.Date.Day}");
 		s = s.Replace("$TIME", $"{usedDate.Hour}_{usedDate.Minute}");
 		s = s.Replace("$EXECUTABLE", GetBuildTargetExecutable(data.target));

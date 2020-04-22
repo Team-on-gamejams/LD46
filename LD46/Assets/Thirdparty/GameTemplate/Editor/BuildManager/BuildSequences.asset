@@ -13,38 +13,21 @@ MonoBehaviour:
   m_Name: BuildSequences
   m_EditorClassIdentifier: 
   sequences:
-  - editorName: Windows 32 only
+  - editorName: Testing windows + itch.io
     itchGameLink: teamon/zoo-keeper
     builds:
     - outputRoot: Builds/
-      middlePath: $NAME_TESTING_$DAY_$TIME/$NAME$EXECUTABLE
+      middlePath: $NAME_$DATESHORT/$NAME$EXECUTABLE
       targetGroup: 1
       target: 5
       options: 0
-      needZip: 1
-      compressDirPath: $NAME_TESTING_$DAY_$TIME
-      needItchPush: 0
+      needZip: 0
+      compressDirPath: $NAME_$DATESHORT
+      needItchPush: 1
       itchChannel: windows-32-testing
-      itchDirPath: $NAME_$VERSION_$DAY_$TIME
+      itchDirPath: $NAME_$DATESHORT
       itchAddLastChangelogUpdateNameToVerison: 1
       itchLastChangelogUpdateName: 0.2 - Ludum Dare 46
-      useGithubActions: 0
-      useUnityActions: 0
-      needGamejolthPush: 0
-      needSteamPush: 0
-      needGoogleDricePush: 0
-    - outputRoot: Builds/
-      middlePath: $NAME_TESTING_64_$DAY_$TIME/$NAME$EXECUTABLE
-      targetGroup: 1
-      target: 19
-      options: 8
-      needZip: 1
-      compressDirPath: $NAME_TESTING_64_$DAY_$TIME
-      needItchPush: 0
-      itchChannel: windows-64-testing
-      itchDirPath: $NAME_$VERSION_$DAY_$TIME
-      itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -465,60 +448,6 @@ MonoBehaviour:
       itchDirPath: $NAME_$VERSION_$PLATFORM$EXECUTABLE
       itchAddLastChangelogUpdateNameToVerison: 1
       itchLastChangelogUpdateName: 0.31 - [Changelog_0.31]
-      useGithubActions: 0
-      useUnityActions: 0
-      needGamejolthPush: 0
-      needSteamPush: 0
-      needGoogleDricePush: 0
-  - editorName: Fixes
-    itchGameLink: teamon/zoo-keeper
-    builds:
-    - outputRoot: Builds/
-      middlePath: $NAME_$VERSION_$PLATFORM/$NAME_$VERSION/$NAME$EXECUTABLE
-      targetGroup: 1
-      target: 24
-      options: 0
-      needZip: 1
-      compressDirPath: $NAME_$VERSION_$PLATFORM
-      needItchPush: 1
-      itchChannel: linux-universal
-      itchDirPath: $NAME_$VERSION_$PLATFORM
-      itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.3 - Ludum Dare 46
-      useGithubActions: 0
-      useUnityActions: 0
-      needGamejolthPush: 0
-      needSteamPush: 0
-      needGoogleDricePush: 0
-    - outputRoot: Builds/
-      middlePath: $NAME_$VERSION_$PLATFORM/$NAME_$VERSION/$NAME$EXECUTABLE
-      targetGroup: 1
-      target: 2
-      options: 0
-      needZip: 1
-      compressDirPath: $NAME_$VERSION_$PLATFORM
-      needItchPush: 1
-      itchChannel: osx-universal
-      itchDirPath: $NAME_$VERSION_$PLATFORM
-      itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.3 - Ludum Dare 46
-      useGithubActions: 0
-      useUnityActions: 0
-      needGamejolthPush: 0
-      needSteamPush: 0
-      needGoogleDricePush: 0
-    - outputRoot: Builds/
-      middlePath: $NAME_$VERSION_$PLATFORM$EXECUTABLE
-      targetGroup: 7
-      target: 13
-      options: 8
-      needZip: 0
-      compressDirPath: 
-      needItchPush: 1
-      itchChannel: android
-      itchDirPath: $NAME_$VERSION_$PLATFORM$EXECUTABLE
-      itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.3 - Ludum Dare 46
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
