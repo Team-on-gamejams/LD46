@@ -30,9 +30,9 @@ public class BaseBaseMinigame : MonoBehaviour {
 	//Destroy minigame after animations
 	public virtual void Uninit() {
 		Debug.Log($"Uninit minigame {transform.name}");
+		LeanTween.cancel(gameObject, false);
 		Destroy(gameObject);
 	}
-
 
 	//TODO: win/lose animation. Or maybe use animator for this
 

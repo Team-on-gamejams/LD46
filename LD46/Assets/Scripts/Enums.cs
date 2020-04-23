@@ -13,3 +13,10 @@ public enum MinigameType {
 	CrabRun,
 	Aligator,
 }
+
+public enum PlayerScreenState : byte {
+	MainMenu,		//Exit on escape
+	SubMainMenu,	//To main menu on escape
+	Cinematic,      //Skip on escape
+	Minigame,       //To main menu on escape
+}

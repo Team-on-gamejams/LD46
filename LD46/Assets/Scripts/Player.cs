@@ -7,6 +7,8 @@ using TMPro;
 public class Player : MonoBehaviour {
 	const string SAVE_PROGRESS_KEY = "Difficulty";
 
+	public PlayerScreenState ScreenState { get; set; }
+
 	[Header("Minigames")]
 	[SerializeField] [ReorderableList] List<BaseBaseMinigame> minigames = null;
 	[SerializeField] [ReorderableList] List<MinigameLauncher> minigamesSingle = null;
@@ -44,17 +46,28 @@ public class Player : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			debugTextField.gameObject.SetActive(!debugTextField.gameObject.activeSelf);
 		}
-	}
 
-	public void OnClearDifficultyClick() {
-		ResetDifficulty();
-	}	
-	
-	public void OnAddDifficultyClick() {
-		IncreaseDifficulty();
+		if (ScreenState == PlayerScreenState.Cinematic && Input.anyKeyDown) {
+			gameMenu.ShowMainMenu();
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			if (ScreenState == PlayerScreenState.Minigame) {
+				currMinigame.Uninit();
+				currMinigame = null;
+				OnEndSingle();
+			}
+			else if (ScreenState == PlayerScreenState.SubMainMenu) {
+				gameMenu.OnCreditsBackClick();
+			}
+			else if (ScreenState == PlayerScreenState.MainMenu) {
+				gameMenu.OnExitClick();
+			}
+		}
 	}
 
 	public void StartLoop() {
+		ScreenState = PlayerScreenState.Minigame;
 		gameMenu.HideMainMenu();
 		StartNewMinigameInSequence();
 	}
@@ -69,6 +82,7 @@ public class Player : MonoBehaviour {
 		}
 
 		if(minigame != null) {
+			ScreenState = PlayerScreenState.Minigame;
 			gameMenu.HideMainMenu();
 			StartSingleMinigame(minigame);
 		}
@@ -105,12 +119,9 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnEndSequence() {
-		minigames.Shuffle();
-		currMinigameId = 0;
+		OnEndSingle();
 
 		IncreaseDifficulty();
-
-		gameMenu.ShowMainMenu();
 		if (currDifficulty == minigamesSingle.Count)
 			gameMenu.PlayEndAnimation();
 	}
@@ -126,11 +137,25 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnEndSingle() {
+		if(currMinigameId != 0) {
+			minigames.Shuffle();
+			currMinigameId = 0;
+		}
+
 		gameMenu.ShowMainMenu();
 	}
 
+	#region CHEATS
+	public void OnClearDifficultyClick() {
+		ResetDifficulty();
+	}
+
+	public void OnAddDifficultyClick() {
+		IncreaseDifficulty();
+	}
+
 	void IncreaseDifficulty() {
-		if(currDifficulty < minigamesSingle.Count)
+		if (currDifficulty < minigamesSingle.Count)
 			minigamesSingle[currDifficulty].Enable();
 		++currDifficulty;
 		PlayerPrefs.SetInt(SAVE_PROGRESS_KEY, currDifficulty);
@@ -146,4 +171,6 @@ public class Player : MonoBehaviour {
 			minigamesSingle[i].Disable();
 		}
 	}
+
+	#endregion
 }

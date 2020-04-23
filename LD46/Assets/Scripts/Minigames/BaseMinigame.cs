@@ -28,7 +28,7 @@ public class BaseMinigame : BaseBaseMinigame {
 		timerTextField.value = 1.0f;
 		isFirstClick = true;
 
-		LeanTween.delayedCall(difficultyBase.delayBeforePlay, () => {
+		LeanTween.delayedCall(gameObject, difficultyBase.delayBeforePlay, () => {
 			HideHelpMenu();
 		});
 	}

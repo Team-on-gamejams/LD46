@@ -38,16 +38,15 @@ public class GameMenu : MonoBehaviour {
 		logo.interactable = logo.blocksRaycasts = false;
 		LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
 		SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
-		//SoundImage.SetNativeSize();
 		ShowMainMenu();
 #else
+		player.ScreenState = PlayerScreenState.Cinematic;
 		logo.interactable = logo.blocksRaycasts = true;
 		logo.alpha = 1.0f;
 		LeanTween.delayedCall(logoAnim.GetDuration(), () => {
 			logo.interactable = logo.blocksRaycasts = false;
 			LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
 			SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
-			//SoundImage.SetNativeSize();
 			ShowMainMenu();
 			anim.Play("IntroAnimation");
 		});
@@ -55,10 +54,13 @@ public class GameMenu : MonoBehaviour {
 	}
 
 	public void PlayEndAnimation() {
+		player.ScreenState = PlayerScreenState.Cinematic;
 		anim.Play("EndGameAnimation");
 	}
 
 	public void ShowMainMenu() {
+		anim.Play("MainMenuIdle");
+		player.ScreenState = PlayerScreenState.MainMenu;
 		cg.interactable = cg.blocksRaycasts = true;
 		LeanTweenEx.ChangeCanvasGroupAlpha(cg, 1.0f, 0.2f);
 	}
@@ -73,16 +75,21 @@ public class GameMenu : MonoBehaviour {
 	}
 
 	public void ShowCreditsLong() {
+		player.ScreenState = PlayerScreenState.SubMainMenu;
 		creditscg.interactable = creditscg.blocksRaycasts = true;
 		LeanTweenEx.ChangeCanvasGroupAlpha(creditscg, 1.0f, 0.5f);
 	}
 
 	public void OnCreditsClick() {
+		player.ScreenState = PlayerScreenState.SubMainMenu;
 		creditscg.interactable = creditscg.blocksRaycasts = true;
 		LeanTweenEx.ChangeCanvasGroupAlpha(creditscg, 1.0f, 0.2f);
 	}
 
 	public void OnCreditsBackClick() {
+		if (creditscg.alpha == 0)
+			return;
+		player.ScreenState = PlayerScreenState.MainMenu;
 		creditscg.interactable = creditscg.blocksRaycasts = false;
 		LeanTweenEx.ChangeCanvasGroupAlpha(creditscg, 0.0f, 0.2f);
 	}
@@ -98,6 +105,5 @@ public class GameMenu : MonoBehaviour {
 	public void OnSoundClick() {
 		AudioManager.Instance.IsEnabled = !AudioManager.Instance.IsEnabled;
 		SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
-		//SoundImage.SetNativeSize();
 	}
 }
