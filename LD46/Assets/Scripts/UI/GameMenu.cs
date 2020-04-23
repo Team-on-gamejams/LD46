@@ -40,7 +40,6 @@ public class GameMenu : MonoBehaviour {
 		SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
 		ShowMainMenu();
 #else
-		player.ScreenState = PlayerScreenState.Cinematic;
 		logo.interactable = logo.blocksRaycasts = true;
 		logo.alpha = 1.0f;
 		LeanTween.delayedCall(logoAnim.GetDuration(), () => {
@@ -49,13 +48,14 @@ public class GameMenu : MonoBehaviour {
 			SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
 			ShowMainMenu();
 			anim.Play("IntroAnimation");
+			player.ScreenState = PlayerScreenState.Cinematic;
 		});
 #endif
 	}
 
 	public void PlayEndAnimation() {
-		player.ScreenState = PlayerScreenState.Cinematic;
 		anim.Play("EndGameAnimation");
+		player.ScreenState = PlayerScreenState.Cinematic;
 	}
 
 	public void ShowMainMenu() {

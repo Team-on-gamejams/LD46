@@ -7,7 +7,7 @@ using TMPro;
 public class Player : MonoBehaviour {
 	const string SAVE_PROGRESS_KEY = "Difficulty";
 
-	public PlayerScreenState ScreenState { get; set; }
+	public PlayerScreenState ScreenState { get; set; } = PlayerScreenState.None;
 
 	[Header("Minigames")]
 	[SerializeField] [ReorderableList] List<BaseBaseMinigame> minigames = null;

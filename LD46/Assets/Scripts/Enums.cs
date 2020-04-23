@@ -15,6 +15,7 @@ public enum MinigameType {
 }
 
 public enum PlayerScreenState : byte {
+	None,
 	MainMenu,		//Exit on escape
 	SubMainMenu,	//To main menu on escape
 	Cinematic,      //Skip on escape
