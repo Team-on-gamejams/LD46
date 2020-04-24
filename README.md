@@ -19,7 +19,6 @@ Ludum Dare is one of the world's largest and longest running Game Jam events. Is
  * Unity 2019.3.9f1
  * Visual Studio 2019
  * Procreate
- * FlipaClip
 
 # Credits
  * [Team-on](https://github.com/Team-on) - programmer
@@ -30,6 +29,6 @@ Ludum Dare is one of the world's largest and longest running Game Jam events. Is
 
 # Screenshots
 ![Screenshot1](Screenshots/AllMenuSmall.jpg)  
-![Screenshot1](Screenshots/AllGameplaySmall.jpg)  
-![Screenshot1](Screenshots/AllWinSmall.jpg)  
-![Screenshot1](Screenshots/AllLoseSmall.jpg)  
+![Screenshot2](Screenshots/AllGameplaySmall.jpg)  
+![Screenshot3](Screenshots/AllWinSmall.jpg)  
+![Screenshot4](Screenshots/AllLoseSmall.jpg)  
