@@ -16,6 +16,8 @@ public class BaseBaseMinigame : MonoBehaviour {
 
 	[SerializeField] /*[ReorderableList]*/ protected BaseMinigameDifficulty[] difficulties;
 
+	bool isShowAnimation = false;
+
 	protected BaseMinigameDifficulty difficultyBase => difficulties[usedDifficulty];
 	byte usedDifficulty = 0;
 
@@ -39,6 +41,9 @@ public class BaseBaseMinigame : MonoBehaviour {
 	//Trigger manually.
 	//Dont forger to set isPlaying = false;
 	protected virtual void ShowWinAnimation() {
+		if (isShowAnimation)
+			return;
+		isShowAnimation = true;
 		Debug.Log($"Win Animation minigame {transform.name}");
 		onWinEvent.Invoke();
 		Uninit();
@@ -46,6 +51,9 @@ public class BaseBaseMinigame : MonoBehaviour {
 
 	//Triggered when timer reach 0
 	protected virtual void ShowLoseAnimation() {
+		if (isShowAnimation)
+			return;
+		isShowAnimation = true;
 		Debug.Log($"Lose Animation minigame {transform.name}");
 		onLoseEvent.Invoke();
 		Uninit();
