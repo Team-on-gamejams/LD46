@@ -50,8 +50,7 @@ public class Player : MonoBehaviour {
 		if (ScreenState == PlayerScreenState.Cinematic && Input.anyKeyDown) {
 			gameMenu.ShowMainMenu();
 		}
-
-		if (Input.GetKeyDown(KeyCode.Escape)) {
+		else if (Input.GetKeyDown(KeyCode.Escape)) {
 			if (ScreenState == PlayerScreenState.Minigame) {
 				currMinigame.Uninit();
 				currMinigame = null;

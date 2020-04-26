@@ -1132,6 +1132,8 @@ MonoBehaviour:
   debugTextField: {fileID: 3324853973642178043}
   LoseAnimation: {fileID: 4296300713956224000}
   WinAnimation: {fileID: 6805407134050618976}
+  LoseCanvas: {fileID: 2353905355068040238}
+  WinCanvas: {fileID: 8798279717565098293}
 --- !u!1 &5942632001224054568
 GameObject:
   m_ObjectHideFlags: 0

@@ -362,7 +362,7 @@ MonoBehaviour:
       itchChannel: windows-32
       itchDirPath: $NAME_$VERSION_$PLATFORM
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.31 - [Changelog_0.31]
+      itchLastChangelogUpdateName: 0.32 - Ludum Dare 46
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -379,7 +379,7 @@ MonoBehaviour:
       itchChannel: windows-64
       itchDirPath: $NAME_$VERSION_$PLATFORM
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.31 - [Changelog_0.31]
+      itchLastChangelogUpdateName: 0.32 - Ludum Dare 46
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -396,7 +396,7 @@ MonoBehaviour:
       itchChannel: linux-universal
       itchDirPath: $NAME_$VERSION_$PLATFORM
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.31 - [Changelog_0.31]
+      itchLastChangelogUpdateName: 0.32 - Ludum Dare 46
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -413,7 +413,7 @@ MonoBehaviour:
       itchChannel: osx-universal
       itchDirPath: $NAME_$VERSION_$PLATFORM
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.31 - [Changelog_0.31]
+      itchLastChangelogUpdateName: 0.32 - Ludum Dare 46
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -430,7 +430,7 @@ MonoBehaviour:
       itchChannel: webgl
       itchDirPath: $NAME_$VERSION_$PLATFORM
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.31 - [Changelog_0.31]
+      itchLastChangelogUpdateName: 0.32 - Ludum Dare 46
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
@@ -447,7 +447,7 @@ MonoBehaviour:
       itchChannel: android
       itchDirPath: $NAME_$VERSION_$PLATFORM$EXECUTABLE
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.31 - [Changelog_0.31]
+      itchLastChangelogUpdateName: 0.32 - Ludum Dare 46
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
