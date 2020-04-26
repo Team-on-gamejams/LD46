@@ -225,7 +225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tap on left/right side \nto balance owl"
+  m_text: "Tap on left/right side \nto push owl"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21e7b938f9d4764419337321df975914, type: 2}
   m_sharedMaterial: {fileID: 7763697515833537325, guid: 21e7b938f9d4764419337321df975914,
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 6348082806962759287}
-    characterCount: 38
+    characterCount: 35
     spriteCount: 0
     spaceCount: 7
     wordCount: 8
