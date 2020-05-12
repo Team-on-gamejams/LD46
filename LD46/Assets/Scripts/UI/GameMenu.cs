@@ -34,23 +34,27 @@ public class GameMenu : MonoBehaviour {
 	}
 
 	private void Start() {
-#if UNITY_EDITOR
-		logo.interactable = logo.blocksRaycasts = false;
-		LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
-		SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
-		ShowMainMenu();
-#else
-		logo.interactable = logo.blocksRaycasts = true;
-		logo.alpha = 1.0f;
-		LeanTween.delayedCall(logoAnim.GetDuration(), () => {
+		bool isCinematicShowed = PlayerPrefs.GetInt("GameMenu.isCinematicShowed", 0) == 1;
+
+		if (isCinematicShowed) {
 			logo.interactable = logo.blocksRaycasts = false;
 			LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
 			SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
 			ShowMainMenu();
-			anim.Play("IntroAnimation");
-			player.ScreenState = PlayerScreenState.Cinematic;
-		});
-#endif
+		}
+		else {
+			logo.interactable = logo.blocksRaycasts = true;
+			logo.alpha = 1.0f;
+			LeanTween.delayedCall(logoAnim.GetDuration(), () => {
+				logo.interactable = logo.blocksRaycasts = false;
+				LeanTweenEx.ChangeCanvasGroupAlpha(logo, 0.0f, 0.2f);
+				SoundImage.sprite = SoundImageState[AudioManager.Instance.IsEnabled ? 1 : 0];
+				ShowMainMenu();
+				anim.Play("IntroAnimation");
+				player.ScreenState = PlayerScreenState.Cinematic;
+			});
+			PlayerPrefs.SetInt("GameMenu.isCinematicShowed", 1);
+		}
 	}
 
 	public void PlayEndAnimation() {
