@@ -17,3 +17,4 @@ Changelog_0.37		Ludum Dare 46
 Changelog_0.38		Ludum Dare 46																											
 Changelog_0.39		Ludum Dare 46																											
 Changelog_0.4		Ludum Dare 46																											
+Changelog_1.0		Release																											
