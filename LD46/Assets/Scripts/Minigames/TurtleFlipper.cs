@@ -17,9 +17,11 @@ public class TurtleFlipper : BaseMinigame {
 	new void Update() {
 		base.Update();
 
+#if UNITY_EDITOR
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			debugTextField.enabled = !debugTextField.enabled;
 		}
+#endif
 
 		if(isPlaying)
 			Arrow.transform.Rotate(new Vector3(0, 0, arrowRotateSpeed) * Time.deltaTime, Space.Self);

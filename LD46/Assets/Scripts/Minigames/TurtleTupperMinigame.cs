@@ -69,9 +69,11 @@ public class TurtleTupperMinigame : BaseMinigame {
 	new void Update() {
 		base.Update();
 
+#if UNITY_EDITOR
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			debugTextField.enabled = !debugTextField.enabled;
 		}
+#endif
 	}
 
 	public void OnTutrleClick(int id) {

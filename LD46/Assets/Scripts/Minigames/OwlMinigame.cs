@@ -43,9 +43,11 @@ public class OwlMinigame : BaseMinigame {
 	new void Update() {
 		base.Update();
 
+#if UNITY_EDITOR
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			debugTextField.enabled = !debugTextField.enabled;
 		}
+#endif
 
 		if (isPlaying) {
 			CheckIsNeedOtherSide();

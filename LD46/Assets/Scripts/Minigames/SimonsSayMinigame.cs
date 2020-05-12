@@ -30,9 +30,11 @@ public class SimonsSayMinigame : BaseBaseMinigame {
 	BirdMinigameDifficulty difficulty;
 
 	private void Update() {
+#if UNITY_EDITOR
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			debugTextField.enabled = !debugTextField.enabled;
 		}
+#endif
 	}
 
 	public override void Init(byte usedDifficulty) {

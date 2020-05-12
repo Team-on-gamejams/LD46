@@ -59,9 +59,11 @@ public class PandaMinigame : BaseMinigame {
 	protected new void Update() {
 		base.Update();
 
+#if UNITY_EDITOR
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			debugTextField.enabled = !debugTextField.enabled;
 		}
+#endif
 	}
 
 	public void LeftClick() {
