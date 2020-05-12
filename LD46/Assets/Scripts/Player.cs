@@ -43,9 +43,11 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update() {
+#if UNITY_EDITOR
 		if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			debugTextField.gameObject.SetActive(!debugTextField.gameObject.activeSelf);
 		}
+#endif
 
 		if (ScreenState == PlayerScreenState.Cinematic && Input.anyKeyDown) {
 			gameMenu.ShowMainMenu();
