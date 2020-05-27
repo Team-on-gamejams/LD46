@@ -8,7 +8,7 @@ This game contains 8 minigames with 7 difficulty levels.
 All minigames played with click(or taps), it’s easy to get how to play it=)   
 
 # Downloads and Links
-Available in [Windows, Linux, OSX and Web](https://teamon.itch.io/zoo-keeper). If you encounter any problem, please leave a issue!  
+Available in [Windows, Linux, OSX, Web and Android](https://teamon.itch.io/zoo-keeper). If you encounter any problem, please leave a issue!  
 [Play Market](https://play.google.com/store/apps/details?id=com.Enteryournamestudios.Zookeeper)  
 Actually, OSX build have never been tested, so please leave feedback is it work properly.  
 
