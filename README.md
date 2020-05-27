@@ -9,7 +9,8 @@ All minigames played with click(or taps), it’s easy to get how to play it=)
 
 # Downloads and Links
 Available in [Windows, Linux, OSX and Web](https://teamon.itch.io/zoo-keeper). If you encounter any problem, please leave a issue!  
-Actually, OSX build have never been tested, so please leave feedback is it work properly.
+[Play Market](https://play.google.com/store/apps/details?id=com.Enteryournamestudios.Zookeeper)  
+Actually, OSX build have never been tested, so please leave feedback is it work properly.  
 
 # Ludum Dare?
 Ludum Dare is one of the world's largest and longest running Game Jam events. Is an event where you create a game from scratch in a weekend based on a theme.  
