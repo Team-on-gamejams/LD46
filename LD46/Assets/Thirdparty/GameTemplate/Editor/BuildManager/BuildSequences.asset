@@ -27,7 +27,7 @@ MonoBehaviour:
       itchChannel: android
       itchDirPath: $NAME_$VERSION_$PLATFORM$EXECUTABLE
       itchAddLastChangelogUpdateNameToVerison: 1
-      itchLastChangelogUpdateName: 0.32 - Ludum Dare 46
+      itchLastChangelogUpdateName: 1.1 - [Changelog_1.1]
       useGithubActions: 0
       useUnityActions: 0
       needGamejolthPush: 0
